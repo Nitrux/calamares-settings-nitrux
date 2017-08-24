@@ -1,0 +1,14 @@
+Source: calamares-settings-nxos
+Section: unknown
+Priority: optional
+Maintainer: Alexis López Zubieta <azubieta90@gmail.com>
+Build-Depends: debhelper (>=9)
+Standards-Version: 3.9.6
+Homepage: https://nxos.org/
+Vcs-Git: https://github.com/nomad-desktop/calamares-settings-nxos.git
+
+Package: calamares-settings-nxos
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, calamares
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>

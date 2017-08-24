@@ -1,0 +1,47 @@
+---
+componentName:  nxos
+
+# This selects between different welcome texts. When false, uses
+# the traditional "Welcome to the %1 installer.", and when true,
+# uses "Welcome to the Calamares installer for %1." This allows
+# to distinguish this installer from other installers for the
+# same distribution.
+welcomeStyleCalamares:   false
+
+# Should the welcome image (productWelcome, below) be scaled
+# up beyond its natural size?
+welcomeExpandingLogo:   true
+
+strings:
+    productName:         NXOS GNU/Linux
+    shortProductName:    NXOS
+    version:             1.0.3 Rolling
+    shortVersion:        1.0.3
+    versionedName:       NXOS GNU/Linux 1.0.3 Rolling "Majestic bit"
+    shortVersionedName:  NXOS 1.0.3
+    bootloaderEntryName: NXOS
+    productUrl:          http://nxos.org/
+#     supportUrl:          http://calamares.io/bugs/
+#     knownIssuesUrl:      http://calamares.io/about/
+#     releaseNotesUrl:     http://calamares.io/about/
+
+images:
+    productLogo:         "nxos_logo.png"
+    productIcon:         "squid.png"
+    productWelcome:      "welcome.png"
+
+slideshow:               "show.qml"
+
+# Colors for text and background components.
+#
+#  - sidebarBackground is the background of the sidebar
+#  - sidebarText is the (foreground) text color
+#  - sidebarTextHighlight sets the background of the selected (current) step.
+#    Optional, and defaults to the application palette.
+#  - sidebarSelect is the text color of the selected step.
+#
+style:
+   sidebarBackground:    "#292F34"
+   sidebarText:          "#FFFFFF"
+   sidebarTextSelect:    "#292F34"
+   sidebarTextHighlight: "#D35400"
