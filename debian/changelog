@@ -1,8 +1,8 @@
-calamares-settings-nxos (1.0-2) UNRELEASED; urgency=medium
+calamares-settings-nxos (1.0-3) nxos; urgency=medium
 
   * Using png images
 
- -- Alexis López Zubieta <azubieta90@gmail.com>  Tue, 26 Sep 2017 14:56:11 -0500
+ -- Alexis López Zubieta <azubieta90@gmail.com>  Tue, 26 Sep 2017 18:21:49 -0500
 
 calamares-settings-nxos (1.0-1) nxos; urgency=medium
 
