@@ -13,12 +13,12 @@ welcomeStyleCalamares:   false
 welcomeExpandingLogo:   true
 
 strings:
-    productName:         NXOS GNU/Linux
+    productName:         Nitrux OS
     shortProductName:    NXOS
-    version:             1.0.3 Rolling
-    shortVersion:        1.0.3
-    versionedName:       NXOS GNU/Linux 1.0.3 Rolling "Majestic bit"
-    shortVersionedName:  NXOS 1.0.3
+    version:             1.0.4 Rolling
+    shortVersion:        1.0.4
+    versionedName:       Nitrux OS 1.0.4
+    shortVersionedName:  NXOS 1.0.4
     bootloaderEntryName: NXOS
     productUrl:          http://nxos.org/
 #     supportUrl:          http://calamares.io/bugs/
@@ -26,9 +26,9 @@ strings:
 #     releaseNotesUrl:     http://calamares.io/about/
 
 images:
-    productLogo:         "nxos_logo.png"
-    productIcon:         "squid.png"
-    productWelcome:      "welcome.png"
+    productLogo:         "nxos_logo_large.svg"
+    productIcon:         "nxos_logo.svg"
+    productWelcome:      "nxos_logo.svg"
 
 slideshow:               "show.qml"
 
@@ -41,7 +41,7 @@ slideshow:               "show.qml"
 #  - sidebarSelect is the text color of the selected step.
 #
 style:
-   sidebarBackground:    "#292F34"
+   sidebarBackground:    "#231F20"
    sidebarText:          "#FFFFFF"
-   sidebarTextSelect:    "#292F34"
-   sidebarTextHighlight: "#D35400"
+   sidebarTextSelect:    "#FFFFFF"
+   sidebarTextHighlight: "#4dd0e1"
