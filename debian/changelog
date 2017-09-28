@@ -1,3 +1,10 @@
+calamares-settings-nxos (1.0-4) UNRELEASED; urgency=medium
+
+  * Customizing slideshow.
+  * Adding desktop icon.
+
+ -- Alexis <azubieta90@gmail.com>  Wed, 27 Sep 2017 19:59:12 -0500
+
 calamares-settings-nxos (1.0-3) nxos; urgency=medium
 
   * Using png images
