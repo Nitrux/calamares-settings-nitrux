@@ -27,7 +27,7 @@ strings:
 
 images:
     productLogo:         "nxos_logo_large.png"
-    productIcon:         "nxos_logo.png"
+    productIcon:         "nxos_logo_large.png"
     productWelcome:      "nxos_logo.png"
 
 slideshow:               "show.qml"

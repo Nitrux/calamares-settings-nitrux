@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dpkg -s nxos-desktop-settings &> /dev/null
+dpkg -s calamares &> /dev/null
 
 if [ $? ]; then
     find . -iname 'org.nxos.installer.desktop' -delete
