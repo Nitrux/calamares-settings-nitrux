@@ -17,9 +17,9 @@ Presentation
 
     Image {
         id: image
-        source: "calamres_install_img.png"
-        width: 350
-        height: 350
+        source: "calamares_install_img.png"
+        width: 360
+        height: 360
         fillMode: Image.PreserveAspectFit
         anchors.left: parent.horizontalCenter
         anchors.right: parent.right

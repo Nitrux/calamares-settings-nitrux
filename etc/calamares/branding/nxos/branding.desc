@@ -10,7 +10,7 @@ welcomeStyleCalamares:   false
 
 # Should the welcome image (productWelcome, below) be scaled
 # up beyond its natural size?
-welcomeExpandingLogo:   true
+welcomeExpandingLogo:   false
 
 strings:
     productName:         Nitrux OS
@@ -44,4 +44,4 @@ style:
    sidebarBackground:    "#231F20"
    sidebarText:          "#FFFFFF"
    sidebarTextSelect:    "#FFFFFF"
-   sidebarTextHighlight: "#4dd0e1"
+   sidebarTextHighlight: "#26C6DA"
