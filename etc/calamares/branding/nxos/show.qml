@@ -124,7 +124,7 @@ Presentation
                 Layout.topMargin: 16
 
                 font.pixelSize: 16
-                text: qsTr("Nitrux includes everithing you need. Its default configuration "
+                text: qsTr("Nitrux includes everything you need. Its default configuration "
                            + "provides you with a ready-to-use system.")
                 wrapMode: Text.WordWrap
             }
