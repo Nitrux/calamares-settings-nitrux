@@ -1,4 +1,4 @@
-calamares-settings-nxos (1.1.2-3) nxos; urgency=medium
+calamares-settings-nxos (1.1.3-3) nxos; urgency=medium
 
   * Remove installer desktop icon in the postrm script.
 
