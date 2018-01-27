@@ -15,10 +15,10 @@ welcomeExpandingLogo:   false
 strings:
     productName:         Nitrux OS
     shortProductName:    NXOS
-    version:             1.0.7 Rolling
-    shortVersion:        1.0.7
-    versionedName:       Nitrux OS 1.0.7
-    shortVersionedName:  NXOS 1.0.7
+    version:             1.0.8 Rolling
+    shortVersion:        1.0.8
+    versionedName:       Nitrux OS 1.0.8
+    shortVersionedName:  NXOS 1.0.8
     bootloaderEntryName: NXOS
     productUrl:          http://nxos.org/
 #     supportUrl:          http://calamares.io/bugs/
