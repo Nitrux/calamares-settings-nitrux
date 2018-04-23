@@ -14,16 +14,16 @@ welcomeExpandingLogo:   false
 
 strings:
     productName:         Nitrux OS
-    shortProductName:    NXOS
-    version:             1.0.9 Rolling
-    shortVersion:        1.0.9
-    versionedName:       Nitrux OS 1.0.9
-    shortVersionedName:  NXOS 1.0.9
-    bootloaderEntryName: NXOS
-    productUrl:          http://nxos.org/
-#     supportUrl:          http://calamares.io/bugs/
-#     knownIssuesUrl:      http://calamares.io/about/
-#     releaseNotesUrl:     http://calamares.io/about/
+    shortProductName:    Nitrux
+    version:             1.0.10
+    shortVersion:        1.0.10
+    versionedName:       Nitrux OS 1.0.10
+    shortVersionedName:  Nitrux 1.0.10
+    bootloaderEntryName: Nitrux
+    productUrl:          https://nxos.org/
+    supportUrl:          https://nxos.org/compendium/#help-and-support
+    knownIssuesUrl:      https://nxos.org/compendium/#get-started
+    releaseNotesUrl:     https://sourceforge.net/p/nitruxos/news/
 
 images:
     productLogo:         "nxos_logo_large.png"
