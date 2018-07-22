@@ -1,11 +1,11 @@
-Source: calamares-settings-nxos
+Source: calamares-settings-nitrux
 Section: unknown
 Priority: optional
 Maintainer: Alexis López Zubieta <azubieta90@gmail.com>
 Build-Depends: debhelper (>=9)
 Standards-Version: 3.9.6
 Homepage: https://nxos.org/
-Vcs-Git: https://github.com/nomad-desktop/calamares-settings-nxos.git
+Vcs-Git: https://github.com/Nitrux/calamares-settings-nitrux.git
 
 Package: calamares-settings-nxos
 Architecture: any

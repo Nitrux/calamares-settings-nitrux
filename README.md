@@ -1,4 +1,4 @@
-# Calamares Settings Nitrux [![Build Status](https://travis-ci.org/nomad-desktop/calamares-settings-nxos.svg?branch=master)](https://travis-ci.org/nomad-desktop/calamares-settings-nxos)
+# Calamares Settings Nitrux [![Build Status](https://github.com/Nitrux/calamares-settings-nitrux.git?branch=master)](https://github.com/Nitrux/calamares-settings-nitrux.git)
 
 This is the repository for the custom Calamares settings used in Nitrux.
 
