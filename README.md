@@ -1,4 +1,4 @@
-# Calamares Settings Nitrux [![Build Status](https://github.com/Nitrux/calamares-settings-nitrux.git?branch=master)](https://github.com/Nitrux/calamares-settings-nitrux.git)
+# Calamares Settings Nitrux [![Build Status](https://github.com/Nitrux/calamares-settings-nitrux.svg?branch=master)](https://github.com/Nitrux/calamares-settings-nitrux.git)
 
 This is the repository for the custom Calamares settings used in Nitrux.
 
