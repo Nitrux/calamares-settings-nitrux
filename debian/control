@@ -7,8 +7,9 @@ Standards-Version: 3.9.6
 Homepage: https://nxos.org/
 Vcs-Git: https://github.com/Nitrux/calamares-settings-nitrux.git
 
-Package: calamares-settings-nxos
+Package: calamares-settings-nitrux
 Architecture: any
+Replaces: calamares-settings-nxos
 Depends: ${shlibs:Depends}, ${misc:Depends}, calamares
 Description: <insert up to 60 chars description>
  <insert long description, indented with spaces>
