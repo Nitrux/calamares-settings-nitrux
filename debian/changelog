@@ -1,3 +1,9 @@
+calamares-settings-nitrux (1.1.13) nxos; urgency=medium
+
+  * Update package.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Fri, 31 Aug 2018 12:09:00 -0500
+
 calamares-settings-nitrux (1.1.12) nxos; urgency=medium
 
   * Update package.
