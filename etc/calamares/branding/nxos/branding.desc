@@ -15,10 +15,10 @@ welcomeExpandingLogo:   false
 strings:
     productName:         Nitrux OS
     shortProductName:    Nitrux
-    version:             1.0.15
-    shortVersion:        1.0.15
-    versionedName:       Nitrux OS 1.0.15
-    shortVersionedName:  Nitrux 1.0.15
+    version:             1.1.0
+    shortVersion:        1.1.0
+    versionedName:       Nitrux OS 1.1.0
+    shortVersionedName:  Nitrux 1.1.0
     bootloaderEntryName: Nitrux
     productUrl:          https://nxos.org/
     supportUrl:          https://nxos.org/compendium/#help-and-support
