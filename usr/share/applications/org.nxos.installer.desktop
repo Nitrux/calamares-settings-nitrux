@@ -1,0 +1,22 @@
+[Desktop Entry]
+Categories=Settings
+Comment[en_US]=Install Nitrux OS in this computer.
+Comment=Install Nitrux OS in this computer.
+Exec=sudo -E calamares -style kvantum
+GenericName[en_US]=Installer
+GenericName=Installer
+Icon=live-installer
+MimeType=
+Name[en_US]=Install Nitrux 1.1.0
+Name=Install Nitrux 1.1.0
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+Version=1.0
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
+X-MultipleArgs=false
