@@ -15,14 +15,14 @@ welcomeExpandingLogo:   false
 strings:
     productName:         Nitrux OS
     shortProductName:    Nitrux
-    version:             1.1.0
-    shortVersion:        1.1.0
-    versionedName:       Nitrux OS 1.1.0
-    shortVersionedName:  Nitrux 1.1.0
+    version:             1.2.3-Legacy
+    shortVersion:        1.2.3-Legacy
+    versionedName:       Nitrux OS 1.2.3-Legacy
+    shortVersionedName:  Nitrux 1.2.3-Legacy
     bootloaderEntryName: Nitrux
     productUrl:          https://nxos.org/
-    supportUrl:          https://nxos.org/compendium/#help-and-support
-    knownIssuesUrl:      https://nxos.org/compendium/#get-started
+    supportUrl:          https://nxos.org/en/compendium/
+    knownIssuesUrl:      https://nxos.org/en/compendium/#get-started
     releaseNotesUrl:     https://sourceforge.net/p/nitruxos/news/
 
 images:
