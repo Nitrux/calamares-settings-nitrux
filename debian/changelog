@@ -1,3 +1,9 @@
+calamares-settings-nitrux (1.1.19) nxos; urgency=medium
+
+  * Don't remove calamares-settings-nitrux.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Sat, 14 Dec 2019 17:01:00 -0500
+
 calamares-settings-nitrux (1.1.18) nxos; urgency=medium
 
   * Update package.
