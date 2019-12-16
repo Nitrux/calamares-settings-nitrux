@@ -1,3 +1,9 @@
+calamares-settings-nitrux (1.1.26) nxos; urgency=medium
+
+  * Make helper script not Lubuntu specific.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Mon, 16 Dec 2019 01:57:00 -0500
+
 calamares-settings-nitrux (1.1.25) nxos; urgency=medium
 
   * Make helper script not Lubuntu specific.
