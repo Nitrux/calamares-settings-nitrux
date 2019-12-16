@@ -1,8 +1,8 @@
-calamares-settings-nitrux (1.1.21) nxos; urgency=medium
+calamares-settings-nitrux (1.1.22) nxos; urgency=medium
 
-  * Add initramfs.conf
+  * Add initramfs.conf, change defualtDesktopEnvironment.
 
- -- Uri Herrera <uri_herrera@nxos.org>  Sun, 15 Dec 2019 14:33:00 -0500
+ -- Uri Herrera <uri_herrera@nxos.org>  Sun, 15 Dec 2019 22:36:00 -0500
 
 calamares-settings-nitrux (1.1.21) nxos; urgency=medium
 
