@@ -1,9 +1,14 @@
+calamares-settings-nitrux (1.1.29) nxos; urgency=medium
+
+  * Remove log helper.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Mon, 16 Dec 2019 14:52:00 -0500
+
 calamares-settings-nitrux (1.1.28) nxos; urgency=medium
 
   * A typo.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Mon, 16 Dec 2019 03:16:00 -0500
-
 
 calamares-settings-nitrux (1.1.27) nxos; urgency=medium
 
