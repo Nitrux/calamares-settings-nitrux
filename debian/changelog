@@ -1,3 +1,9 @@
+calamares-settings-nitrux (1.1.27) nxos; urgency=medium
+
+  * Whatever.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Mon, 16 Dec 2019 02:46:00 -0500
+ 
 calamares-settings-nitrux (1.1.26) nxos; urgency=medium
 
   * Remove unnecessary modules.
