@@ -24,8 +24,8 @@ Presentation
     Image {
         id: image
         source: "calamares_install_image.svg"
-        width: 360
-        height: 360
+        width: 256
+        height: 256
         fillMode: Image.PreserveAspectFit
         anchors.left: parent.horizontalCenter
         anchors.right: parent.right
@@ -44,7 +44,7 @@ Presentation
                 Layout.fillWidth: true
 
                 text: qsTr("Welcome to the #NXWorld")
-                font.pixelSize: 28
+                font.pixelSize: 22
                 font.bold: true
                 color: "white"
             }
@@ -86,7 +86,7 @@ Presentation
                 Layout.fillWidth: true
 
                 text: qsTr("Everything you need to get started.")
-                font.pixelSize: 28
+                font.pixelSize: 22
                 font.bold: true
                 color: "white"
             }
@@ -143,7 +143,7 @@ Presentation
 
                 text: qsTr("Explore a universe of apps"
                 + "in Nitrux with AppImage.")
-                font.pixelSize: 28
+                font.pixelSize: 22
                 font.bold: true
                 color: "white"
             }

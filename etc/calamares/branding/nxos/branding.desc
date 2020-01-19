@@ -10,7 +10,7 @@ welcomeStyleCalamares:   false
 
 # Should the welcome image (productWelcome, below) be scaled
 # up beyond its natural size?
-welcomeExpandingLogo:   false
+welcomeExpandingLogo:   true
 
 strings:
     productName:         Nitrux OS
