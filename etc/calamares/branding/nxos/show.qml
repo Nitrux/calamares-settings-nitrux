@@ -63,12 +63,8 @@ Presentation
 
                 font.pixelSize: 12
                 color: "white"
-                text: qsTr("Nitrux is a Linux desktop distribution directly based on Ubuntu. It uses"
-                           + "the Calamares installer and includes NX Desktop and NX Firewall. NX Desktop"
-                           + "is our set of applied customizations to the Plasma 5 Desktop.\n\n"
-                           + "It includes new plasmoids (or widgets) and a new look and feel package"
-                           + "(wallpapers, Plasma themes, Konsole theme and profile, Aurorae themes,"
-                           + "SDDM themes, cursors, and color-schemes).")
+                text: qsTr("Nitrux is a Linux desktop distribution directly based on Ubuntu. It uses the Calamares installer and includes NX Desktop and NX Firewall. NX Desktop is our set of applied customizations to the Plasma 5 Desktop.\n\n"
+                           + "It includes new plasmoids (or widgets) and a new look and feel package (wallpapers, Plasma themes, Konsole theme and profile, Aurorae themes, SDDM themes, cursors, and color-schemes).")
                 wrapMode: Text.WordWrap
             }
         }
@@ -105,8 +101,7 @@ Presentation
 
                 font.pixelSize: 12
                 color: "white"
-                text: qsTr("Nitrux is a complete Operating System that ships the essential"
-                           + "apps and services for the daily use: office applications, PDF reader, image editor,"
+                text: qsTr("Nitrux is a complete Operating System that ships the essential apps and services for the daily use: office applications, PDF reader, image editor,"
                            + "music and video players, etc.\n\n"
                            + "Nitrux includes a selection of applications carefully picked to perform the best when using your computer:\n\n"
                            + " • Dolphin, the file manager.\n"
@@ -141,8 +136,7 @@ Presentation
             Label {
                 Layout.fillWidth: true
 
-                text: qsTr("Explore a universe of apps"
-                + "in Nitrux with AppImage.")
+                text: qsTr("Explore a universe of apps with AppImage.")
                 font.pixelSize: 22
                 font.bold: true
                 color: "white"
@@ -162,18 +156,16 @@ Presentation
 
                 font.pixelSize: 12
                 color: "white"
-                text: qsTr("AppImage provides a way for upstream developers to offer “native” binaries for Linux users just the"
-                           + "same way they could do for other operating systems. It allows packaging applications for any common"
-                           + "Linux based operating system, e.g., Ubuntu, Debian, OpenSUSE, RHEL, CentOS, Fedora, etc.\n\n"
+                text: qsTr("AppImage provides a way for upstream developers to offer “native” binaries for Linux users just the same way they could do for other operating systems. It allows packaging applications for any common Linux based operating system, e.g., Ubuntu, Debian, OpenSUSE, RHEL, CentOS, Fedora, etc.\n\n"
                            + "AppImages come with all dependencies that cannot be assumed to be part of each target system in"
                            + "a recent enough version and will run on most Linux distributions without further modifications.\n\n"
                            + "An AppImage has these advantages:\n"
                            + " • Just one format for all major distributions.\n"
                            + " • Works out of the box, no installation of runtimes needed.\n"
                            + " • No root needed.\n"
-                           + " • One app = one file = super simple for users."
+                           + " • One app = one file = super simple for users.\n"
                            + " • Binary delta updates, e.g., for continuous builds (only download the binary diff) using AppImageUpdate.\n"
-                           + "• Can GPG2-sign your AppImages (inside the file).\n")
+                           + " • Can GPG2-sign your AppImages (inside the file).\n")
                 wrapMode: Text.WordWrap
             }
         }
