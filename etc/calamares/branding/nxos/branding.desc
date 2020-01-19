@@ -26,9 +26,9 @@ strings:
     releaseNotesUrl:     https://sourceforge.net/p/nitruxos/news/
 
 images:
-    productLogo:         "nitrux_icon.png"
-    productIcon:         "nitrux_icon.png"
-    productWelcome:      "nxos_logo.png"
+    productLogo:         "calamares_product_logo.svg"
+    productIcon:         "calamares_product_icon.svg"
+    productWelcome:      "calamares_welcome_logo.svg"
 
 slideshow:               "show.qml"
 

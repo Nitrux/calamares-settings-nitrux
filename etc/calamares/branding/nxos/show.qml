@@ -14,25 +14,25 @@ Presentation
         repeat: true
         onTriggered: presentation.goToNextSlide()
     }
+    
+    Image {
+        id: background
+        source: "calamares_background.svg"
+        anchors.fill: parent
+    }
+    
+    Image {
+        id: image
+        source: "calamares_install_image.svg"
+        width: 360
+        height: 360
+        fillMode: Image.PreserveAspectFit
+        anchors.left: parent.horizontalCenter
+        anchors.right: parent.right
+        anchors.verticalCenter: parent.verticalCenter
+    }
 
     Slide {
-        
-        Image {
-            id: background
-            source: "calamares_background_1.svg"
-            anchors.fill: parent
-        }
-        
-        Image {
-            id: image
-            source: "calamares_install_nxos.png"
-            width: 360
-            height: 360
-            fillMode: Image.PreserveAspectFit
-            anchors.left: parent.horizontalCenter
-            anchors.right: parent.right
-            anchors.verticalCenter: parent.verticalCenter
-        }
         
         ColumnLayout {
             anchors.leftMargin: 18
@@ -76,23 +76,6 @@ Presentation
 
     Slide {
         
-        Image {
-            id: background
-            source: "calamares_background_2.svg"
-            anchors.fill: parent
-        }
-        
-        Image {
-            id: image
-            source: "calamares_install_apps.png"
-            width: 360
-            height: 360
-            fillMode: Image.PreserveAspectFit
-            anchors.left: parent.horizontalCenter
-            anchors.right: parent.right
-            anchors.verticalCenter: parent.verticalCenter
-        }
-        
         ColumnLayout {
             anchors.leftMargin: 18
             anchors.left: parent.left
@@ -126,45 +109,28 @@ Presentation
                            + "apps and services for the daily use: office applications, PDF reader, image editor,"
                            + "music and video players, etc.\n\n"
                            + "Nitrux includes a selection of applications carefully picked to perform the best when using your computer:\n\n"
-                           + "Dolphin, the file manager.\n"
-                           + "Kate, an advanced text editor.\n"
-                           + "Ark, archiving tool.\n"
-                           + "Konsole, the terminal emulator.\n"
-                           + "KCalc, calculator.\n"
-                           + "Info Center, system summary tool.\n"
-                           + "KSysGuard, system task manager.\n"
-                           + "Spectacle, screenshot utility.\n"
-                           + "Latte, versatile dock application.\n"
-                           + "qpdfview, simple and light PDF viewer.\n"
-                           + "Kvantum Manager, GUI application to manage and configure Kvantum SVG themes.\n"
-                           + "Firefox, ethical web browser.\n"
-                           + "mpv, multimedia player.\n"
-                           + "LibreOffice, open-source office suite.\n"
-                           + "Inkscape, vector graphic editor.\n"
-                           + "GIMP, GNU image manipulation tool.")
+                           + " • Dolphin, the file manager.\n"
+                           + " • Kate, an advanced text editor.\n"
+                           + " • Ark, archiving tool.\n"
+                           + " • Konsole, the terminal emulator.\n"
+                           + " • KCalc, calculator.\n"
+                           + " • Info Center, system summary tool.\n"
+                           + " • KSysGuard, system task manager.\n"
+                           + " • Spectacle, screenshot utility.\n"
+                           + " • Latte, versatile dock application.\n"
+                           + " • qpdfview, simple and light PDF viewer.\n"
+                           + " • Kvantum Manager, GUI application to manage and configure Kvantum SVG themes.\n"
+                           + " • Firefox, ethical web browser.\n"
+                           + " • mpv, multimedia player.\n"
+                           + " • LibreOffice, open-source office suite.\n"
+                           + " • Inkscape, vector graphic editor.\n"
+                           + " • GIMP, GNU image manipulation tool.")
                 wrapMode: Text.WordWrap
             }
         }
     }
 
     Slide {
-        
-        Image {
-            id: background
-            source: "calamares_background_3.svg"
-            anchors.fill: parent
-        }
-        
-        Image {
-            id: image
-            source: "calamares_install_appimage.png"
-            width: 360
-            height: 360
-            fillMode: Image.PreserveAspectFit
-            anchors.left: parent.horizontalCenter
-            anchors.right: parent.right
-            anchors.verticalCenter: parent.verticalCenter
-        }
         
         ColumnLayout {
             anchors.leftMargin: 18
@@ -175,7 +141,8 @@ Presentation
             Label {
                 Layout.fillWidth: true
 
-                text: qsTr("Explore a universe of apps in Nitrux with AppImage.")
+                text: qsTr("Explore a universe of apps"
+                + "in Nitrux with AppImage.")
                 font.pixelSize: 28
                 font.bold: true
                 color: "white"
@@ -199,7 +166,14 @@ Presentation
                            + "same way they could do for other operating systems. It allows packaging applications for any common"
                            + "Linux based operating system, e.g., Ubuntu, Debian, OpenSUSE, RHEL, CentOS, Fedora, etc.\n\n"
                            + "AppImages come with all dependencies that cannot be assumed to be part of each target system in"
-                           + "a recent enough version and will run on most Linux distributions without further modifications.")
+                           + "a recent enough version and will run on most Linux distributions without further modifications.\n\n"
+                           + "An AppImage has these advantages:\n"
+                           + " • Just one format for all major distributions.\n"
+                           + " • Works out of the box, no installation of runtimes needed.\n"
+                           + " • No root needed.\n"
+                           + " • One app = one file = super simple for users."
+                           + " • Binary delta updates, e.g., for continuous builds (only download the binary diff) using AppImageUpdate.\n"
+                           + "• Can GPG2-sign your AppImages (inside the file).\n")
                 wrapMode: Text.WordWrap
             }
         }
