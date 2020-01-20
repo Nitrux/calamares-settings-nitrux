@@ -1,5 +1,11 @@
 calamares-settings-nitrux (1.1.37) nxos; urgency=medium
 
+  * Adjust image with logos.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Sun, 19 Jan 2020 19:58:00 -0500
+
+calamares-settings-nitrux (1.1.37) nxos; urgency=medium
+
   * Remove version from desktop launcher.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Sun, 19 Jan 2020 18:59:00 -0500
