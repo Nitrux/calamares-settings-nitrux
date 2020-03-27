@@ -15,10 +15,10 @@ welcomeExpandingLogo:   true
 strings:
     productName:         Nitrux OS
     shortProductName:    Nitrux
-    version:             1.2.5 build.310120
-    shortVersion:        1.2.5 build.310120
-    versionedName:       Nitrux OS 1.2.5 build.310120
-    shortVersionedName:  Nitrux 1.2.5 build.310120
+    version:             1.2.7
+    shortVersion:        1.2.7
+    versionedName:       Nitrux OS 1.2.7 build.270320
+    shortVersionedName:  Nitrux 1.2.7 build.270320
     bootloaderEntryName: Nitrux
     productUrl:          https://nxos.org/
     supportUrl:          https://nxos.org/
