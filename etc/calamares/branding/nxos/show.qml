@@ -104,12 +104,15 @@ Presentation
                 text: qsTr("Nitrux is a complete Operating System that ships the essential apps and services for the daily use: office applications, PDF reader, image editor,"
                            + "music and video players, etc.\n\n"
                            + "Nitrux includes a selection of applications carefully picked to perform the best when using your computer:\n\n"
-                           + " • Dolphin, the file manager.\n"
-                           + " • Kate, an advanced text editor.\n"
+                           + " • Index, the file manager.\n"
+                           + " • Nota, a simple text editor.\n"
+                           + " • Station, the terminal emulator.\n"
+                           + " • Pix, an image gallery.\n"
+                           + " • VVave, music player.\n"
+                           + " • Buho, a note-taking application.\n"
+                           + " • Contacts, an application to manage contacts.\n"
                            + " • Ark, archiving tool.\n"
-                           + " • Konsole, the terminal emulator.\n"
                            + " • KCalc, calculator.\n"
-                           + " • Info Center, system summary tool.\n"
                            + " • KSysGuard, system task manager.\n"
                            + " • Spectacle, screenshot utility.\n"
                            + " • Latte, versatile dock application.\n"
@@ -119,7 +122,8 @@ Presentation
                            + " • mpv, multimedia player.\n"
                            + " • LibreOffice, open-source office suite.\n"
                            + " • Inkscape, vector graphic editor.\n"
-                           + " • GIMP, GNU image manipulation tool.")
+                           + " • GIMP, GNU image manipulation tool.\n"
+                           + " • LMMS, free, open-source, multiplatform digital audio workstation.")
                 wrapMode: Text.WordWrap
             }
         }
