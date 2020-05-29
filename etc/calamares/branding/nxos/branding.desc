@@ -15,15 +15,16 @@ welcomeExpandingLogo:   true
 strings:
     productName:         Nitrux OS
     shortProductName:    Nitrux
-    version:             1.2.8
-    shortVersion:        1.2.8
-    versionedName:       Nitrux OS 1.2.8 build.250420
-    shortVersionedName:  Nitrux 1.2.8 build.250420
+    version:             1.2.9
+    shortVersion:        1.2.9
+    versionedName:       Nitrux OS 1.2.9 build.290520
+    shortVersionedName:  Nitrux 1.2.8 build.290520
     bootloaderEntryName: Nitrux
     productUrl:          https://nxos.org/
     supportUrl:          https://nxos.org/
     knownIssuesUrl:      https://nxos.org/
     releaseNotesUrl:     https://sourceforge.net/p/nitruxos/news/
+    releaseNotesUrl:     https://nxos.org/changelog/
 
 images:
     productLogo:         "calamares_product_logo.svg"

@@ -14,7 +14,7 @@
    viewBox="0 0 677.33332 508.00001"
    version="1.1"
    id="svg8"
-   sodipodi:docname="calamares_background_1.svg"
+   sodipodi:docname="calamares_background.svg"
    inkscape:version="0.92.3 (unknown)"
    inkscape:export-filename="/home/uri/bitmap.png"
    inkscape:export-xdpi="96"
@@ -29,8 +29,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.25"
-     inkscape:cx="1153.0964"
-     inkscape:cy="1143.0807"
+     inkscape:cx="1231.0964"
+     inkscape:cy="931.0807"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -39,11 +39,11 @@
      borderlayer="true"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:window-width="2560"
-     inkscape:window-height="1384"
+     inkscape:window-width="1400"
+     inkscape:window-height="1380"
      inkscape:window-x="0"
      inkscape:window-y="32"
-     inkscape:window-maximized="1"
+     inkscape:window-maximized="0"
      inkscape:pagecheckerboard="true">
     <inkscape:grid
        type="xygrid"
@@ -82,7 +82,7 @@
      id="layer1"
      transform="translate(0,211.00002)">
     <rect
-       style="opacity:1;fill:#505659;fill-opacity:1;stroke:none;stroke-width:0.52916664;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:#2b2c31;fill-opacity:1;stroke:none;stroke-width:0.52916664;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect912"
        width="677.33331"
        height="508"

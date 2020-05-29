@@ -1,3 +1,9 @@
+calamares-settings-nitrux (1.1.42) nitrux; urgency=medium
+
+  * Update package.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Fri, 29 May 2020 11:52:00 -0500
+ 
 calamares-settings-nitrux (1.1.41) nitrux; urgency=medium
 
   * Update package.
