@@ -18,7 +18,7 @@ strings:
     version:             1.2.9
     shortVersion:        1.2.9
     versionedName:       Nitrux OS 1.2.9 build.290520
-    shortVersionedName:  Nitrux 1.2.8 build.290520
+    shortVersionedName:  Nitrux 1.2.9 build.290520
     bootloaderEntryName: Nitrux
     productUrl:          https://nxos.org/
     supportUrl:          https://nxos.org/
