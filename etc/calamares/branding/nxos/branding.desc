@@ -23,7 +23,6 @@ strings:
     productUrl:          https://nxos.org/
     supportUrl:          https://nxos.org/
     knownIssuesUrl:      https://nxos.org/
-    releaseNotesUrl:     https://sourceforge.net/p/nitruxos/news/
     releaseNotesUrl:     https://nxos.org/changelog/
 
 images:
