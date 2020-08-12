@@ -4,13 +4,16 @@ script:
   - sudo ./travis-build.sh
 
 branches:
-  - master
-  - development
+  only:
+    - master
+    - qml-calamares
 
 deploy:
-  skip_cleanup: true
-  provider: script
-  script: wget -qO - https://raw.githubusercontent.com/Nitrux/nitrux-repository-util/master/upload-pkgs | sh -s *.deb
+  - provider: script
+    script: wget -qO - https://raw.githubusercontent.com/Nitrux/nitrux-repository-util/master/upload-pkgs | sh -s *.deb
+    skip_cleanup: true
+    on:
+      branch: master
 
 notifications:
   email: false
