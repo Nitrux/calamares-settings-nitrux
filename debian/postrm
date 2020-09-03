@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 find /home/ -iname 'org.nxos.installer.desktop' -delete
 find /usr/share/applications/ -iname 'org.nxos.installer.desktop' -delete
