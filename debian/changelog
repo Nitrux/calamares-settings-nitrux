@@ -1,3 +1,9 @@
+calamares-settings-nitrux (1.1.48) nitrux; urgency=medium
+
+  * Use generic version number in the branding
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Mon, 07 Sep 2020 18:14:00 -0500
+
 calamares-settings-nitrux (1.1.47) nitrux; urgency=medium
 
   * Fix typo in postrm script, use reboot instead of systemctl command to reboot, remove both calamares pkgs when finished.
