@@ -1,6 +1,12 @@
+calamares-settings-nitrux (1.1.49) nitrux; urgency=medium
+
+  * Comment module that may fail without internet, organize default groups of user.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Sat, 31 Oct 2020 20:54:00 -0500
+
 calamares-settings-nitrux (1.1.48) nitrux; urgency=medium
 
-  * Use generic version number in the branding
+  * Use generic version number in the branding.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Mon, 07 Sep 2020 18:14:00 -0500
 
