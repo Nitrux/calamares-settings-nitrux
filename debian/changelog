@@ -1,3 +1,9 @@
+calamares-settings-nitrux (1.1.51) nitrux; urgency=medium
+
+  * Use zstd compression in btrfs filesystem.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Wed, 24 Mar 2021 00:01:00 -0500
+
 calamares-settings-nitrux (1.1.50) nitrux; urgency=medium
 
   * Comment module that may fail without internet, organize default groups of user.
