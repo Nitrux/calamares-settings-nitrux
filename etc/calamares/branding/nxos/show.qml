@@ -116,7 +116,7 @@ Presentation
                            + " • LibreOffice, open-source office suite.\n"
                            + " • Inkscape, vector graphic editor.\n"
                            + " • GIMP, GNU image manipulation tool.\n"
-                           + " • LMMS, free, open-source, multiplatform digital audio workstation."
+                           + " • LMMS, free, open-source, multiplatform digital audio workstation.\n"
                            + " • ... And more.")
                 wrapMode: Text.WordWrap
             }
