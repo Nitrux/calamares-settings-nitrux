@@ -63,7 +63,7 @@ Presentation
 
                 font.pixelSize: 12
                 color: "white"
-                text: qsTr("Nitrux is a Linux desktop distribution directly based on Ubuntu. It uses the Calamares installer and includes NX Desktop and NX Firewall. NX Desktop is our set of applied customizations to the Plasma 5 Desktop.\n\n"
+                text: qsTr("Nitrux is a Linux desktop distribution directly based on Debian. It uses the Calamares installer and includes NX Desktop and NX Firewall. NX Desktop is our set of applied customizations to the Plasma 5 Desktop.\n\n"
                            + "It includes new plasmoids (or widgets) and a new look and feel package (wallpapers, Plasma themes, Konsole theme and profile, Aurorae themes, SDDM themes, cursors, and color-schemes).")
                 wrapMode: Text.WordWrap
             }
@@ -110,19 +110,14 @@ Presentation
                            + " • Pix, an image gallery.\n"
                            + " • VVave, music player.\n"
                            + " • Buho, a note-taking application.\n"
-                           + " • Ark, archiving tool.\n"
-                           + " • KCalc, calculator.\n"
-                           + " • Qps, system task manager.\n"
-                           + " • Spectacle, screenshot utility.\n"
-                           + " • Latte, versatile dock application.\n"
-                           + " • qpdfview, simple and light PDF viewer.\n"
-                           + " • Kvantum Manager, GUI application to manage and configure Kvantum SVG themes.\n"
+                           + " • Shelf, simple and light PDF viewer.\n"
+                           + " • Clip, a video player.\n"
                            + " • Firefox, ethical web browser.\n"
-                           + " • mpv, multimedia player.\n"
                            + " • LibreOffice, open-source office suite.\n"
                            + " • Inkscape, vector graphic editor.\n"
                            + " • GIMP, GNU image manipulation tool.\n"
-                           + " • LMMS, free, open-source, multiplatform digital audio workstation.")
+                           + " • LMMS, free, open-source, multiplatform digital audio workstation."
+                           + " • ... And more.")
                 wrapMode: Text.WordWrap
             }
         }

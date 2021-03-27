@@ -1,3 +1,9 @@
+calamares-settings-nitrux (1.1.52) nitrux; urgency=medium
+
+  * Update slideshow text.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Sat, 27 Mar 2021 16:14:00 -0500
+
 calamares-settings-nitrux (1.1.51) nitrux; urgency=medium
 
   * Use zstd compression in btrfs filesystem.
