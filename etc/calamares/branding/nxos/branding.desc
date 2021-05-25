@@ -29,6 +29,7 @@ images:
     productLogo:         "calamares_product_logo.svg"
     productIcon:         "calamares_product_icon.svg"
     productWelcome:      "calamares_welcome_logo.svg"
+    productWallpaper:    "calamares_wallpaper.jpg"
 
 slideshow:               "show.qml"
 
@@ -45,3 +46,5 @@ style:
    sidebarText:          "#FFFFFF"
    sidebarTextSelect:    "#FFFFFF"
    sidebarTextHighlight: "#26C6DA"
+
+sidebar:                none
