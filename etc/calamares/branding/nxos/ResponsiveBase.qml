@@ -58,9 +58,8 @@ Page
                 asynchronous: true
                 cache: true
                 
-                source: Branding.imagePath(Branding.ProductWallpaper)
-            }
-            
+                source: "./calamares_wallpaper.jpg"
+            }            
             FastBlur
             {
                 id: fastBlur
@@ -70,6 +69,22 @@ Page
                 transparentBorder: false
                 cached: true
             }
+
+ layer.enabled: true
+        layer.effect: OpacityMask
+        {
+            maskSource: Item
+            {
+                width: _background.width
+                height: _background.height
+
+                Rectangle
+                {
+                    anchors.fill: parent
+                    radius: 20
+                }
+            }
+        }
         }
         
         

@@ -29,7 +29,7 @@ images:
     productLogo:         "calamares_product_logo.svg"
     productIcon:         "calamares_product_icon.svg"
     productWelcome:      "calamares_welcome_logo.svg"
-    productWallpaper:    "calamares_wallpaper.jpg"
+ #  productWallpaper:    "calamares_wallpaper.jpg"
 
 slideshow:               "show.qml"
 
