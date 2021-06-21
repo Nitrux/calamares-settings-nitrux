@@ -11,27 +11,27 @@ import "."
 ResponsiveBase
 {
     id: control
-    
+
     title: stackView.currentItem.title
     subtitle: stackView.currentItem.subtitle
     message: stackView.currentItem.message
-    
-header.visible: false
+    icon.source: stackView.currentItem.icon
 
-property string currentRegion 
-property string currentZone
+    property string currentRegion
+    property string currentZone
 
     stackView.initialItem: ListViewTemplate
     {
-        id: _regionListView        
-        
+        id: _regionListView
+
         property string title: qsTr("Region")
         property string subtitle: qsTr("Pick your preferred region or use the default one based on your current location")
-        property string message:  qsTr("Select your preferred zone within your location to continue with the installation")        
-        
+        property string message:  qsTr("Select your preferred zone within your location to continue with the installation")
+        property string icon : "cs-region"
+
         model: config.regionModel
-       currentIndex : -1
-        
+        currentIndex : -1
+
         delegate: ListItemDelegate
         {
             id: _delegate
@@ -39,12 +39,12 @@ property string currentZone
             onClicked:
             {
                 _regionListView.currentIndex = index
-		control.currentRegion = model.name
-config.regionalZonesModel.region = control.currentRegion
+                control.currentRegion = model.name
+                config.regionalZonesModel.region = control.currentRegion
                 control.stackView.push(_zonesListComponent)
             }
         }
-        
+
         Button
         {
             Layout.fillWidth: true
@@ -52,22 +52,23 @@ config.regionalZonesModel.region = control.currentRegion
             icon.name: "go-previous"
             onClicked: control.stackView.push(_zonesListComponent)
         }
-    }    
-    
+    }
+
     Component
     {
         id: _zonesListComponent
-        
+
         ListViewTemplate
         {
             id: _zonesListView
             property string title: qsTr("Timezone")
             property string subtitle: config.prettyStatus
             property string message: ""
-            
-model: config.regionalZonesModel       
-currentIndex : -1
-     
+            property string icon : "yast-timezone"
+
+            model: config.regionalZonesModel
+            currentIndex : -1
+
             delegate: ListItemDelegate
             {
                 id: _delegate
@@ -75,22 +76,23 @@ currentIndex : -1
                 onClicked:
                 {
                     _zonesListView.currentIndex = index
-		control.currentZone = model.name
+                    control.currentZone = model.name
 
                     _zonesListView.listView.positionViewAtIndex(index, ListView.Center)
 
-config.setCurrentLocation(control.currentRegion, control.currentZone)
+                    config.setCurrentLocation(control.currentRegion, control.currentZone)
 
                 }
             }
+
             Button
             {
                 Layout.fillWidth: true
                 icon.name: "go-previous"
                 text: qsTr("Regions")
                 onClicked: control.stackView.pop()
-            }            
-        }        
+            }
+        }
     }
 }
 

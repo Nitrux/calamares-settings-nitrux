@@ -17,15 +17,12 @@ ResponsiveBase
     title: qsTr("Users")
     subtitle: qsTr("Pick your user name and credentials to login and perform admin tasks")
     message: config.status.message
+    icon.source: "cs-user-accounts"
 
-    Kirigami.Theme.textColor: "white"
-
-    stackView.initialItem: Kirigami.ScrollablePage
+    stackView.initialItem: ScrollView
     {
         id: _userPage
-//         implicitHeight: _formLayout.implicitHeight + 100
-//         width: parent.width
-
+        contentWidth: availableWidth
         padding: 0
         background:  Rectangle
         {
@@ -34,21 +31,21 @@ ResponsiveBase
             opacity: 0.3
         }
 
+        Flickable
+        {
+            contentHeight: _formLayout.implicitHeight
+
         ColumnLayout
         {
             id: _formLayout
-            spacing: Kirigami.Units.largeSpacing
+            spacing: Kirigami.Units.smallSpacing
+            anchors.fill: parent
 
-            Column
+            ItemSection
             {
                 Layout.fillWidth: true
-                spacing: Kirigami.Units.smallSpacing
 
-                Label
-                {
-                    width: parent.width
-                    text: qsTr("What is your name?")
-                }
+                title: qsTr("What is your name?")
 
                 TextField
                 {
@@ -64,29 +61,16 @@ ResponsiveBase
                         radius: 5
                         opacity: 0.5
                         border.color:  _userNameField.text.length ? Kirigami.Theme.backgroundColor : ( config.fullNameChanged ? Kirigami.Theme.backgroundColor : Kirigami.Theme.negativeTextColor)
-
                     }
                 }
             }
 
-            Column
+            ItemSection
             {
                 Layout.fillWidth: true
-                spacing: Kirigami.Units.smallSpacing
 
-                Label
-                {
-                    width: parent.width
-                    text: qsTr("What name do you want to use to log in?")
-                }
-                
-                Label {
-                    
-                    width: parent.width
-                    text: qsTr("If more than one person will use this computer, you can create multiple accounts after installation.")
-                    font.weight: Font.Thin
-                    font.pointSize: 8
-                }
+                title:  qsTr("What name do you want to use to log in?")
+                subtitle: qsTr("If more than one person will use this computer, you can create multiple accounts after installation.")
 
                 TextField
                 {
@@ -96,7 +80,7 @@ ResponsiveBase
                     placeholderText: qsTr("Login Name")
                     text: config.loginName
                     onTextChanged: config.setLoginName(text)
-                    
+
                     background: Rectangle
                     {
                         color:  Kirigami.Theme.backgroundColor
@@ -105,28 +89,15 @@ ResponsiveBase
                         border.color: _userLoginField.text.length ? Kirigami.Theme.backgroundColor : (config.loginNameStatusChanged ? Kirigami.Theme.backgroundColor : Kirigami.Theme.negativeTextColor)
 
                     }
-                }                
+                }
             }
 
-            Column
+            ItemSection
             {
                 Layout.fillWidth: true
-                spacing: Kirigami.Units.smallSpacing
 
-                Label
-                {
-                    width: parent.width
-                    text: qsTr("What is the name of this computer?")
-                }
-                
-                Label {
-                    
-                    width: parent.width
-                    text: qsTr("This name will be used if you make the computer visible to others on a network.")
-                    font.weight: Font.Thin
-                    font.pointSize: 8
-                    color: "#6D6D6D"
-                }
+                title: qsTr("What is the name of this computer?")
+                subtitle: qsTr("This name will be used if you make the computer visible to others on a network.")
 
                 TextField
                 {
@@ -145,40 +116,25 @@ ResponsiveBase
                 }
             }
 
-            Column
+            ItemSection
             {
-                //visible: !config.reuseUserPasswordForRoot
                 Layout.fillWidth: true
-                spacing: Kirigami.Units.smallSpacing
-                
-                Label
-                {
-                    width: parent.width
-                    text: qsTr("Choose a root password to keep your account safe.")
-                }
-                
-                
-                Label {
-                    
-                    width: parent.width
-                    text: qsTr("Enter the same password twice, so that it can be checked for typing errors. A good password will contain a mixture of letters, numbers and punctuation, should be at least eight characters long, and should be changed at regular intervals.")
-                    font.weight: Font.Thin
-                    font.pointSize: 8
-                    wrapMode: Text.WordWrap
-                }
-                
+
+                title: qsTr("Choose a root password to keep your account safe.")
+                subtitle: qsTr("Enter the same password twice, so that it can be checked for typing errors. A good password will contain a mixture of letters, numbers and punctuation, should be at least eight characters long, and should be changed at regular intervals.")
+
                 TextField
                 {
                     id: _passwordField
                     width: parent.width
                     placeholderText: qsTr("Password")
                     text: config.userPassword
-                    
+
                     echoMode: TextInput.Password
                     passwordMaskDelay: 300
                     inputMethodHints: Qt.ImhNoAutoUppercase
                     onTextChanged: config.setUserPassword(text)
-                    
+
                     background: Rectangle
                     {
                         color:  Kirigami.Theme.backgroundColor
@@ -186,9 +142,9 @@ ResponsiveBase
                         opacity: 0.5
                         border.color:  _passwordField.text.length ? Kirigami.Theme.backgroundColor : ( config.userPasswordStatusChanged ? Kirigami.Theme.backgroundColor : Kirigami.Theme.negativeTextColor)
                     }
-                    
+
                 }
-                
+
                 TextField
                 {
                     id: _verificationPasswordField
@@ -196,11 +152,11 @@ ResponsiveBase
                     placeholderText: qsTr("Repeat Password")
                     text: config.userPasswordSecondary
                     onTextChanged: config.setUserPasswordSecondary(text)
-                    
+
                     echoMode: TextInput.Password
                     passwordMaskDelay: 300
                     inputMethodHints: Qt.ImhNoAutoUppercase
-                    
+
                     background: Rectangle
                     {
                         color:  Kirigami.Theme.backgroundColor
@@ -209,28 +165,25 @@ ResponsiveBase
                         border.color: _verificationPasswordField.text.length ? Kirigami.Theme.backgroundColor : ( config.userPasswordSecondaryChanged ? Kirigami.Theme.backgroundColor : Kirigami.Theme.negativeTextColor)
                     }
                 }
-            } 
-                        
-            CheckBox
-            {
-                visible: config.writeRootPassword
-                text: qsTr("Reuse user password as root password")
-                checked: config.reuseUserPasswordForRoot
-                onCheckedChanged: config.setReuseUserPasswordForRoot(checked)
+
+                CheckBox
+                {
+                    visible: config.writeRootPassword
+                    text: qsTr("Reuse user password as root password")
+                    checked: config.reuseUserPasswordForRoot
+                    onCheckedChanged: config.setReuseUserPasswordForRoot(checked)
+                }
+
             }
 
-            Column
+
+            ItemSection
             {
-                visible: !config.reuseUserPasswordForRoot
                 Layout.fillWidth: true
-                spacing: Kirigami.Units.smallSpacing
-                
-                Label
-                {
-                    width: parent.width
-                    text: qsTr("Choose a root password to keep your account safe.")
-                }
-                
+                visible: !config.reuseUserPasswordForRoot
+
+                title: qsTr("Choose a root password to keep your account safe.")
+
                 TextField
                 {
                     id: _rootPasswordField
@@ -241,17 +194,17 @@ ResponsiveBase
                     inputMethodHints: Qt.ImhNoAutoUppercase
                     text: config.rootPassword
                     onTextChanged: config.setRootPassword(text)
-                    
+
                     background: Rectangle
                     {
                         color:  Kirigami.Theme.backgroundColor
                         radius: 5
                         opacity: 0.5
                         border.color: _rootPasswordField.text.length ? Kirigami.Theme.backgroundColor :  ( config.rootPasswordReady ? Kirigami.Theme.backgroundColor : Kirigami.Theme.negativeTextColor)
-                        
+
                     }
                 }
-                
+
                 TextField
                 {
                     id: _verificationRootPasswordField
@@ -262,7 +215,7 @@ ResponsiveBase
                     inputMethodHints: Qt.ImhNoAutoUppercase
                     text: config.rootPasswordSecondary
                     onTextChanged: config.setRootPasswordSecondary(text)
-                    
+
                     background: Rectangle
                     {
                         color:  Kirigami.Theme.backgroundColor
@@ -272,24 +225,33 @@ ResponsiveBase
                     }
                 }
             }
-            
-            
-            CheckBox
+
+
+            ItemSection
             {
-                visible: config.permitWeakPasswords
-                text: qsTr("Validate passwords quality")
-                checked: config.requireStrongPasswords
-                onCheckedChanged: config.setRequireStrongPasswords(checked)
+                Layout.fillWidth: true
+                title: qsTr("More options.")
+
+
+                CheckBox
+                {
+                    visible: config.permitWeakPasswords
+                    text: qsTr("Validate passwords quality")
+                    checked: config.requireStrongPasswords
+                    onCheckedChanged: config.setRequireStrongPasswords(checked)
+                }
+
+
+
+                CheckBox
+                {
+                    text: qsTr("Log in automatically without asking for the password")
+                    checked: config.doAutoLogin
+                    onCheckedChanged: config.setAutoLogin(checked)
+                }
             }
 
-
-
-            CheckBox
-            {
-                text: qsTr("Log in automatically without asking for the password")
-                checked: config.doAutoLogin
-                onCheckedChanged: config.setAutoLogin(checked)
-            }
+        }
         }
 
     }

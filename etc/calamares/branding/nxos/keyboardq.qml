@@ -11,14 +11,16 @@ ResponsiveBase
 
 	title: stackView.currentItem.title
 	subtitle: stackView.currentItem.subtitle
+	icon.source: stackView.currentItem.icon
 
 	stackView.initialItem: ListViewTemplate
 		{
 			id: _keyboardModelListView
 			property string title: qsTr("Keyboard Model")
             property string subtitle: qsTr("Pick your preferred keyboard model or use the default one based on the detected hardware")
-            
-			currentIndex: model.currentIndex			
+            property string icon : "cs-keyboard"
+
+			currentIndex: model.currentIndex
 
 			model: config.keyboardModelsModel
 
@@ -32,7 +34,7 @@ ResponsiveBase
 					control.stackView.push(_keyboardLayoutsComponent)
 				}
 			}
-			
+
 			Button
 			{
                 Layout.fillWidth: true
@@ -40,7 +42,7 @@ ResponsiveBase
                 onClicked: model.refresh()
                 text: qsTr("Refresh")
             }
-            
+
             Button
             {
                 Layout.fillWidth: true
@@ -48,23 +50,24 @@ ResponsiveBase
                 icon.name: "go-previous"
                 onClicked: control.stackView.push(_keyboardLayoutsComponent)
             }
-            
+
 		}
 
-	
+
 
 	Component
 	{
 		id: _keyboardLayoutsComponent
-		
+
 		ListViewTemplate
 			{
 				id: _layoutsListView
 				property string title: qsTr("Keyboard Layout")
                 property string subtitle: config.prettyStatus
-				
+                property string icon : "applications-education-language"
+
 				currentIndex: model.currentIndex
-				
+
 				model: config.keyboardLayoutsModel
 
 				delegate: ListItemDelegate
@@ -77,8 +80,8 @@ ResponsiveBase
 						_layoutsListView.positionViewAtIndex(index, ListView.Center)
 						control.stackView.push(_keyboardVariantsComponent)
 					}
-				}				
-				
+				}
+
 				Button
 				{
                     Layout.fillWidth: true
@@ -86,7 +89,7 @@ ResponsiveBase
                     text: qsTr("Models")
                     onClicked: control.stackView.pop()
                 }
-                
+
                 Button
                 {
                     Layout.fillWidth: true
@@ -121,7 +124,7 @@ ResponsiveBase
 						_variantsListView.positionViewAtIndex(index, ListView.Center)
 					}
 				}
-				
+
 				Button
 				{
                     Layout.fillWidth: true
@@ -141,7 +144,7 @@ ResponsiveBase
         Layout.maximumWidth:  500
         Layout.fillWidth: true
         Layout.alignment: Qt.AlignCenter
-        
+
         background:Rectangle
         {
             z: parent.z - 1
@@ -151,6 +154,6 @@ ResponsiveBase
             opacity: 0.5
         }
     }
-    
+
 
 }
