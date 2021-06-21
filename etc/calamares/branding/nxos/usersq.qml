@@ -3,10 +3,13 @@ import io.calamares.ui 1.0
 import QtQuick 2.10
 import QtQuick.Controls 2.10
 import QtQuick.Layouts 1.3
-import org.kde.kirigami 2.7 as Kirigami
+
 import QtGraphicalEffects 1.0
 import QtQuick.Window 2.3
 import "."
+
+import org.kde.kirigami 2.7 as Kirigami
+
 
 ResponsiveBase
 {
@@ -26,24 +29,26 @@ ResponsiveBase
         padding: 0
         background:  Rectangle
         {
-            color: Kirigami.Theme.backgroundColor
+            color: Qt.lighter(control.Kirigami.Theme.backgroundColor)
             radius: 5
-            opacity: 0.3
+            opacity: 0.5
         }
-
+        
         Flickable
         {
             contentHeight: _formLayout.implicitHeight
-
-        ColumnLayout
+            
+            Column
         {
             id: _formLayout
+            width: parent.width
+            height: parent.height
+            
             spacing: Kirigami.Units.smallSpacing
-            anchors.fill: parent
 
             ItemSection
             {
-                Layout.fillWidth: true
+                width: parent.width
 
                 title: qsTr("What is your name?")
 
@@ -67,8 +72,8 @@ ResponsiveBase
 
             ItemSection
             {
-                Layout.fillWidth: true
-
+                width: parent.width
+                
                 title:  qsTr("What name do you want to use to log in?")
                 subtitle: qsTr("If more than one person will use this computer, you can create multiple accounts after installation.")
 
@@ -94,8 +99,8 @@ ResponsiveBase
 
             ItemSection
             {
-                Layout.fillWidth: true
-
+                width: parent.width
+                
                 title: qsTr("What is the name of this computer?")
                 subtitle: qsTr("This name will be used if you make the computer visible to others on a network.")
 
@@ -118,8 +123,8 @@ ResponsiveBase
 
             ItemSection
             {
-                Layout.fillWidth: true
-
+                width: parent.width
+                
                 title: qsTr("Choose a root password to keep your account safe.")
                 subtitle: qsTr("Enter the same password twice, so that it can be checked for typing errors. A good password will contain a mixture of letters, numbers and punctuation, should be at least eight characters long, and should be changed at regular intervals.")
 
@@ -179,7 +184,7 @@ ResponsiveBase
 
             ItemSection
             {
-                Layout.fillWidth: true
+                width: parent.width
                 visible: !config.reuseUserPasswordForRoot
 
                 title: qsTr("Choose a root password to keep your account safe.")
@@ -229,7 +234,7 @@ ResponsiveBase
 
             ItemSection
             {
-                Layout.fillWidth: true
+                width: parent.width
                 title: qsTr("More options.")
 
 

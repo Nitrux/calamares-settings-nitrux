@@ -18,8 +18,8 @@ ItemDelegate
     property bool isCurrentItem: ListView.isCurrentItem
     background: Rectangle
     {
-        color: isCurrentItem || hovered ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
-        opacity: isCurrentItem || hovered ? 0.7 : 0.1
+        color: isCurrentItem || hovered ? Kirigami.Theme.highlightColor : Qt.lighter(Kirigami.Theme.backgroundColor)
+        opacity: isCurrentItem || hovered ? 1 : 0.4
     }
 
     width: ListView.view.width

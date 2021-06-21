@@ -14,8 +14,8 @@ Item
     Rectangle
     {
         anchors.fill: parent
-        color:  Kirigami.Theme.backgroundColor
-        opacity: 0.3
+        color: Qt.lighter(control.Kirigami.Theme.backgroundColor)
+        opacity: 0.7
     }
 
     Column

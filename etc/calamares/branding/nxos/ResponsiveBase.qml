@@ -19,11 +19,75 @@ Page
 
     property alias backButton : _backButton
     property alias nextButton : _nextButton
-
+    
+    background: Rectangle
+    {
+        id: _background
+        radius: Maui.Style.radiusV
+        color: control.Kirigami.Theme.backgroundColor
+        
+        Image
+        {
+            id: _wallpaper
+            height: parent.height
+            width: parent.width
+            /*
+            sourceSize.height: 600
+            sourceSize.width: 800
+            */
+            fillMode: Image.PreserveAspectCrop
+            antialiasing: false
+            smooth: false
+            asynchronous: true
+            cache: true
+            
+            
+            source: "./nomad.png"
+        }
+        
+                  
+            FastBlur
+            {
+            id: fastBlur
+            anchors.fill: parent
+            source: _wallpaper
+            radius: 130
+            transparentBorder: false
+            cached: true
+            }
+            
+           
+        
+        OpacityMask
+        {
+            source: mask
+            maskSource: parent
+        }
+        
+        LinearGradient
+        {
+            id: mask
+            anchors.fill: parent
+            gradient: Gradient {
+                GradientStop { position: 0.6; color: "transparent"}
+                GradientStop { position: 0.9; color: _background.color}
+            }
+            
+            start: Qt.point(0, 0)
+            end: Qt.point(0, control.height-48)
+        }
+        
+    }
 
     Page
     {
         id: _card
+      /*  
+        Kirigami.Theme.inherit: false
+        Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+        
+       Kirigami.Theme.backgroundColor : "#fafafa"
+       Kirigami.Theme.textColor : "#333"*/
         anchors.centerIn: parent
         height: Math.min(800, parent.height * 0.8)
         width: Math.min(1200, parent.width * 0.9)
@@ -38,60 +102,69 @@ Page
             easing.type: Easing.OutQuad
         }
 
-
-
-        background: Item
+        background: Rectangle
         {
-            id: _background
-
-            Image
-            {
-                id: _wallpaper
-                height: parent.height
-                width: parent.width
-
-                sourceSize.height: 600
-                sourceSize.width: 800
-
-                fillMode: Image.PreserveAspectCrop
-                antialiasing: false
-                smooth: false
-                asynchronous: true
-                cache: true
-
-                source: "./calamares_wallpaper.jpg"
-            }
-            FastBlur
-            {
-                id: fastBlur
-                anchors.fill: parent
-                source: _wallpaper
-                radius: 130
-                transparentBorder: false
-                cached: true
-            }
-
-            layer.enabled: true
-            layer.effect: OpacityMask
-            {
-                maskSource: Item
-                {
-                    width: _background.width
-                    height: _background.height
-
-                    Rectangle
-                    {
-                        anchors.fill: parent
-                        radius: 20
-                    }
-                }
-            }
+            color: Kirigami.Theme.backgroundColor
+            radius: 20
         }
+        
+        
+        
+        
+       
+        
+        //background: Item
+        //{
+            //id: _background
+
+            //Image
+            //{
+                //id: _wallpaper
+                //height: parent.height
+                //width: parent.width
+
+                //sourceSize.height: 600
+                //sourceSize.width: 800
+
+                //fillMode: Image.PreserveAspectCrop
+                //antialiasing: false
+                //smooth: false
+                //asynchronous: true
+                //cache: true
+
+                //source: "./nomad.png"
+            //}
+            //FastBlur
+            //{
+                //id: fastBlur
+                //anchors.fill: parent
+                //source: _wallpaper
+                //radius: 130
+                //transparentBorder: false
+                //cached: true
+            //}
+
+            //layer.enabled: true
+            //layer.effect: OpacityMask
+            //{
+                //maskSource: Item
+                //{
+                    //width: _background.width
+                    //height: _background.height
+
+                    //Rectangle
+                    //{
+                        //anchors.fill: parent
+                        //radius: 20
+                    //}
+                //}
+            //}
+        //}
 
         RowLayout
         {
             anchors.fill: parent
-            anchors.margins: Kirigami.Units.largeSpacing * 4
+            anchors.margins: Kirigami.Units.largeSpacing * 6
             spacing: Kirigami.Units.largeSpacing * 2
 
             ColumnLayout
@@ -128,7 +201,6 @@ Page
                     wrapMode: Text.Wrap
                     elide: Text.ElideMiddle
                     text: control.title
-                    color: "white"
                     font.bold: true
                     font.weight: Font.Bold
                     font.pointSize: 24
@@ -143,9 +215,9 @@ Page
                     wrapMode: Text.Wrap
                     elide: Text.ElideMiddle
                     text: control.subtitle
-                    color: "white"
                     font.weight: Font.Light
                     font.pointSize: 12
+                    
                     FadeBehavior on text { }
                 }
 
@@ -157,7 +229,6 @@ Page
                     wrapMode: Text.Wrap
                     elide: Text.ElideMiddle
                     text: control.message
-                    color: "white"
                     font.weight: Font.Light
                     font.pointSize: 10
                     FadeBehavior on text { }

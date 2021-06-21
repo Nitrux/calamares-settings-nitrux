@@ -24,6 +24,7 @@ Item
             anchors.centerIn: parent
             
             spacing: Kirigami.Units.largeSpacing
+            
             ListView
             {
                 id: _listView
@@ -43,7 +44,7 @@ Item
                 {
                     z: control.z - 1
                     anchors.fill: parent
-                    color: Kirigami.Theme.backgroundColor
+                    color: Qt.lighter(Kirigami.Theme.backgroundColor)
                     radius: 5
                     opacity: 0.5
                 }
