@@ -1,7 +1,10 @@
 import QtQuick 2.10
 import QtQuick.Controls 2.10
 import QtQuick.Layouts 1.3
+
+import org.mauikit.controls 1.3 as Maui
 import org.kde.kirigami 2.7 as Kirigami
+
 import QtGraphicalEffects 1.0
 
 import "."
@@ -19,15 +22,15 @@ Page
 
     property alias stackView: _stackView
 
-    property alias backButton : _backButton
-    property alias nextButton : _nextButton
-
     default property alias content : _card.data
+
+        property alias backButton : _backButton
+
+        signal goBack()
 
         background: Rectangle
         {
             id: _background
-            radius: Maui.Style.radiusV
             color: control.Kirigami.Theme.backgroundColor
 
             Image
@@ -46,6 +49,7 @@ Page
                 cache: true
                 source: "./nomad.png"
             }
+
             FastBlur
             {
                 id: fastBlur
@@ -66,7 +70,8 @@ Page
             {
                 id: mask
                 anchors.fill: parent
-                gradient: Gradient {
+                gradient: Gradient
+                {
                     GradientStop { position: 0.6; color: "transparent"}
                     GradientStop { position: 0.9; color: _background.color}
                 }
@@ -87,12 +92,37 @@ Page
 
             Component.onCompleted: fadeIn.start()
 
-            NumberAnimation on opacity {
+            NumberAnimation on opacity
+            {
                 id: fadeIn
                 duration: 150
                 from: 0
                 to: 1.0
                 easing.type: Easing.OutQuad
+            }
+
+            header: ToolBar
+            {
+                visible: _stackView.depth > 1
+                background: null
+
+                ToolButton
+                {
+                    id:_backButton
+                    text: _stackView.get(Math.max(0, _stackView.currentItem.StackView.index - 1), StackView.DontLoad).title
+                    icon.name: "go-previous"
+                    flat: true
+                    onClicked:
+                    {
+                        if(_stackView.depth > 1)
+                        {
+                            _stackView.pop()
+                        }
+
+                        control.goBack()
+
+                    }
+                }
             }
 
             background: Rectangle
@@ -237,66 +267,65 @@ Page
 
             ViewStepsBar
             {
-                width: parent.width
+                width: Math.min(parent.width, 900)
+                anchors.horizontalCenter: parent.horizontalCenter
             }
 
-            Item
-            {
-                height: 100
-                width: parent.width
+            //Item
+            //{
+                //height: 100
+                //width: parent.width
 
-                Row
-                {
-                    spacing: Kirigami.Units.largeSpacing
-                    anchors.centerIn: parent
+                //Row
+                //{
+                    //spacing: Kirigami.Units.largeSpacing
+                    //anchors.centerIn: parent
 
-                    Button
-                    {
-                        //text: ViewManager.quitLabel;
-                        icon.name: ViewManager.quitIcon;
+                    //Button
+                    //{
+                        ////text: ViewManager.quitLabel;
+                        //icon.name: ViewManager.quitIcon;
 
-                        ToolTip.visible: hovered
-                        ToolTip.timeout: 5000
-                        ToolTip.delay: 1000
-                        ToolTip.text: ViewManager.quitTooltip;
+                        //ToolTip.visible: hovered
+                        //ToolTip.timeout: 5000
+                        //ToolTip.delay: 1000
+                        //ToolTip.text: ViewManager.quitTooltip;
 
-                        enabled: ViewManager.quitEnabled;
-                        visible: ViewManager.quitVisible;
-                        onClicked: { ViewManager.quit(); }
-                    }
+                        //enabled: ViewManager.quitEnabled;
+                        //visible: ViewManager.quitVisible;
+                        //onClicked: { ViewManager.quit(); }
+                    //}
 
-                    Button
-                    {
-                        id: _backButton
-                        text: ViewManager.backLabel;
-                        icon.name: ViewManager.backIcon;
+                    //Button
+                    //{
+                        //text: ViewManager.backLabel;
+                        //icon.name: ViewManager.backIcon;
 
-                        enabled: ViewManager.backEnabled;
-                        visible: true;
-                        onClicked: { ViewManager.back(); }
+                        //enabled: ViewManager.backEnabled;
+                        //visible: true;
+                        //onClicked: { ViewManager.back(); }
 
-                        height: implicitHeight
-                        Kirigami.Theme.backgroundColor: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.4)
-                        Kirigami.Theme.textColor: "#fff"
-                    }
+                        //height: implicitHeight
+                        //Kirigami.Theme.backgroundColor: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.4)
+                        //Kirigami.Theme.textColor: "#fff"
+                    //}
 
-                    Button
-                    {
-                        id: _nextButton
+                    //Button
+                    //{
 
-                        height: implicitHeight
+                        //height: implicitHeight
 
-                        text: ViewManager.nextLabel;
-                        icon.name: ViewManager.nextIcon;
+                        //text: ViewManager.nextLabel;
+                        //icon.name: ViewManager.nextIcon;
 
-                        //                     enabled: ViewManager.nextEnabled;
-                        enabled: true;
-                        visible: true;
-                        onClicked: { ViewManager.next(); }
-                        Kirigami.Theme.backgroundColor: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.4)
-                        Kirigami.Theme.textColor: "#fff"
-                    }
-                }
-            }
+                        ////                     enabled: ViewManager.nextEnabled;
+                        //enabled: true;
+                        //visible: true;
+                        //onClicked: { ViewManager.next(); }
+                        //Kirigami.Theme.backgroundColor: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.4)
+                        //Kirigami.Theme.textColor: "#fff"
+                    //}
+                //}
+            //}
         }
 }

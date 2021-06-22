@@ -22,11 +22,12 @@ ItemDelegate
         opacity: isCurrentItem || hovered ? 1 : 0.4
     }
 
-    width: ListView.view.width
-    height: 48
+    implicitWidth: ListView.view.width
+    implicitHeight: Math.max(48, _layout.implicitHeight + Kirigami.Units.largeSpacing *2)
 
     contentItem: RowLayout
     {
+        id: _layout
         anchors.fill: parent
         anchors.margins: Kirigami.Units.largeSpacing
 
@@ -49,6 +50,7 @@ ItemDelegate
             color: isCurrentItem ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
             opacity: isCurrentItem ? 1 : 0.7
             font.weight: Font.Light
+            wrapMode: Text.Wrap
         }
 
         Kirigami.Icon

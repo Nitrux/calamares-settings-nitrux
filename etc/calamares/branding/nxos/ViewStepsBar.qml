@@ -15,7 +15,7 @@
      RowLayout
      {
          anchors.fill: parent
-         anchors.margins: Kirigami.Units.largeSpacing
+         anchors.margins: Kirigami.Units.largeSpacing * 2
          spacing: 0
 
          Repeater
@@ -23,58 +23,48 @@
              id: _viewManagerRepeater
              model: ViewManager
 
-             ColumnLayout
+             RowLayout
              {
-                 id: _managerLayout
+                 visible: index !== _viewManagerRepeater.count-1
                  Layout.fillWidth: true
                  Layout.fillHeight: true
+                 spacing: 0
 
-                 RowLayout
+                 Rectangle
                  {
+                     Layout.alignment: Qt.AlignCenter
                      Layout.fillWidth: true
-                     Layout.fillHeight: true
-                     spacing: 0
+                     Layout.preferredHeight: 4
+                     anchors.verticalCenter: parent.verticalCenter
+                     color: index !== 0 ?  (ViewManager.currentStepIndex >= index ? Kirigami.Theme.highlightColor : Kirigami.Theme.textColor) : "transparent"
+                 }
 
-                     Rectangle
-                     {
-                         Layout.alignment: Qt.AlignCenter
-                         Layout.fillWidth: true
-                         Layout.preferredHeight: 4
-                         anchors.verticalCenter: parent.verticalCenter
-                         color: index !== 0 ?  Kirigami.Theme.textColor : "transparent"
-                     }
+                 Column
+                 {
+                     Layout.alignment: Qt.AlignCenter
+                     Layout.preferredWidth: 22
+                     Layout.preferredHeight: 22
+                     spacing: Kirigami.Units.largeSpacing
 
                      Rectangle
                      {
                          id: _bgCheck
-                         Layout.alignment: Qt.AlignCenter
-                         Layout.preferredWidth: 22
-                         Layout.preferredHeight: 22
+                         height: 22
+                         width: height
                          radius: height
                          border.color: ViewManager.currentStepIndex === index ? Kirigami.Theme.textColor : (ViewManager.currentStepIndex >= index ? Kirigami.Theme.highlightColor : Kirigami.Theme.textColor)
                          border.width: 4
                          color: ViewManager.currentStepIndex >= index ? Kirigami.Theme.highlightColor : "transparent"
                      }
 
-                     Rectangle
+                     Label
                      {
-                         Layout.alignment: Qt.AlignCenter
-                         Layout.fillWidth: true
-                         Layout.preferredHeight: 4
-                         anchors.verticalCenter: parent.verticalCenter
-                         color: index !== _viewManagerRepeater.count-1 ? Kirigami.Theme.textColor : "transparent"
+                         text: display
+                         horizontalAlignment: Qt.AlignHCenter
+                         anchors.horizontalCenter: parent.horizontalCenter
+                         color: Kirigami.Theme.textColor
+                         font.bold: true
                      }
-
-                 }
-
-                 Label
-                 {
-                     text: display
-                     horizontalAlignment: Qt.AlignHCenter
-                     Layout.fillWidth: true
-                     Layout.alignment: Qt.AlignCenter
-                     color: Kirigami.Theme.textColor
-                     font.bold: true
                  }
              }
          }

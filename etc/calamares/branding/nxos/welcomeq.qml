@@ -1,13 +1,13 @@
 import io.calamares.ui 1.0
 import io.calamares.core 1.0
 
-import QtQuick 2.10
-import QtQuick.Controls 2.10
+import QtQuick 2.14
+import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.3
-import org.kde.kirigami 2.7 as Kirigami
-import org.mauikit.controls 1.0 as Maui
 
-import QtGraphicalEffects 1.0
+import org.kde.kirigami 2.7 as Kirigami
+import org.mauikit.controls 1.3 as Maui
+
 import "."
 
 ResponsiveBase
@@ -29,11 +29,9 @@ ResponsiveBase
         property string icon : Branding.imagePath(Branding.ProductWelcome)
         model: config.unsatisfiedRequirements
 
-        delegate: Maui.ItemDelegate
+        delegate: Control
         {
             id: _delegate
-
-            isCurrentItem : ListView.isCurrentItem
 
             background: Rectangle
             {
@@ -41,16 +39,19 @@ ResponsiveBase
                 opacity: 0.2
             }
 
-            width: parent.width
-            height: 48
+            width: ListView.view.width
+            height: 72
 
             Maui.ListItemTemplate
             {
+                id: _template
                 anchors.fill: parent
                 iconSource: model.satisfied ? "checkmark" : (model.mandatory ? "error" : "dialog-warning-symbolic")
                 iconSizeHint: Maui.Style.iconSizes.big
+//                 headerSizeHint: iconSizeHint+ Kirigami.Units.largeSpacing
                 label1.text: model.name
                 label2.text: !model.satisfied ?  model.negatedText : model.details
+                label2.wrapMode: Text.Wrap
             }
         }
 
@@ -106,11 +107,11 @@ ResponsiveBase
                 onClicked: Qt.openUrlExternally(Branding.string(Branding.ReleaseNotesUrl))
             }
         }
+
         Button
         {
             Layout.fillWidth: true
             text: qsTr("Language")
-            icon.name: "go-previous"
             onClicked: control.stackView.push(_langComponent)
             enabled: true
         }
@@ -137,14 +138,6 @@ ResponsiveBase
                 label2.text: model.englishLabel
 
                 onClicked: config.localeIndex = index
-            }
-
-            Button
-            {
-                Layout.fillWidth: true
-                text: qsTr("Welcome")
-                icon.name: "go-previous"
-                onClicked: control.stackView.pop()
             }
         }
     }

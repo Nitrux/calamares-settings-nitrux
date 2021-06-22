@@ -4,7 +4,6 @@ import QtQuick 2.10
 import QtQuick.Controls 2.10
 import QtQuick.Layouts 1.3
 import org.kde.kirigami 2.7 as Kirigami
-import QtGraphicalEffects 1.0
 
 import "."
 
@@ -83,14 +82,6 @@ ResponsiveBase
                     config.setCurrentLocation(control.currentRegion, control.currentZone)
 
                 }
-            }
-
-            Button
-            {
-                Layout.fillWidth: true
-                icon.name: "go-previous"
-                text: qsTr("Regions")
-                onClicked: control.stackView.pop()
             }
         }
     }
