@@ -6,7 +6,6 @@ import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.3
 
 import org.kde.kirigami 2.7 as Kirigami
-import org.mauikit.controls 1.3 as Maui
 
 import "."
 
@@ -42,16 +41,48 @@ ResponsiveBase
             width: ListView.view.width
             height: 72
 
-            Maui.ListItemTemplate
+            RowLayout
             {
                 id: _template
                 anchors.fill: parent
-                iconSource: model.satisfied ? "checkmark" : (model.mandatory ? "error" : "dialog-warning-symbolic")
-                iconSizeHint: Maui.Style.iconSizes.big
-//                 headerSizeHint: iconSizeHint+ Kirigami.Units.largeSpacing
-                label1.text: model.name
-                label2.text: !model.satisfied ?  model.negatedText : model.details
-                label2.wrapMode: Text.Wrap
+
+                Item
+                {
+                    Layout.alignment: Qt.AlignCenter
+                    implicitWidth: 48
+                    implicitHeight: 48
+                    Kirigami.Icon
+                    {
+                        source: model.satisfied ? "checkmark" : (model.mandatory ? "error" : "dialog-warning-symbolic")
+                        height: 22
+                        width: 22
+                        anchors.centerIn: parent
+                    }
+                }
+
+                ColumnLayout
+                {
+                    Layout.fillWidth: true
+                    Layout.alignment: Qt.AlignCenter
+                    Layout.margins: Kirigami.Units.smallSpacing
+                    spacing : 0
+
+                    Label
+                    {
+                        Layout.fillWidth: true
+                        text: model.name
+                        font.bold: true
+                    }
+
+                    Label
+                    {
+                        Layout.fillWidth: true
+                        text: !model.satisfied ?  model.negatedText : model.details
+                        wrapMode: Text.Wrap
+                    }
+                }
+
+
             }
         }
 

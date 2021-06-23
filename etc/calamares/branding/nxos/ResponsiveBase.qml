@@ -80,14 +80,18 @@ Page
             }
         }
 
+        ColumnLayout
+        {
+            anchors.centerIn: parent
+            height: Math.min(800, parent.height * 0.95)
+            width: Math.min(1200, parent.width * 0.95)
         Page
         {
             id: _card
             clip: true
 
-            anchors.centerIn: parent
-            height: Math.min(800, parent.height * 0.95)
-            width: Math.min(1200, parent.width * 0.95)
+           Layout.fillWidth: true
+           Layout.fillHeight: true
 
             Component.onCompleted: fadeIn.start()
 
@@ -260,15 +264,19 @@ Page
             }
         }
 
-        footer: Column
+        ViewStepsBar
         {
-            width: parent.width
+            Layout.fillWidth: true
+            Layout.maximumWidth: 900
+            Layout.minimumWidth: 400
+           Layout.alignment: Qt.AlignCenter
+        }
 
-            ViewStepsBar
-            {
-                width: Math.min(parent.width, 900)
-                anchors.horizontalCenter: parent.horizontalCenter
-            }
+        }
+
+        //footer: Column
+        //{
+            //width: parent.width
 
             //Item
             //{
@@ -326,5 +334,5 @@ Page
             //}
             //}
             //}
-        }
+        //}
 }

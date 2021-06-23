@@ -9,12 +9,12 @@
 
  Item
  {
-     implicitHeight: 64
+     implicitHeight: 80
 
      RowLayout
      {
          anchors.fill: parent
-         anchors.margins: Kirigami.Units.largeSpacing * 2
+         anchors.margins: Kirigami.Units.largeSpacing
          spacing: 0
 
          Repeater
@@ -24,7 +24,7 @@
 
              RowLayout
              {
-                 visible: index !== _viewManagerRepeater.count-1
+                 opacity: index !== _viewManagerRepeater.count-1 ? 1 : 0
                  Layout.fillWidth: true
                  Layout.fillHeight: true
                  spacing: 0
