@@ -33,17 +33,17 @@ ResponsiveBase
             radius: 5
             opacity: 0.5
         }
-        
+
         Flickable
         {
             contentHeight: _formLayout.implicitHeight
-            
+
             Column
         {
             id: _formLayout
             width: parent.width
             height: parent.height
-            
+
             spacing: Kirigami.Units.smallSpacing
 
             ItemSection
@@ -73,7 +73,7 @@ ResponsiveBase
             ItemSection
             {
                 width: parent.width
-                
+
                 title:  qsTr("What name do you want to use to log in?")
                 subtitle: qsTr("If more than one person will use this computer, you can create multiple accounts after installation.")
 
@@ -100,7 +100,7 @@ ResponsiveBase
             ItemSection
             {
                 width: parent.width
-                
+
                 title: qsTr("What is the name of this computer?")
                 subtitle: qsTr("This name will be used if you make the computer visible to others on a network.")
 
@@ -124,8 +124,8 @@ ResponsiveBase
             ItemSection
             {
                 width: parent.width
-                
-                title: qsTr("Choose a root password to keep your account safe.")
+
+                title: qsTr("Choose a password to keep your account safe.")
                 subtitle: qsTr("Enter the same password twice, so that it can be checked for typing errors. A good password will contain a mixture of letters, numbers and punctuation, should be at least eight characters long, and should be changed at regular intervals.")
 
                 TextField
@@ -145,7 +145,7 @@ ResponsiveBase
                         color:  Kirigami.Theme.backgroundColor
                         radius: 5
                         opacity: 0.5
-                        border.color:  _passwordField.text.length ? Kirigami.Theme.backgroundColor : ( config.userPasswordStatusChanged ? Kirigami.Theme.backgroundColor : Kirigami.Theme.negativeTextColor)
+                        border.color: ( config.userPasswordStatusChanged ? Kirigami.Theme.backgroundColor : Kirigami.Theme.negativeTextColor)
                     }
 
                 }
@@ -167,7 +167,7 @@ ResponsiveBase
                         color:  Kirigami.Theme.backgroundColor
                         radius: 5
                         opacity: 0.5
-                        border.color: _verificationPasswordField.text.length ? Kirigami.Theme.backgroundColor : ( config.userPasswordSecondaryChanged ? Kirigami.Theme.backgroundColor : Kirigami.Theme.negativeTextColor)
+                        border.color: config.userPasswordSecondaryChanged ? Kirigami.Theme.backgroundColor : Kirigami.Theme.negativeTextColor
                     }
                 }
 

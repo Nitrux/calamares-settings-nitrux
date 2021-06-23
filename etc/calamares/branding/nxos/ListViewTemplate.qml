@@ -12,34 +12,31 @@ Item
     property alias currentIndex : _listView.currentIndex
     property alias currentItem : _listView.currentItem
     property alias listView : _listView
-    
+
     default property alias content : _content.data
-        
+
         implicitHeight: _content.implicitHeight
-        
+
         ColumnLayout
         {
             id: _content
-            width: parent.width
-            anchors.centerIn: parent
-            
+            anchors.fill: parent
+
             spacing: Kirigami.Units.largeSpacing
-            
+
             ListView
             {
                 id: _listView
                 Layout.minimumHeight: 0
                 Layout.preferredHeight: contentHeight
-                Layout.maximumHeight:  500 
+                Layout.maximumHeight:  500
                 Layout.fillWidth: true
+                Layout.fillHeight: true
                 Layout.alignment: Qt.AlignCenter
                 spacing: Kirigami.Units.smallSpacing
                 clip: true
                 boundsBehavior: Flickable.StopAtBounds
-                
-                //     footerPositioning: ListView.OverlayFooter
-                
-                
+
                 Rectangle
                 {
                     z: control.z - 1
@@ -48,9 +45,9 @@ Item
                     radius: 5
                     opacity: 0.5
                 }
-                
+
             }
         }
-        
+
 }
 
