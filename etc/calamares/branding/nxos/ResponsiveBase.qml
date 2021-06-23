@@ -85,259 +85,259 @@ Page
             anchors.centerIn: parent
             height: Math.min(800, parent.height * 0.95)
             width: Math.min(1200, parent.width * 0.95)
-        Page
-        {
-            id: _card
-            clip: true
-
-           Layout.fillWidth: true
-           Layout.fillHeight: true
-
-            Component.onCompleted: fadeIn.start()
-
-            NumberAnimation on opacity
+            Page
             {
-                id: fadeIn
-                duration: 150
-                from: 0
-                to: 1.0
-                easing.type: Easing.OutQuad
-            }
+                id: _card
+                clip: true
 
-            header: ToolBar
-            {
-                visible: _stackView.depth > 1
-                background: null
+                Layout.fillWidth: true
+                Layout.fillHeight: true
 
-                ToolButton
+                Component.onCompleted: fadeIn.start()
+
+                NumberAnimation on opacity
                 {
-                    id:_backButton
-                    text: _stackView.get(Math.max(0, _stackView.currentItem.StackView.index - 1), StackView.DontLoad).title
-                    icon.name: "go-previous"
-                    flat: true
-                    onClicked:
+                    id: fadeIn
+                    duration: 150
+                    from: 0
+                    to: 1.0
+                    easing.type: Easing.OutQuad
+                }
+
+                header: ToolBar
+                {
+                    visible: _stackView.depth > 1
+                    background: null
+
+                    ToolButton
                     {
-                        if(_stackView.depth > 1)
+                        id:_backButton
+                        text: _stackView.get(Math.max(0, _stackView.currentItem.StackView.index - 1), StackView.DontLoad).title
+                        icon.name: "go-previous"
+                        flat: true
+                        onClicked:
                         {
-                            _stackView.pop()
+                            if(_stackView.depth > 1)
+                            {
+                                _stackView.pop()
+                            }
+
+                            control.goBack()
+
                         }
-
-                        control.goBack()
-
                     }
                 }
-            }
 
-            background: Rectangle
-            {
-                color: Kirigami.Theme.backgroundColor
-                radius: 20
-            }
-
-            RowLayout
-            {
-                anchors.fill: parent
-                anchors.margins: Kirigami.Units.largeSpacing * 6
-                spacing: Kirigami.Units.largeSpacing * 2
-
-                ColumnLayout
+                background: Rectangle
                 {
-                    id: _content
-                    Layout.fillHeight: true
-                    Layout.fillWidth: true
-                    Layout.margins: Kirigami.Units.largeSpacing * 2
-                    Layout.maximumWidth: 400
-                    Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
+                    color: Kirigami.Theme.backgroundColor
+                    radius: 20
+                }
 
-                    spacing:  Kirigami.Units.largeSpacing * 2
+                RowLayout
+                {
+                    anchors.fill: parent
+                    anchors.margins: Kirigami.Units.largeSpacing * 6
+                    spacing: Kirigami.Units.largeSpacing * 2
 
-                    Item
+                    ColumnLayout
                     {
+                        id: _content
+                        Layout.fillHeight: true
                         Layout.fillWidth: true
-                        Layout.preferredHeight: 100
+                        Layout.margins: Kirigami.Units.largeSpacing * 2
+                        Layout.maximumWidth: 400
+                        Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
 
-                        Kirigami.Icon
+                        spacing:  Kirigami.Units.largeSpacing * 2
+
+                        Item
                         {
-                            id: _icon
-                            height: 80
-                            width: height
-                            anchors.centerIn: parent
-                            FadeBehavior on source { fadeProperty: "scale" }
+                            Layout.fillWidth: true
+                            Layout.preferredHeight: 100
+
+                            Kirigami.Icon
+                            {
+                                id: _icon
+                                height: 80
+                                width: height
+                                anchors.centerIn: parent
+                                FadeBehavior on source { fadeProperty: "scale" }
+                            }
+                        }
+
+                        Label
+                        {
+                            Layout.fillWidth: true
+                            Layout.preferredHeight: Math.min(implicitHeight, 200)
+                            horizontalAlignment: Qt.AlignHCenter
+                            wrapMode: Text.Wrap
+                            elide: Text.ElideMiddle
+                            text: control.title
+                            font.bold: true
+                            font.weight: Font.Bold
+                            font.pointSize: 24
+                            FadeBehavior on text { }
+                        }
+
+                        Label
+                        {
+                            Layout.fillWidth: true
+                            Layout.preferredHeight: Math.min(implicitHeight, 200)
+                            horizontalAlignment: Qt.AlignHCenter
+                            wrapMode: Text.Wrap
+                            elide: Text.ElideMiddle
+                            text: control.subtitle
+                            font.weight: Font.Light
+                            font.pointSize: 12
+                            FadeBehavior on text { }
+                        }
+
+                        Label
+                        {
+                            Layout.fillWidth: true
+                            Layout.preferredHeight: Math.min(implicitHeight, 200)
+                            horizontalAlignment: Qt.AlignHCenter
+                            wrapMode: Text.Wrap
+                            elide: Text.ElideMiddle
+                            text: control.message
+                            font.weight: Font.Light
+                            font.pointSize: 10
+                            FadeBehavior on text { }
                         }
                     }
 
-                    Label
+                    StackView
                     {
+                        id: _stackView
+                        Layout.fillHeight: true
                         Layout.fillWidth: true
-                        Layout.preferredHeight: Math.min(implicitHeight, 200)
-                        horizontalAlignment: Qt.AlignHCenter
-                        wrapMode: Text.Wrap
-                        elide: Text.ElideMiddle
-                        text: control.title
-                        font.bold: true
-                        font.weight: Font.Bold
-                        font.pointSize: 24
-                        FadeBehavior on text { }
-                    }
 
-                    Label
-                    {
-                        Layout.fillWidth: true
-                        Layout.preferredHeight: Math.min(implicitHeight, 200)
-                        horizontalAlignment: Qt.AlignHCenter
-                        wrapMode: Text.Wrap
-                        elide: Text.ElideMiddle
-                        text: control.subtitle
-                        font.weight: Font.Light
-                        font.pointSize: 12
-                        FadeBehavior on text { }
-                    }
+                        Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
 
-                    Label
-                    {
-                        Layout.fillWidth: true
-                        Layout.preferredHeight: Math.min(implicitHeight, 200)
-                        horizontalAlignment: Qt.AlignHCenter
-                        wrapMode: Text.Wrap
-                        elide: Text.ElideMiddle
-                        text: control.message
-                        font.weight: Font.Light
-                        font.pointSize: 10
-                        FadeBehavior on text { }
+                        Layout.margins: Kirigami.Units.largeSpacing * 2
+
+                        Layout.minimumWidth: 300
+                        Layout.maximumWidth: 500
+
+                        Layout.maximumHeight:  currentItem.implicitHeight
+                        Layout.minimumHeight: 200
+
+
+                        clip: true
+
+                        pushEnter: Transition
+                        {
+                            NumberAnimation {
+                                property: "opacity"
+                                duration: 150
+                                to: 1
+                                easing.type: Easing.OutQuad
+                            }
+                        }
+
+                        popEnter: Transition
+                        {
+                            NumberAnimation {
+                                property: "opacity"
+                                duration: 150
+                                to: 1
+                                easing.type: Easing.OutQuad
+                            }
+                        }
+
+                        popExit: Transition
+                        {
+                            NumberAnimation {
+                                property: "opacity"
+                                duration: 150
+                                to: 0
+                                easing.type: Easing.InQuad
+                            }
+                        }
+
+                        pushExit: Transition
+                        {
+                            NumberAnimation {
+                                property: "opacity"
+                                duration: 150
+                                to: 0
+                                easing.type: Easing.InQuad
+                            }
+                        }
                     }
                 }
-
-                StackView
-                {
-                    id: _stackView
-                    Layout.fillHeight: true
-                    Layout.fillWidth: true
-
-                    Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
-
-                    Layout.margins: Kirigami.Units.largeSpacing * 2
-
-                    Layout.minimumWidth: 300
-                    Layout.maximumWidth: 500
-
-                    Layout.maximumHeight:  currentItem.implicitHeight
-                    Layout.minimumHeight: 200
-
-
-                    clip: true
-
-                    pushEnter: Transition
-                    {
-                        NumberAnimation {
-                            property: "opacity"
-                            duration: 150
-                            to: 1
-                            easing.type: Easing.OutQuad
-                        }
-                    }
-
-                    popEnter: Transition
-                    {
-                        NumberAnimation {
-                            property: "opacity"
-                            duration: 150
-                            to: 1
-                            easing.type: Easing.OutQuad
-                        }
-                    }
-
-                    popExit: Transition
-                    {
-                        NumberAnimation {
-                            property: "opacity"
-                            duration: 150
-                            to: 0
-                            easing.type: Easing.InQuad
-                        }
-                    }
-
-                    pushExit: Transition
-                    {
-                        NumberAnimation {
-                            property: "opacity"
-                            duration: 150
-                            to: 0
-                            easing.type: Easing.InQuad
-                        }
-                    }
-                }
             }
-        }
 
-        ViewStepsBar
-        {
-            Layout.fillWidth: true
-            Layout.maximumWidth: 900
-            Layout.minimumWidth: 400
-           Layout.alignment: Qt.AlignCenter
-        }
+            ViewStepsBar
+            {
+                Layout.fillWidth: true
+                Layout.maximumWidth: 900
+                Layout.minimumWidth: 400
+                Layout.alignment: Qt.AlignCenter
+            }
 
         }
 
-        footer: Column
-        {
-            width: parent.width
+        //footer: Column
+        //{
+            //width: parent.width
 
-            Item
-            {
-            height: 100
-            width: parent.width
+            //Item
+            //{
+                //height: 100
+                //width: parent.width
 
-            Row
-            {
-            spacing: Kirigami.Units.largeSpacing
-            anchors.centerIn: parent
+                //Row
+                //{
+                    //spacing: Kirigami.Units.largeSpacing
+                    //anchors.centerIn: parent
 
-            Button
-            {
-            //text: ViewManager.quitLabel;
-            icon.name: ViewManager.quitIcon;
+                    //Button
+                    //{
+                        ////text: ViewManager.quitLabel;
+                        //icon.name: ViewManager.quitIcon;
 
-            ToolTip.visible: hovered
-            ToolTip.timeout: 5000
-            ToolTip.delay: 1000
-            ToolTip.text: ViewManager.quitTooltip;
+                        //ToolTip.visible: hovered
+                        //ToolTip.timeout: 5000
+                        //ToolTip.delay: 1000
+                        //ToolTip.text: ViewManager.quitTooltip;
 
-            enabled: ViewManager.quitEnabled;
-            visible: ViewManager.quitVisible;
-            onClicked: { ViewManager.quit(); }
-            }
+                        //enabled: ViewManager.quitEnabled;
+                        //visible: ViewManager.quitVisible;
+                        //onClicked: { ViewManager.quit(); }
+                    //}
 
-            Button
-            {
-            text: ViewManager.backLabel;
-            icon.name: ViewManager.backIcon;
+                    //Button
+                    //{
+                        //text: ViewManager.backLabel;
+                        //icon.name: ViewManager.backIcon;
 
-            enabled: ViewManager.backEnabled;
-            visible: true;
-            onClicked: { ViewManager.back(); }
+                        //enabled: ViewManager.backEnabled;
+                        //visible: true;
+                        //onClicked: { ViewManager.back(); }
 
-            height: implicitHeight
-            Kirigami.Theme.backgroundColor: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.4)
-            Kirigami.Theme.textColor: "#fff"
-            }
+                        //height: implicitHeight
+                        //Kirigami.Theme.backgroundColor: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.4)
+                        //Kirigami.Theme.textColor: "#fff"
+                    //}
 
-            Button
-            {
+                    //Button
+                    //{
 
-            height: implicitHeight
+                        //height: implicitHeight
 
-            text: ViewManager.nextLabel;
-            icon.name: ViewManager.nextIcon;
+                        //text: ViewManager.nextLabel;
+                        //icon.name: ViewManager.nextIcon;
 
-            //                     enabled: ViewManager.nextEnabled;
-            enabled: true;
-            visible: true;
-            onClicked: { ViewManager.next(); }
-            Kirigami.Theme.backgroundColor: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.4)
-            Kirigami.Theme.textColor: "#fff"
-            }
-            }
-            }
-        }
+                        ////                     enabled: ViewManager.nextEnabled;
+                        //enabled: true;
+                        //visible: true;
+                        //onClicked: { ViewManager.next(); }
+                        //Kirigami.Theme.backgroundColor: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.4)
+                        //Kirigami.Theme.textColor: "#fff"
+                    //}
+                //}
+            //}
+        //}
 }
