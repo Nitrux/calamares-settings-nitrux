@@ -9,8 +9,7 @@
 
  Item
  {
-
-     implicitHeight: 130
+     implicitHeight: 64
 
      RowLayout
      {

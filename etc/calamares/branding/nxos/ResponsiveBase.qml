@@ -38,8 +38,8 @@ Page
                 height: parent.height
                 width: parent.width
 
-                        sourceSize.height: 600
-                         sourceSize.width: 800
+                sourceSize.height: 600
+                sourceSize.width: 800
 
                 fillMode: Image.PreserveAspectCrop
                 antialiasing: false
@@ -86,8 +86,8 @@ Page
             clip: true
 
             anchors.centerIn: parent
-            height: Math.min(800, parent.height * 0.8)
-            width: Math.min(1200, parent.width * 0.9)
+            height: Math.min(800, parent.height * 0.95)
+            width: Math.min(1200, parent.width * 0.95)
 
             Component.onCompleted: fadeIn.start()
 
@@ -272,59 +272,59 @@ Page
 
             //Item
             //{
-                //height: 100
-                //width: parent.width
+            //height: 100
+            //width: parent.width
 
-                //Row
-                //{
-                    //spacing: Kirigami.Units.largeSpacing
-                    //anchors.centerIn: parent
+            //Row
+            //{
+            //spacing: Kirigami.Units.largeSpacing
+            //anchors.centerIn: parent
 
-                    //Button
-                    //{
-                        ////text: ViewManager.quitLabel;
-                        //icon.name: ViewManager.quitIcon;
+            //Button
+            //{
+            ////text: ViewManager.quitLabel;
+            //icon.name: ViewManager.quitIcon;
 
-                        //ToolTip.visible: hovered
-                        //ToolTip.timeout: 5000
-                        //ToolTip.delay: 1000
-                        //ToolTip.text: ViewManager.quitTooltip;
+            //ToolTip.visible: hovered
+            //ToolTip.timeout: 5000
+            //ToolTip.delay: 1000
+            //ToolTip.text: ViewManager.quitTooltip;
 
-                        //enabled: ViewManager.quitEnabled;
-                        //visible: ViewManager.quitVisible;
-                        //onClicked: { ViewManager.quit(); }
-                    //}
+            //enabled: ViewManager.quitEnabled;
+            //visible: ViewManager.quitVisible;
+            //onClicked: { ViewManager.quit(); }
+            //}
 
-                    //Button
-                    //{
-                        //text: ViewManager.backLabel;
-                        //icon.name: ViewManager.backIcon;
+            //Button
+            //{
+            //text: ViewManager.backLabel;
+            //icon.name: ViewManager.backIcon;
 
-                        //enabled: ViewManager.backEnabled;
-                        //visible: true;
-                        //onClicked: { ViewManager.back(); }
+            //enabled: ViewManager.backEnabled;
+            //visible: true;
+            //onClicked: { ViewManager.back(); }
 
-                        //height: implicitHeight
-                        //Kirigami.Theme.backgroundColor: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.4)
-                        //Kirigami.Theme.textColor: "#fff"
-                    //}
+            //height: implicitHeight
+            //Kirigami.Theme.backgroundColor: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.4)
+            //Kirigami.Theme.textColor: "#fff"
+            //}
 
-                    //Button
-                    //{
+            //Button
+            //{
 
-                        //height: implicitHeight
+            //height: implicitHeight
 
-                        //text: ViewManager.nextLabel;
-                        //icon.name: ViewManager.nextIcon;
+            //text: ViewManager.nextLabel;
+            //icon.name: ViewManager.nextIcon;
 
-                        ////                     enabled: ViewManager.nextEnabled;
-                        //enabled: true;
-                        //visible: true;
-                        //onClicked: { ViewManager.next(); }
-                        //Kirigami.Theme.backgroundColor: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.4)
-                        //Kirigami.Theme.textColor: "#fff"
-                    //}
-                //}
+            ////                     enabled: ViewManager.nextEnabled;
+            //enabled: true;
+            //visible: true;
+            //onClicked: { ViewManager.next(); }
+            //Kirigami.Theme.backgroundColor: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.4)
+            //Kirigami.Theme.textColor: "#fff"
+            //}
+            //}
             //}
         }
 }
