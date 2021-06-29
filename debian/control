@@ -10,6 +10,6 @@ Vcs-Git: https://github.com/Nitrux/calamares-settings-nitrux.git
 Package: calamares-qml-settings-nitrux
 Architecture: any
 Replaces: calamares-settings-nxos
-Depends: ${shlibs:Depends}, ${misc:Depends}, calamares-qml
-Description: Settings for Calamares QMl.
- Nitrux branding package and settings for the Calamares QML installer.
+Depends: ${shlibs:Depends}, ${misc:Depends}, calamares
+Description: Settings for Calamares.
+ Nitrux branding package and settings for the Calamares installer.
