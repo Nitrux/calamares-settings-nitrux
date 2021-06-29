@@ -46,7 +46,7 @@ Page
                 smooth: false
                 asynchronous: true
                 cache: true
-                source: "./nomad.png"
+                source: "./calamares_bg_image.png"
             }
 
             FastBlur

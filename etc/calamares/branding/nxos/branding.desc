@@ -15,10 +15,10 @@ welcomeExpandingLogo:   true
 strings:
     productName:         Nitrux OS
     shortProductName:    Nitrux
-    version:             1.3.x
-    shortVersion:        1.3.x
-    versionedName:       Nitrux OS 1.3.x build.0x0
-    shortVersionedName:  Nitrux 1.3.x build.0x0
+    version:             1.5.x
+    shortVersion:        1.5.x
+    versionedName:       Nitrux OS 1.5.x build.0x0
+    shortVersionedName:  Nitrux 1.5.x build.0x0
     bootloaderEntryName: Nitrux
     productUrl:          https://nxos.org/
     supportUrl:          https://nxos.org/
@@ -29,7 +29,6 @@ images:
     productLogo:         "calamares_product_logo.svg"
     productIcon:         "calamares_product_icon.svg"
     productWelcome:      "calamares_welcome_logo.svg"
- #  productWallpaper:    "calamares_wallpaper.jpg"
 
 slideshow:               "show.qml"
 
@@ -47,6 +46,4 @@ style:
    sidebarTextSelect:    "#FFFFFF"
    sidebarTextHighlight: "#26C6DA"
 
-windowExpanding:	 fullscreen
-sidebar:               none
-#navigation: 	none
+sidebar:                none
