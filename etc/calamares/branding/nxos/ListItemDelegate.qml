@@ -55,7 +55,7 @@ ItemDelegate
 
         Kirigami.Icon
         {
-            source: "checkmark"
+            source: "emblem-default"
             Layout.preferredWidth: 22
             Layout.preferredHeight: 22
             color: Kirigami.Theme.highlightedTextColor

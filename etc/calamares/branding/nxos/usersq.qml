@@ -20,7 +20,7 @@ ResponsiveBase
     title: qsTr("Users")
     subtitle: qsTr("Pick your user name and credentials to login and perform admin tasks")
     message: config.status.message
-    icon.source: "cs-user-accounts"
+    icon.source: "cala-qml-user"
 
     stackView.initialItem: ScrollView
     {

@@ -53,7 +53,7 @@ ResponsiveBase
                     implicitHeight: 48
                     Kirigami.Icon
                     {
-                        source: model.satisfied ? "checkmark" : (model.mandatory ? "error" : "dialog-warning-symbolic")
+                        source: model.satisfied ? "checkmark" : (model.mandatory ? "error" : "emblem-info")
                         height: 22
                         width: 22
                         anchors.centerIn: parent
@@ -131,7 +131,7 @@ ResponsiveBase
             {
                 Layout.fillWidth: true
                 text: qsTr("Release notes")
-                icon.name: "answer"
+                icon.name: "document-edit"
                 Kirigami.Theme.backgroundColor: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.4)
                 Kirigami.Theme.textColor: "#fff"
                 visible: Branding.string(Branding.ReleaseNotesUrl).length

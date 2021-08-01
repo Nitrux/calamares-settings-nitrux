@@ -18,7 +18,7 @@ ResponsiveBase
         id: _keyboardModelListView
         property string title: qsTr("Keyboard Model")
         property string subtitle: qsTr("Pick your preferred keyboard model or use the default one based on the detected hardware")
-        property string icon : "cs-keyboard"
+        property string icon : "cala-qml-keyboard"
 
         currentIndex: model.currentIndex
 
@@ -53,7 +53,7 @@ ResponsiveBase
             id: _layoutsListView
             property string title: qsTr("Keyboard Layout")
             property string subtitle: config.prettyStatus
-            property string icon : "applications-education-language"
+            property string icon : "cala-qml-keyboard-layout"
 
             currentIndex: model.currentIndex
 

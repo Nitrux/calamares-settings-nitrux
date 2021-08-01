@@ -16,7 +16,7 @@ ResponsiveBase
     subtitle: qsTr("Installation process has finished")
     message: qsTr("<p>A full log of the install is available as installation.log in the home directory of the Live user.<br/>
     This log is copied to /var/log/installation.log of the target system.</p>")
-    icon.source: "drink-beer"
+    icon.source: "cala-qml-finished"
 
 
     stackView.initialItem:  Item
@@ -50,7 +50,7 @@ ResponsiveBase
 
                 Button {
                     text: qsTr("Restart System")
-                    icon.name: "system-reboot"
+                    icon.name: "document-revert"
                     onClicked: { config.doRestart(true); }
                 }
             }

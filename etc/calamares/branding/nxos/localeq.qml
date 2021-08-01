@@ -26,7 +26,7 @@ ResponsiveBase
         property string title: qsTr("Region")
         property string subtitle: qsTr("Pick your preferred region or use the default one based on your current location")
         property string message:  qsTr("Select your preferred zone within your location to continue with the installation")
-        property string icon : "cs-region"
+        property string icon : "cala-qml-region"
 
         model: config.regionModel
         currentIndex : -1
@@ -63,7 +63,7 @@ ResponsiveBase
             property string title: qsTr("Timezone")
             property string subtitle: config.prettyStatus
             property string message: ""
-            property string icon : "yast-timezone"
+            property string icon : "internet-services"
 
             model: config.regionalZonesModel
             currentIndex : -1
