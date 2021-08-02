@@ -18,7 +18,7 @@ ResponsiveBase
         id: _keyboardModelListView
         property string title: qsTr("Keyboard Model")
         property string subtitle: qsTr("Pick your preferred keyboard model or use the default one based on the detected hardware")
-        property string icon : "cala-qml-keyboard"
+        property string icon : "cala-qml-keyboard-model"
 
         currentIndex: model.currentIndex
 
