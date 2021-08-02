@@ -98,8 +98,10 @@ ResponsiveBase
         {
             id: _variantsListView
 
-            property string title: qsTr("Keyboard Layout")
+            property string title: qsTr("Keyboard Layout Variant")
             property string subtitle: config.prettyStatus
+            property string icon : "cala-qml-keyboard-layout-variant"
+            
             currentIndex: model.currentIndex
 
             model: config.keyboardVariantsModel
