@@ -63,8 +63,8 @@ Presentation
 
                 font.pixelSize: 12
                 color: "white"
-                text: qsTr("Nitrux is a Linux desktop distribution directly based on Debian. It uses the Calamares installer and includes NX Desktop and NX Firewall. NX Desktop is our set of applied customizations to the Plasma 5 Desktop.\n\n"
-                           + "It includes new plasmoids (or widgets) and a new look and feel package (wallpapers, Plasma themes, Konsole theme and profile, Aurorae themes, SDDM themes, cursors, and color-schemes).")
+                text: qsTr("Nitrux is a Linux desktop distribution directly based on Debian. It uses the Calamares installer and includes NX Desktop and NX Firewall on top of the KDE Plasma 5 desktop environment and KDE Applications. Nitrux emphasizes the use of AppImages to manage end-user software. Nitrux also does not use systemD as its init system; instead, it uses OpenRC.\n\n"
+                           + "Nitrux includes a suite of convergent applications called Maui Apps. We use MauiKit, our convergent, cross-platform UI framework, to create these applications. Both MauiKit and the Maui Apps are entirely free and open-source software.).")
                 wrapMode: Text.WordWrap
             }
         }
@@ -116,7 +116,6 @@ Presentation
                            + " • LibreOffice, open-source office suite.\n"
                            + " • Inkscape, vector graphic editor.\n"
                            + " • GIMP, GNU image manipulation tool.\n"
-                           + " • LMMS, free, open-source, multiplatform digital audio workstation.\n"
                            + " • ... And more.")
                 wrapMode: Text.WordWrap
             }
