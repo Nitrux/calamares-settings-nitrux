@@ -15,14 +15,14 @@ welcomeExpandingLogo:   true
 strings:
     productName:         Nitrux OS
     shortProductName:    Nitrux
-    version:             1.5.x
-    shortVersion:        1.5.x
-    versionedName:       Nitrux OS 1.5.x build.0x0
-    shortVersionedName:  Nitrux 1.5.x build.0x0
+    version:             1.6.0
+    shortVersion:        1.6.0
+    versionedName:       Nitrux OS 1.6.0 build.310821
+    shortVersionedName:  Nitrux 1.6.0 build.310821
     bootloaderEntryName: Nitrux
     productUrl:          https://nxos.org/
-    supportUrl:          https://nxos.org/
-    knownIssuesUrl:      https://nxos.org/
+    supportUrl:          https://github.com/Nitrux/nitrux-bug-tracker/
+    knownIssuesUrl:      https://nxos.org/changelog/
     releaseNotesUrl:     https://nxos.org/changelog/
 
 images:
