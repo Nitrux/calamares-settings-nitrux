@@ -28,11 +28,11 @@ xdg_file_path="$HOME/.config"
     '' \
     '[2]' \
     'Description=Preferencias para la aplicación libreoffice-startcenter' \
-    'fullscreenrule=0' \
     'position=-2,30' \
     'positionrule=3' \
-    'types=4294967295' \
     'wmclass=libreoffice libreoffice-startcenter' \
+    'wmclasscomplete=true' \
+    'wmclassmatch=1' \
     '' \
     '[General]' \
     'count=2'
