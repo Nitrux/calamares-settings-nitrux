@@ -4,7 +4,7 @@ set -x
 
 ### Add kwin rules for calamares
 
-xdg_file_path='$HOME/.confg'
+xdg_file_path='$HOME/.config'
 
 >> $xdg_file_path/kwinrulesrc printf "%s\n" \
     '[1]' \
