@@ -37,4 +37,14 @@ xdg_file_path="$HOME/.config"
     '[General]' \
     'count=2'
 
+#   restart kwin otherwise rules aren't loaded
+
+if pgrep -x "kwin_x11" > /dev/null
+then
+    kwin_x11 --replace &
+else
+    kwin_wayland --replace &
+fi
+
+
 exit 0

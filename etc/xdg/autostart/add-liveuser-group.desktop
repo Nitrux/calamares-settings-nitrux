@@ -1,0 +1,16 @@
+[Desktop Entry]
+Comment=
+Exec=adduser-group-input
+GenericName=
+Icon=preferences-desktop
+MimeType=
+Name=adduser-group-input
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-DBUS-SubstitueUID=false
+X-DBUS-Username=
