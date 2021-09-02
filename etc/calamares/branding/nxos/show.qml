@@ -64,7 +64,7 @@ Presentation
                 font.pixelSize: 12
                 color: "white"
                 text: qsTr("Nitrux is a Linux desktop distribution directly based on Debian. It uses the Calamares installer and includes NX Desktop and NX Firewall on top of the KDE Plasma 5 desktop environment and KDE Applications. Nitrux emphasizes the use of AppImages to manage end-user software. Nitrux also does not use systemD as its init system; instead, it uses OpenRC.\n\n"
-                           + "Nitrux includes a suite of convergent applications called Maui Apps. We use MauiKit, our convergent, cross-platform UI framework, to create these applications. Both MauiKit and the Maui Apps are entirely free and open-source software.).")
+                           + "Nitrux includes a suite of convergent applications called Maui Apps. We use MauiKit, our convergent, cross-platform UI framework, to create these applications. Both MauiKit and the Maui Apps are entirely free and open-source software.")
                 wrapMode: Text.WordWrap
             }
         }
