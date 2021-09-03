@@ -46,7 +46,7 @@ if pgrep -x "kwin_x11" > /dev/null
         kwin_wayland --replace &
 fi
 
-#   Also restart plasmshell and latte-dock because why the F not
+#   Also restart plasmashell and latte-dock because why the F not
 
 if pgrep -x "plasmashell" > /dev/null
     then
