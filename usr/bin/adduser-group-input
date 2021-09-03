@@ -1,9 +1,0 @@
-#! /bin/bash
-
-set -x
-
-### Add live user to group 'input'
-
-sudo usermod -a -G input nitrux
-
-exit 0
