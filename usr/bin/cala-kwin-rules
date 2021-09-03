@@ -37,6 +37,8 @@ xdg_file_path="$HOME/.config"
     '[General]' \
     'count=2'
 
+sleep 1
+
 #   restart kwin otherwise rules aren't loaded
 
 if pgrep -x "kwin_x11" > /dev/null
@@ -45,6 +47,8 @@ if pgrep -x "kwin_x11" > /dev/null
     else
         kwin_wayland --replace &
 fi
+
+sleep 1
 
 #   Also restart plasmashell and latte-dock because why the F not
 
