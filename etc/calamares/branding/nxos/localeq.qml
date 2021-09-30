@@ -63,7 +63,7 @@ ResponsiveBase
             property string title: qsTr("Timezone")
             property string subtitle: config.prettyStatus
             property string message: ""
-            property string icon : "internet-services"
+            property string icon : "cala-qml-timezone"
 
             model: config.regionalZonesModel
             currentIndex : -1
