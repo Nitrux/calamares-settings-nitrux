@@ -101,8 +101,8 @@ Presentation
 
                 font.pixelSize: 12
                 color: "white"
-                text: qsTr("Nitrux is a complete Operating System that ships the essential apps and services for the daily use: office applications, PDF reader, image editor,"
-                           + "music and video players, etc.\n\n"
+                text: qsTr("Nitrux is a complete Operating System that ships the essential apps and services for the daily use: office applications, PDF reader, image editor"
+                           + ", music and video players, etc.\n\n"
                            + "Nitrux includes a selection of applications carefully picked to perform the best when using your computer:\n\n"
                            + " • Index, the file manager.\n"
                            + " • Nota, a simple text editor.\n"
