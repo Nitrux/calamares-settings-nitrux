@@ -23,7 +23,7 @@ ResponsiveBase
         id: _requirementsList
         property string title: qsTr("Welcome to ") + Branding.string(Branding.ProductName) + " " + Branding.string(Branding.Version)
         property string subtitle: config.genericWelcomeMessage
-        property string message: config.requirementsModel.satisfiedRequirements ? "All requierements have been satisfied" :  qsTr("<p>This computer does not satisfy some of the recommended requirements for setting up %1.<br/>
+        property string message: config.requirementsModel.satisfiedRequirements ? "All requierements have been satisfied" :  qsTr("<p>Please make sure this computer has enough storage, RAM, and a working Internet connection %1.<br/>
         Setup can continue, but some features might be disabled.</p>").arg(Branding.string(Branding.VersionedName))
         property string icon : Branding.imagePath(Branding.ProductWelcome)
         model: config.unsatisfiedRequirements
@@ -158,7 +158,7 @@ ResponsiveBase
 
             property string title : qsTr("Language")
             property string subtitle:  qsTr("Select your preferred language to continue with the installation")
-            property string icon : "applications-education-language"
+            property string icon : "cala-qml-language"
 
             currentIndex: config.localeIndex
             model: config.languagesModel
