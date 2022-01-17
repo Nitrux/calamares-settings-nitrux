@@ -15,10 +15,10 @@ welcomeExpandingLogo:   true
 strings:
     productName:         Nitrux OS
     shortProductName:    Nitrux
-    version:             1.8.0
-    shortVersion:        1.8.0
-    versionedName:       Nitrux OS 1.8.0 build.251221
-    shortVersionedName:  Nitrux 1.8.0 build.251221
+    version:             1.8.1
+    shortVersion:        1.8.1
+    versionedName:       Nitrux OS 1.8.1 build.280122
+    shortVersionedName:  Nitrux 1.8.1 build.280122
     bootloaderEntryName: Nitrux
     productUrl:          https://nxos.org/
     supportUrl:          https://github.com/Nitrux/nitrux-bug-tracker/
