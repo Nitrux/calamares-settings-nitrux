@@ -23,7 +23,7 @@ ResponsiveBase
         id: _requirementsList
         property string title: qsTr("Welcome to ") + Branding.string(Branding.ProductName) + " " + Branding.string(Branding.Version)
         property string subtitle: config.genericWelcomeMessage
-        property string message: config.requirementsModel.satisfiedRequirements ? "All requierements have been satisfied" :  qsTr("<p>Please make sure this computer has enough storage, RAM, and a working Internet connection %1.<br/>
+        property string message: config.requirementsModel.satisfiedRequirements ? "All requirements have been satisfied." :  qsTr("<p>Please ensure this computer has enough storage, RAM, and a working Internet connection. %1.<br/>
         Setup can continue, but some features might be disabled.</p>").arg(Branding.string(Branding.VersionedName))
         property string icon : Branding.imagePath(Branding.ProductWelcome)
         model: config.unsatisfiedRequirements
