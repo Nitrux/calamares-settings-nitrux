@@ -22,8 +22,8 @@ strings:
     bootloaderEntryName: Nitrux
     productUrl:          https://nxos.org/
     supportUrl:          https://github.com/Nitrux/nitrux-bug-tracker/
-    knownIssuesUrl:      https://nxos.org/changelog/
-    releaseNotesUrl:     https://nxos.org/changelog/
+    knownIssuesUrl:      https://nxos.org/known-issues/
+    releaseNotesUrl:     https://nxos.org/notes/
 
 images:
     productLogo:         "calamares_product_logo.svg"
