@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (0.4.9+new-dev) nitrux; urgency=medium
+
+  * Update package.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Sat, 29 Jan 2022 00:46:00 -0500
+
 calamares-qml-settings-nitrux (0.4.8+new-dev) nitrux; urgency=medium
 
   * Update package.
