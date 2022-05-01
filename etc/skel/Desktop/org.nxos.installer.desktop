@@ -2,7 +2,7 @@
 Categories=Settings
 Comment[en_US]=Install Nitrux OS in this computer.
 Comment=Install Nitrux OS in this computer.
-Exec=/usr/bin/sudo -E calamares
+Exec=/usr/bin/sudo -E calamares -d
 GenericName[en_US]=Installer
 GenericName=Installer
 Icon=live-installer
