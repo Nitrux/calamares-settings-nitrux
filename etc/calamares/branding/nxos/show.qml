@@ -113,9 +113,6 @@ Presentation
                            + " • Shelf, simple and light PDF viewer.\n"
                            + " • Clip, a video player.\n"
                            + " • Firefox, ethical web browser.\n"
-                           + " • LibreOffice, open-source office suite.\n"
-                           + " • Inkscape, vector graphic editor.\n"
-                           + " • GIMP, GNU image manipulation tool.\n"
                            + " • ... And more.")
                 wrapMode: Text.WordWrap
             }
