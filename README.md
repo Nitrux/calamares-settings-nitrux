@@ -1,4 +1,5 @@
-# Calamares Settings Nitrux [![Build Status](https://travis-ci.org/Nitrux/calamares-settings-nitrux.svg?branch=master)](https://travis-ci.orgNitrux/calamares-settings-nitrux)
+# Calamares Settings Nitrux [![Build and push packages to PackageCloud.](https://github.com/Nitrux/calamares-settings-nitrux/actions/workflows/build.yml/badge.svg)](https://github.com/Nitrux/calamares-settings-nitrux/actions/workflows/build.yml)
+
 This is the repository for the custom Calamares settings used in Nitrux.
 
 # Issues
