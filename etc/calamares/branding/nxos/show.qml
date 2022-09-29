@@ -151,8 +151,7 @@ Presentation
                 font.pixelSize: 12
                 color: "white"
                 text: qsTr("AppImage provides a way for upstream developers to offer “native” binaries for Linux users just the same way they could do for other operating systems. It allows packaging applications for any common Linux based operating system, e.g., Ubuntu, Debian, OpenSUSE, RHEL, CentOS, Fedora, etc.\n\n"
-                           + "AppImages come with all dependencies that cannot be assumed to be part of each target system in"
-                           + "a recent enough version and will run on most Linux distributions without further modifications.\n\n"
+                           + "AppImages come with all dependencies that cannot be assumed to be part of each target system in a recent enough version and will run on most Linux distributions without further modifications.\n\n"
                            + "An AppImage has these advantages:\n"
                            + " • Just one format for all major distributions.\n"
                            + " • Works out of the box, no installation of runtimes needed.\n"
