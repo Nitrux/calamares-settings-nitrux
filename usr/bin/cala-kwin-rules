@@ -50,12 +50,4 @@ fi
 
 sleep 1
 
-#   Also restart plasmashell and latte-dock because why the F not
-
-if pgrep -x "plasmashell" > /dev/null
-    then
-        kquitapp5 plasmashell && kstart5 plasmashell &
-        sleep 1 && latte-dock --replace &
-fi
-
 exit 0
