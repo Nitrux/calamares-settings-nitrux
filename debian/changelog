@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (0.7.2+new-dev) nitrux; urgency=medium
+
+  * Set EFI fallback to false because Calamares dies spectacularly if the option is unset or set to true.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Fri, 02 Dec 2022 01:29:00 -0500
+
 calamares-qml-settings-nitrux (0.7.1+new-dev) nitrux; urgency=medium
 
   * Update package.
