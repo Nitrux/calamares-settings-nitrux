@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (0.8.1+new-dev) nitrux; urgency=medium
+
+  * Adjust ratio of default partitions when selecting erase disk assuming a device of 32G of storage
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Sun, 25 Dec 2022 17:06:00 -0500
+
 calamares-qml-settings-nitrux (0.8.0+new-dev) nitrux; urgency=medium
 
   * Fix typo in kernel parameters
