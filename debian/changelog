@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (0.7.8+new-dev) nitrux; urgency=medium
+
+  * Add kernel parameters
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Sat, 24 Dec 2022 23:41:00 -0500
+
 calamares-qml-settings-nitrux (0.7.7+new-dev) nitrux; urgency=medium
 
   * Adjust value of storage and ram in welcomeq to values in GiB
