@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (0.8.0+new-dev) nitrux; urgency=medium
+
+  * Fix typo in kernel parameters
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Sun, 25 Dec 2022 16:37:00 -0500
+
 calamares-qml-settings-nitrux (0.7.9+new-dev) nitrux; urgency=medium
 
   * Configure module to undebianize
