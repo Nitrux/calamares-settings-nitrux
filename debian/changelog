@@ -1,48 +1,54 @@
+calamares-qml-settings-nitrux (0.8.3+new-dev) nitrux; urgency=medium
+
+  * Update branding file.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Sun, 01 Jan 2023 03:20:00 -0500
+
 calamares-qml-settings-nitrux (0.8.2+new-dev) nitrux; urgency=medium
 
-  * Add kernel parameters
+  * Add kernel parameters.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Sun, 01 Jan 2023 02:36:00 -0500
 
 calamares-qml-settings-nitrux (0.8.1+new-dev) nitrux; urgency=medium
 
-  * Adjust ratio of default partitions when selecting erase disk assuming a device of 32G of storage
+  * Adjust ratio of default partitions when selecting erase disk assuming a device of 32G of storage.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Sun, 25 Dec 2022 17:06:00 -0500
 
 calamares-qml-settings-nitrux (0.8.0+new-dev) nitrux; urgency=medium
 
-  * Fix typo in kernel parameters
+  * Fix typo in kernel parameters.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Sun, 25 Dec 2022 16:37:00 -0500
 
 calamares-qml-settings-nitrux (0.7.9+new-dev) nitrux; urgency=medium
 
-  * Configure module to undebianize
+  * Configure module to undebianize.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Sun, 25 Dec 2022 03:43:00 -0500
 
 calamares-qml-settings-nitrux (0.7.8+new-dev) nitrux; urgency=medium
 
-  * Add kernel parameters
+  * Add kernel parameters.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Sat, 24 Dec 2022 23:41:00 -0500
 
 calamares-qml-settings-nitrux (0.7.7+new-dev) nitrux; urgency=medium
 
-  * Adjust value of storage and ram in welcomeq to values in GiB
+  * Adjust value of storage and ram in welcomeq to values in GiB.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Sat, 24 Dec 2022 23:22:00 -0500
 
 calamares-qml-settings-nitrux (0.7.6+new-dev) nitrux; urgency=medium
 
-  * Adjust ratio of default partitions when selecting erase disk assuming a device of 32G of storage
+  * Adjust ratio of default partitions when selecting erase disk assuming a device of 32G of storage.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Sat, 24 Dec 2022 23:17:00 -0500
 
 calamares-qml-settings-nitrux (0.7.5+new-dev) nitrux; urgency=medium
 
-  * Adjust ratio of default partitions when selecting erase disk assuming a device of 64G of storage
+  * Adjust ratio of default partitions when selecting erase disk assuming a device of 64G of storage.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Sat, 24 Dec 2022 21:39:00 -0500
 

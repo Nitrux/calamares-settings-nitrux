@@ -15,10 +15,10 @@ welcomeExpandingLogo:   true
 strings:
     productName:         Nitrux OS
     shortProductName:    Nitrux
-    version:             2.5.1
-    shortVersion:        2.5.1
-    versionedName:       Nitrux OS 2.5.1 build.011222
-    shortVersionedName:  Nitrux 2.5.1 build.011222
+    version:             2.6.0
+    shortVersion:        2.6.0
+    versionedName:       Nitrux OS 2.6.0 build.010123.ff
+    shortVersionedName:  Nitrux 2.6.0 build.010123.ff
     bootloaderEntryName: Nitrux
     productUrl:          https://nxos.org/
     supportUrl:          https://github.com/Nitrux/nitrux-bug-tracker/
