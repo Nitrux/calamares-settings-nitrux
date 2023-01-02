@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (0.8.4+new-dev) nitrux; urgency=medium
+
+  * Add user to pipewire group.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Sun, 01 Jan 2023 03:20:00 -0500
+
 calamares-qml-settings-nitrux (0.8.3+new-dev) nitrux; urgency=medium
 
   * Update branding file.
