@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (0.8.7+new-dev) nitrux; urgency=medium
+
+  * Do not add user to docker group.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Tue, 02 Jan 2023 00:44:00 -0500
+
 calamares-qml-settings-nitrux (0.8.6+new-dev) nitrux; urgency=medium
 
   * Do not add user to docker group.
