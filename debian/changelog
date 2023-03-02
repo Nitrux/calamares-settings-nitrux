@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (0.9.0+new-dev) nitrux; urgency=medium
+
+  * Update autostart script.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Wed, 01 Mar 2023 22:08:00 -0500
+ 
 calamares-qml-settings-nitrux (0.8.9+new-dev) nitrux; urgency=medium
 
   * Update launch script.

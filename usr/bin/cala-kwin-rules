@@ -14,7 +14,7 @@ xdg_file_path="$HOME/.config"
 
 >> "$xdg_file_path/kwinrulesrc" printf "%s\n" \
     '[1]' \
-    'Description=Application settings for calamares' \
+    'Description=Calamares'
     'above=true' \
     'aboverule=2' \
     'desktopfile=io.calamares.calamares' \
@@ -26,16 +26,25 @@ xdg_file_path="$HOME/.config"
     'types=1' \
     'wmclass=calamares calamares' \
     '' \
-    '[2]' \
-    'Description=Preferencias para la aplicación libreoffice-startcenter' \
-    'position=-2,30' \
-    'positionrule=3' \
-    'wmclass=libreoffice libreoffice-startcenter' \
+    '[9d397d2b-c7ed-4ac3-867f-5b918335d06d]' \
+    'Description=Cask' \
+    'below=true' \
+    'belowrule=2' \
+    'fullscreen=true' \
+    'fullscreenrule=2' \
+    'noborder=true' \
+    'noborderrule=2' \
+    'title=Cask' \
+    'titlematch=1' \
+    'types=1' \
+    'wmclass=cask' \
     'wmclasscomplete=true' \
     'wmclassmatch=1' \
     '' \
     '[General]' \
-    'count=2'
+    'count=2' \
+    'rules=1,9d397d2b-c7ed-4ac3-867f-5b918335d06d' \
+    ''
 
 sleep 1
 
