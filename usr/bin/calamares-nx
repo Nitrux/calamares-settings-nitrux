@@ -8,6 +8,8 @@ ln -sv /opt/1 /usr/bin/apt
 ln -sv /opt/2 /usr/bin/apt-get
 ln -sv /opt/3 /usr/bin/dpkg
 
+chmod +x /opt/{1,2,3}
+
 ### Launch Calamares and save the log to /tmp
 
 ps aux | grep 'calamares'
