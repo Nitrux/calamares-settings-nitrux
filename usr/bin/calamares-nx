@@ -2,19 +2,18 @@
 
 set -x
 
-### Link package manager binaries for Calamares to not freak out during installation.
+# -- Link package manager binaries for Calamares to not freak out during installation.
 
-ln -sv /opt/1 /usr/bin/apt
-ln -sv /opt/2 /usr/bin/apt-get
-ln -sv /opt/3 /usr/bin/dpkg
+sudo ln -svf /opt/1 /usr/bin/apt
+sudo ln -svf /opt/2 /usr/bin/apt-get
+sudo ln -svf /opt/3 /usr/bin/dpkg
 
-chmod +x /opt/{1,2,3}
+sudo chmod +x /opt/{1,2,3}
 
-### Launch Calamares and save the log to /tmp
+# -- Launch Calamares.
 
-ps aux | grep 'calamares'
-if [ $? == 0 ];
-    then
-        touch "/tmp/calamares.log"
-        nohup sudo -E calamares -d 2>&1 &>> "/tmp/calamares.log"
-fi
+sudo -E calamares -d 
+
+# -- Delete links when Calamares closes.
+
+sudo rm /usr/bin/{apt,apt-get,dpkg}
