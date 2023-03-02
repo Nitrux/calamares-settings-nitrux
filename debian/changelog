@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (0.9.2+new-dev) nitrux; urgency=medium
+
+  * Delete launch script.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Tue, 02 Mar 2023 01:50:00 -0500
+ 
 calamares-qml-settings-nitrux (0.9.1+new-dev) nitrux; urgency=medium
 
   * Update launch script.
