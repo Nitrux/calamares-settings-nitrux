@@ -1,0 +1,7 @@
+#! /bin/bash
+
+set -x
+
+# -- Launch Calamares.
+
+sudo -E calamares -d 
