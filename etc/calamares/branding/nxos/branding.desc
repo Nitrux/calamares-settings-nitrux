@@ -17,8 +17,8 @@ strings:
     shortProductName:    Nitrux
     version:             2.8.0
     shortVersion:        2.8.0
-    versionedName:       Nitrux OS 2.8.0 build.300423.sh
-    shortVersionedName:  Nitrux 2.8.0 build.300423.sh
+    versionedName:       Nitrux OS 2.8.0 build.300423.tf
+    shortVersionedName:  Nitrux 2.8.0 build.300423.tf
     bootloaderEntryName: Nitrux
     productUrl:          https://nxos.org/
     supportUrl:          https://github.com/Nitrux/nitrux-bug-tracker/
