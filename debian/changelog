@@ -1,4 +1,10 @@
-calamares-qml-settings-nitrux (0.9.9+new-dev) nitrux; urgency=medium
+calamares-qml-settings-nitrux (1.0.0+new-dev) nitrux; urgency=medium
+
+  * Update partitions and fstab modules.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Fri, 28 Apr 2023 03:40:00 -0500
+ 
+ calamares-qml-settings-nitrux (0.9.9+new-dev) nitrux; urgency=medium
 
   * Update partitions and fstab modules.
 
