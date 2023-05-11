@@ -1,33 +1,39 @@
+calamares-qml-settings-nitrux (1.0.3+new-dev) nitrux; urgency=medium
+
+  * Update branding.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Thu, 11 May 2023 15:42:00 -0500
+
 calamares-qml-settings-nitrux (1.0.2+new-dev) nitrux; urgency=medium
 
   * Update grub module.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Thu, 11 May 2023 04:07:00 -0500
- 
+
 calamares-qml-settings-nitrux (1.0.1+new-dev) nitrux; urgency=medium
 
   * Update partitions and welcome modules.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Wed, 03 May 2023 21:59:00 -0500
- 
+
 calamares-qml-settings-nitrux (1.0.0+new-dev) nitrux; urgency=medium
 
   * Update partitions and fstab modules.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Fri, 28 Apr 2023 03:40:00 -0500
  
- calamares-qml-settings-nitrux (0.9.9+new-dev) nitrux; urgency=medium
+calamares-qml-settings-nitrux (0.9.9+new-dev) nitrux; urgency=medium
 
   * Update partitions and fstab modules.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Thu, 27 Apr 2023 23:49:00 -0500
- 
+
 calamares-qml-settings-nitrux (0.9.8+new-dev) nitrux; urgency=medium
 
   * Update grub module.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Thu, 27 Apr 2023 20:09:00 -0500
- 
+
 calamares-qml-settings-nitrux (0.9.7+new-dev) nitrux; urgency=medium
 
   * Update grub module.
@@ -35,61 +41,61 @@ calamares-qml-settings-nitrux (0.9.7+new-dev) nitrux; urgency=medium
   * Adjust root size requirement.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Tue, 25 Apr 2023 15:11:00 -0500
- 
+
 calamares-qml-settings-nitrux (0.9.6+new-dev) nitrux; urgency=medium
 
   * Update branding.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Tue, 25 Apr 2023 13:36:00 -0500
- 
+
 calamares-qml-settings-nitrux (0.9.5+new-dev) nitrux; urgency=medium
 
   * Update partition module config.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Thu, 13 Apr 2023 07:45:00 -0500
- 
+
 calamares-qml-settings-nitrux (0.9.4+new-dev) nitrux; urgency=medium
 
   * Update branding.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Thu, 31 Mar 2023 17:46:00 -0500
- 
+
 calamares-qml-settings-nitrux (0.9.3+new-dev) nitrux; urgency=medium
 
   * Update branding.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Tue, 02 Mar 2023 01:50:00 -0500
- 
+
 calamares-qml-settings-nitrux (0.9.2+new-dev) nitrux; urgency=medium
 
   * Delete launch script.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Tue, 02 Mar 2023 01:50:00 -0500
- 
+
 calamares-qml-settings-nitrux (0.9.1+new-dev) nitrux; urgency=medium
 
   * Update launch script.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Wed, 01 Mar 2023 23:38:00 -0500
- 
+
 calamares-qml-settings-nitrux (0.9.0+new-dev) nitrux; urgency=medium
 
   * Update autostart script.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Wed, 01 Mar 2023 22:08:00 -0500
- 
+
 calamares-qml-settings-nitrux (0.8.9+new-dev) nitrux; urgency=medium
 
   * Update launch script.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Wed, 01 Mar 2023 20:19:00 -0500
- 
+
 calamares-qml-settings-nitrux (0.8.8+new-dev) nitrux; urgency=medium
 
   * Update packages.conf.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Wed, 01 Mar 2023 19:36:00 -0500
- 
+
 calamares-qml-settings-nitrux (0.8.7+new-dev) nitrux; urgency=medium
 
   * Do not add user to docker group.
