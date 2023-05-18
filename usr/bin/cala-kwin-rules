@@ -5,15 +5,7 @@ set -x
 
 ### (force) Add kwin rules for calamares
 
-root_xdg_path="/etc/xdg/"
 user_xdg_path="$HOME/.config"
-
-if [ -f "$user_xdg_path"/kwinrulesrc ]
-    then
-        rm "$user_xdg_path"/kwinrulesrc 
-    else
-        $(which cp) "$root_xdg_path/kwinrulesrc"
-fi
 
 >> "$user_xdg_path/kwinrulesrc" printf "%s\n" \
     '[3]' \
