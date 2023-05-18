@@ -5,22 +5,23 @@ set -x
 
 ### (force) Add kwin rules for calamares
 
+sleep 2
+
 user_xdg_path="$HOME/.config"
 
 >> "$user_xdg_path/kwinrulesrc" printf "%s\n" \
+    '' \
     '[3]' \
     'Description=Calamares' \
-    'above=true' \
-    'aboverule=2' \
     'desktopfile=io.calamares.calamares' \
     'desktopfilerule=3' \
     'fullscreen=true' \
-    'fullscreenrule=2' \
+    'fullscreenrule=3' \
     'position=-2,30' \
     'positionrule=0' \
     'types=1' \
     'wmclass=calamares calamares' \
-    '' \
+    ''
 
 sed -i 's+count=2+count=3+g' "$user_xdg_path"/kwinrulesrc
 sed -i 's+rules=1,2+rules=1,2,3+g' "$user_xdg_path"/kwinrulesrc
@@ -33,8 +34,6 @@ sleep 1
 if pgrep -x "kwin_x11" > /dev/null
     then
         kwin_x11 --replace &
-    else
-        kwin_wayland --replace &
 fi
 
 sleep 1
