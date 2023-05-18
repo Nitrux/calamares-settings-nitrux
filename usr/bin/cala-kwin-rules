@@ -35,6 +35,7 @@ sed -i 's+rules=1,2+rules=1,2,3+g' "$user_xdg_path"/kwinrulesrc
 
 sleep 1
 
+
 #   restart kwin otherwise rules aren't loaded
 
 if pgrep -x "kwin_x11" > /dev/null
