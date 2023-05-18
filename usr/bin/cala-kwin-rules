@@ -2,19 +2,22 @@
 
 set -x
 
+
 ### (force) Add kwin rules for calamares
 
-xdg_file_path="$HOME/.config"
+root_xdg_path="/etc/xdg/"
+user_xdg_path="$HOME/.config"
 
-[ -f $xdg_file_path/kwinrulesrc ] && {
-    rm $xdg_file_path/kwinrulesrc 
-    } || {
-    touch "$xdg_file_path/kwinrulesrc"
-}
+if [ -f "$user_xdg_path"/kwinrulesrc ]
+    then
+        rm "$user_xdg_path"/kwinrulesrc 
+    else
+        $(which cp) "$root_xdg_path/kwinrulesrc"
+fi
 
->> "$xdg_file_path/kwinrulesrc" printf "%s\n" \
-    '[1]' \
-    'Description=Calamares'
+>> "$user_xdg_path/kwinrulesrc" printf "%s\n" \
+    '[3]' \
+    'Description=Calamares' \
     'above=true' \
     'aboverule=2' \
     'desktopfile=io.calamares.calamares' \
@@ -26,25 +29,9 @@ xdg_file_path="$HOME/.config"
     'types=1' \
     'wmclass=calamares calamares' \
     '' \
-    '[9d397d2b-c7ed-4ac3-867f-5b918335d06d]' \
-    'Description=Cask' \
-    'below=true' \
-    'belowrule=2' \
-    'fullscreen=true' \
-    'fullscreenrule=2' \
-    'noborder=true' \
-    'noborderrule=2' \
-    'title=Cask' \
-    'titlematch=1' \
-    'types=1' \
-    'wmclass=cask' \
-    'wmclasscomplete=true' \
-    'wmclassmatch=1' \
-    '' \
-    '[General]' \
-    'count=2' \
-    'rules=1,9d397d2b-c7ed-4ac3-867f-5b918335d06d' \
-    ''
+
+sed -i 's+count=2+count=3+g' "$user_xdg_path"/kwinrulesrc
+sed -i 's+rules=1,2+rules=1,2,3+g' "$user_xdg_path"/kwinrulesrc
 
 sleep 1
 
