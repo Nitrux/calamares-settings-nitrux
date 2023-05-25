@@ -95,7 +95,6 @@ if [ "${xdg_session}" == "wayland" ]; then
             echo "calamares on x11" >> "$HOME/.cala-x11-check"
             del "$HOME/.cala-wayland-check" || true
     fi
-
     if pgrep -x "kwin_x11" > /dev/null
         then
             kwin_x11 --replace &
