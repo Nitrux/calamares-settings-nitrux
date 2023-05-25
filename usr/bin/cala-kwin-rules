@@ -69,6 +69,8 @@ if [ "${xdg_session}" == "wayland" ]; then
                 'positionrule=0' \
                 'types=1' \
                 'wmclass=calamares calamares' \
+                'wmclasscomplete=true' \
+                'wmclassmatch=1' \
                 ''
 
                 sed -i 's+count=1+count=2+g' "$xdg_user_path"/kwinrulesrc
