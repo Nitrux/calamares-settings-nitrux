@@ -38,7 +38,8 @@ del () { rm -rf "$@"; }
 
 #   Wait for the kwinrulesrc file to exist.
 #   Detect whether the Live session is X11 or Wayland.
-#   Add rules for Calamares.
+#   If on Wayland DO NOT ADD THE RULES because of course everything is fucking fullscreen.
+#   If on X11 add the rules for Calamares.
 #   Restart KWin X11 otherwise rules aren't loaded.
 
 sleep 2
@@ -48,22 +49,6 @@ if [ "${xdg_session}" == "wayland" ]; then
         then
             exit
         else
-            >> "$xdg_user_path/kwinrulesrc" printf "%s\n" \
-            '' \
-            '[3]' \
-            'Description=Calamares' \
-            'desktopfile=io.calamares.calamares' \
-            'desktopfilerule=3' \
-            'fullscreen=true' \
-            'fullscreenrule=3' \
-            'position=-2,30' \
-            'positionrule=0' \
-            'types=1' \
-            'wmclass=calamares calamares' \
-            ''
-
-            sed -i 's+count=2+count=3+g' "$xdg_user_path"/kwinrulesrc
-            sed -i 's+rules=1,2+rules=1,2,3+g' "$xdg_user_path"/kwinrulesrc
             echo "calamares on wayland" >> "$HOME/.cala-wayland-check"
             del "$HOME/.cala-x11-check"
     fi
