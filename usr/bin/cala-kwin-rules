@@ -50,7 +50,7 @@ if [ "${xdg_session}" == "wayland" ]; then
             exit
         else
             echo "calamares on wayland" >> "$HOME/.cala-wayland-check"
-            del "$HOME/.cala-x11-check"
+            del "$HOME/.cala-x11-check" || true
     fi
     else
         if [ -f "$HOME/.cala-x11-check" ]
@@ -74,7 +74,7 @@ if [ "${xdg_session}" == "wayland" ]; then
                 sed -i 's+count=1+count=2+g' "$xdg_user_path"/kwinrulesrc
                 sed -i 's+rules=1+rules=1,2+g' "$xdg_user_path"/kwinrulesrc
                 echo "calamares on x11" >> "$HOME/.cala-x11-check"
-                del "$HOME/.cala-wayland-check"
+                del "$HOME/.cala-wayland-check" || true
         fi
 
         if pgrep -x "kwin_x11" > /dev/null
