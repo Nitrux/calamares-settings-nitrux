@@ -71,35 +71,34 @@ if [ "${xdg_session}" == "wayland" ]; then
             del "$HOME/.cala-x11-check" || true
     fi
     else
-        if [ -f "$HOME/.cala-x11-check" ]
-            then
-                exit
-            else
-                >> "$xdg_user_path/kwinrulesrc" printf "%s\n" \
-                '' \
-                '[2]' \
-                'Description=Calamares' \
-                'desktopfile=io.calamares.calamares' \
-                'desktopfilerule=3' \
-                'fullscreen=true' \
-                'fullscreenrule=3' \
-                'position=-2,30' \
-                'positionrule=0' \
-                'types=1' \
-                'wmclass=calamares calamares' \
-                'wmclasscomplete=true' \
-                'wmclassmatch=1' \
-                ''
+    if [ -f "$HOME/.cala-x11-check" ]
+        then
+            exit
+        else
+            >> "$xdg_user_path/kwinrulesrc" printf "%s\n" \
+            '' \
+            '[2]' \
+            'Description=Calamares' \
+            'desktopfile=io.calamares.calamares' \
+            'desktopfilerule=3' \
+            'fullscreen=true' \
+            'fullscreenrule=3' \
+            'position=-2,30' \
+            'positionrule=0' \
+            'types=1' \
+            'wmclass=calamares calamares' \
+            'wmclasscomplete=true' \
+            'wmclassmatch=1' \
+            ''
 
-                sed -i 's+count=1+count=2+g' "$xdg_user_path"/kwinrulesrc
-                sed -i 's+rules=1+rules=1,2+g' "$xdg_user_path"/kwinrulesrc
-                echo "calamares on x11" >> "$HOME/.cala-x11-check"
-                del "$HOME/.cala-wayland-check" || true
-        fi
+            sed -i 's+count=1+count=2+g' "$xdg_user_path"/kwinrulesrc
+            sed -i 's+rules=1+rules=1,2+g' "$xdg_user_path"/kwinrulesrc
+            echo "calamares on x11" >> "$HOME/.cala-x11-check"
+            del "$HOME/.cala-wayland-check" || true
+    fi
 
-        if pgrep -x "kwin_x11" > /dev/null
-            then
-                kwin_x11 --replace &
-        fi
-
+    if pgrep -x "kwin_x11" > /dev/null
+        then
+            kwin_x11 --replace &
+    fi
 fi
