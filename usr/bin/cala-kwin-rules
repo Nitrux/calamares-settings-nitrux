@@ -49,6 +49,24 @@ if [ "${xdg_session}" == "wayland" ]; then
         then
             exit
         else
+            >> "$xdg_user_path/kwinrulesrc" printf "%s\n" \
+            '' \
+            '[3]' \
+            'Description=Calamares' \
+            'desktopfile=io.calamares.calamares' \
+            'desktopfilerule=3' \
+            'fullscreen=true' \
+            'fullscreenrule=3' \
+            'position=-2,30' \
+            'positionrule=0' \
+            'types=1' \
+            'wmclass=calamares calamares' \
+            'wmclasscomplete=true' \
+            'wmclassmatch=1' \
+            ''
+
+            sed -i 's+count=2+count=3+g' "$xdg_user_path"/kwinrulesrc
+            sed -i 's+rules=1,2+rules=1,2,3+g' "$xdg_user_path"/kwinrulesrc
             echo "calamares on wayland" >> "$HOME/.cala-wayland-check"
             del "$HOME/.cala-x11-check" || true
     fi
