@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (1.0.7+new-dev) nitrux; urgency=medium
+
+  * Fix calamares kwin rules script.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Thu, 25 May 2023 02:12:00 -0500
+
 calamares-qml-settings-nitrux (1.0.6+new-dev) nitrux; urgency=medium
 
   * Fix calamares kwin rules script.

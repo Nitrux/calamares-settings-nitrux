@@ -1,41 +1,100 @@
 #! /bin/bash
 
+#############################################################################################################################################################################
+#   The license used for this file and its contents is: BSD-3-Clause                                                                                                        #
+#                                                                                                                                                                           #
+#   Copyright <2023> <Uri Herrera <uri_herrera@nxos.org>>                                                                                                               #
+#                                                                                                                                                                           #
+#   Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:                          #
+#                                                                                                                                                                           #
+#    1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.                                        #
+#                                                                                                                                                                           #
+#    2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer                                      #
+#       in the documentation and/or other materials provided with the distribution.                                                                                         #
+#                                                                                                                                                                           #
+#    3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software                    #
+#       without specific prior written permission.                                                                                                                          #
+#                                                                                                                                                                           #
+#    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,                      #
+#    THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS                  #
+#    BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE                 #
+#    GOODS OR SERVICES; LOSS OF USE, DATA,   OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,                      #
+#    STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.   #
+#############################################################################################################################################################################
+
 set -x
 
 
-### (force) Add kwin rules for calamares
+#   Variables.
+
+xdg_user_path="$HOME/.config"
+xdg_session="$XDG_SESSION_TYPE"
+
+
+#   Functions.
+
+del () { rm -rf "$@"; }
+
+
+#   Wait for the kwinrulesrc file to exist.
+#   Detect whether the Live session is X11 or Wayland.
+#   Add rules for Calamares.
+#   Restart KWin X11 otherwise rules aren't loaded.
 
 sleep 2
 
-user_xdg_path="$HOME/.config"
+if [ "${xdg_session}" == "wayland" ]; then
+    if [ -f "$HOME/.cala-wayland-check" ]
+        then
+            exit
+        else
+            >> "$xdg_user_path/kwinrulesrc" printf "%s\n" \
+            '' \
+            '[3]' \
+            'Description=Calamares' \
+            'desktopfile=io.calamares.calamares' \
+            'desktopfilerule=3' \
+            'fullscreen=true' \
+            'fullscreenrule=3' \
+            'position=-2,30' \
+            'positionrule=0' \
+            'types=1' \
+            'wmclass=calamares calamares' \
+            ''
 
->> "$user_xdg_path/kwinrulesrc" printf "%s\n" \
-    '' \
-    '[3]' \
-    'Description=Calamares' \
-    'desktopfile=io.calamares.calamares' \
-    'desktopfilerule=3' \
-    'fullscreen=true' \
-    'fullscreenrule=3' \
-    'position=-2,30' \
-    'positionrule=0' \
-    'types=1' \
-    'wmclass=calamares calamares' \
-    ''
+            sed -i 's+count=2+count=3+g' "$xdg_user_path"/kwinrulesrc
+            sed -i 's+rules=1,2+rules=1,2,3+g' "$xdg_user_path"/kwinrulesrc
+            echo "calamares on wayland" >> "$HOME/.cala-wayland-check"
+            del "$HOME/.cala-x11-check"
+    fi
+    else
+        if [ -f "$HOME/.cala-x11-check" ]
+            then
+                exit
+            else
+                >> "$xdg_user_path/kwinrulesrc" printf "%s\n" \
+                '' \
+                '[2]' \
+                'Description=Calamares' \
+                'desktopfile=io.calamares.calamares' \
+                'desktopfilerule=3' \
+                'fullscreen=true' \
+                'fullscreenrule=3' \
+                'position=-2,30' \
+                'positionrule=0' \
+                'types=1' \
+                'wmclass=calamares calamares' \
+                ''
 
-sed -i 's+count=2+count=3+g' "$user_xdg_path"/kwinrulesrc
-sed -i 's+rules=1,2+rules=1,2,3+g' "$user_xdg_path"/kwinrulesrc
+                sed -i 's+count=1+count=2+g' "$xdg_user_path"/kwinrulesrc
+                sed -i 's+rules=1+rules=1,2+g' "$xdg_user_path"/kwinrulesrc
+                echo "calamares on x11" >> "$HOME/.cala-x11-check"
+                del "$HOME/.cala-wayland-check"
+        fi
 
-sleep 1
+        if pgrep -x "kwin_x11" > /dev/null
+            then
+                kwin_x11 --replace &
+        fi
 
-
-#   restart kwin otherwise rules aren't loaded
-
-if pgrep -x "kwin_x11" > /dev/null
-    then
-        kwin_x11 --replace &
 fi
-
-sleep 1
-
-exit 0
