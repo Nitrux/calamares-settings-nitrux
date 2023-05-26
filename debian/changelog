@@ -1,8 +1,9 @@
-calamares-qml-settings-nitrux (1.1.0+new-dev) nitrux; urgency=medium
 
-  * Update grubcfg module and add parameter.
+calamares-qml-settings-nitrux (1.1.1+new-dev) nitrux; urgency=medium
 
- -- Uri Herrera <uri_herrera@nxos.org>  Thu, 25 May 2023 06:55:00 -0500
+  * Update usersq module and add user to group.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Thu, 25 May 2023 20:26:00 -0500
 
 calamares-qml-settings-nitrux (1.0.9+new-dev) nitrux; urgency=medium
 
