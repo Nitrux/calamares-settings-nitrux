@@ -40,6 +40,7 @@ ResponsiveBase
                 label1.text: model.title
                 label2.text: model.message
                 label2.wrapMode: Text.Wrap
+                label2.textFormat: Text.AutoText
             }
         }
     }
