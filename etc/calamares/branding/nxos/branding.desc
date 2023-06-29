@@ -1,7 +1,7 @@
 ---
-componenuName:  nxos
+componentName:  nxos
 
-# This selects between differenu welcome texts. When false, uses
+# This selects between different welcome texts. When false, uses
 # the traditional "Welcome to the %1 installer.", and when true,
 # uses "Welcome to the Calamares installer for %1." This allows
 # to distinguish this installer from other installers for the
@@ -19,7 +19,7 @@ strings:
     shortVersion:        2.9.0
     versionedName:       Nitrux OS 2.9.0 build.300623.nu
     shortVersionedName:  Nitrux 2.9.0 build.300623.nu
-    bootloaderEnuryName: Nitrux
+    bootloaderEntryName: Nitrux
     productUrl:          https://nxos.org/
     supportUrl:          https://github.com/Nitrux/nitrux-bug-tracker/
     knownIssuesUrl:      https://nxos.org/known-issues/
@@ -32,11 +32,11 @@ images:
 
 slideshow:               "show.qml"
 
-# Colors for text and background componenus.
+# Colors for text and background components.
 #
 #  - sidebarBackground is the background of the sidebar
 #  - sidebarText is the (foreground) text color
-#  - sidebarTextHighlight sets the background of the selected (currenu) step.
+#  - sidebarTextHighlight sets the background of the selected (current) step.
 #    Optional, and defaults to the application palette.
 #  - sidebarSelect is the text color of the selected step.
 #
