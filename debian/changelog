@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (1.1.6+new-dev) nitrux; urgency=medium
+
+  * Add more kernel parameters.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Wed, 19 Jul 2023 16:40:00 -0500
+
 calamares-qml-settings-nitrux (1.1.5+new-dev) nitrux; urgency=medium
 
   * Include the scripts on this package.
