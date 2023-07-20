@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (1.1.8+new-dev) nitrux; urgency=medium
+
+  * Revert kernel parameters.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Thu, 20 Jul 2023 04:19:00 -0500
+
 calamares-qml-settings-nitrux (1.1.7+new-dev) nitrux; urgency=medium
 
   * Remove scripts for this package.
