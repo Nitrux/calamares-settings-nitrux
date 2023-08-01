@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (1.2.0+new-dev) nitrux; urgency=medium
+
+  * Sort alphabetically the kernel parameters.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Mon, 31 Jul 2023 21:00:00 -0500
+
 calamares-qml-settings-nitrux (1.1.9+new-dev) nitrux; urgency=medium
 
   * Update branding.
