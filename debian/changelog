@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (1.2.1+new-dev) nitrux; urgency=medium
+
+  * Remove some kernel parameters since Calamares since to add them already.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Tue, 01 Aug 2023 08:01:00 -0500
+
 calamares-qml-settings-nitrux (1.2.0+new-dev) nitrux; urgency=medium
 
   * Sort alphabetically the kernel parameters.
