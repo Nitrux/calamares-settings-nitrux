@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (1.2.4+new-dev) nitrux; urgency=medium
+
+  * Update settings.conf to run linker before for modules that use the package manager.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Mon, 14 Aug 2023 15:40:00 -0500
+
 calamares-qml-settings-nitrux (1.2.3+new-dev) nitrux; urgency=medium
 
   * Update partition.conf and dsiplaymanager.conf to maybe see if autologin works.
