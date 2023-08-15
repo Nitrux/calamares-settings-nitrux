@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (1.2.3+new-dev) nitrux; urgency=medium
+
+  * Update partition.conf and dsiplaymanager.conf to maybe see if autologin works.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Mon, 14 Aug 2023 15:31:00 -0500
+
 calamares-qml-settings-nitrux (1.2.2+new-dev) nitrux; urgency=medium
 
   * Remove deprecated kernel parameter.
