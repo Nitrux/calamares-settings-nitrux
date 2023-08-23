@@ -4,4 +4,4 @@ set -x
 
 # -- Launch Calamares.
 
-sudo -E calamares -d 
+sudo -E calamares -D6
