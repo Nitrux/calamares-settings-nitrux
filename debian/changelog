@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (1.2.7+new-dev) nitrux; urgency=medium
+
+  * Add a kernel parameter to avoid loading Intel SGX, which Intel deprecated since the 11th gen and has a record of vulnerabilities.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Sat, 26 Aug 2023 14:12:00 -0500
+
 calamares-qml-settings-nitrux (1.2.6+new-dev) nitrux; urgency=medium
 
   * Update branding.
