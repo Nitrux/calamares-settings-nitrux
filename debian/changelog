@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (1.2.8+new-dev) nitrux; urgency=medium
+
+  * Check if the swap partition and unmount it so that Calamares can partition disks when using it in a VM.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Tue, 19 Sep 2023 04:38:00 -0500
+
 calamares-qml-settings-nitrux (1.2.7+new-dev) nitrux; urgency=medium
 
   * Add a kernel parameter to avoid loading Intel SGX, which Intel deprecated since the 11th gen and has a record of vulnerabilities.
