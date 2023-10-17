@@ -28,6 +28,11 @@
 set -eu
 
 
+# -- Variables.
+
+TOOL_NAME="Calamares Startup"
+
+
 # -- Print informative messages to stderr.
 
 puts_info() {
