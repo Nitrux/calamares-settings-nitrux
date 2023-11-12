@@ -1,8 +1,8 @@
-calamares-qml-settings-nitrux (1.3.7+new-dev) nitrux; urgency=medium
+calamares-qml-settings-nitrux (1.3.8+new-dev) nitrux; urgency=medium
 
   * Update initramfs module to include mitigations for lax file permissions in initramfs.
 
- -- Uri Herrera <uri_herrera@nxos.org>  Sun, 12 Nov 2023 01:17:00 -0500
+ -- Uri Herrera <uri_herrera@nxos.org>  Sun, 12 Nov 2023 04:28:00 -0500
 
 calamares-qml-settings-nitrux (1.3.7+new-dev) nitrux; urgency=medium
 
