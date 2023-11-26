@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (1.4.1+new-dev) nitrux; urgency=medium
+
+  * Revert mount.conf mount options, else Calamares breaks.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Sun, 26 Nov 2023 12:57:00 -0500
+
 calamares-qml-settings-nitrux (1.4.0+new-dev) nitrux; urgency=medium
 
   * Add SPDX license headers.
