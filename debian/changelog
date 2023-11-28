@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (1.4.2+new-dev) nitrux; urgency=medium
+
+  * Add check to welcomeq.conf to verify connectivity to raw.githubusercontent.com.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Tue, 28 Nov 2023 12:24:00 -0500
+
 calamares-qml-settings-nitrux (1.4.1+new-dev) nitrux; urgency=medium
 
   * Revert mount.conf mount options, else Calamares breaks.
