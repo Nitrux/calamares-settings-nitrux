@@ -2,13 +2,13 @@ calamares-qml-settings-nitrux (1.4.4+new-dev) nitrux; urgency=medium
 
   * Requirements the try to follow the suggestions from https://pages.nist.gov/800-63-3/sp800-63b.html.
 
- -- Uri Herrera <uri_herrera@nxos.org>  Wed, 06 Nov 2023 04:48:00 -0500
+ -- Uri Herrera <uri_herrera@nxos.org>  Wed, 06 Dec 2023 04:48:00 -0500
 
 calamares-qml-settings-nitrux (1.4.3+new-dev) nitrux; urgency=medium
 
   * Increase lenght of password requirement to maximum of 64 characters and minimum of 8 to match libpwquality.
 
- -- Uri Herrera <uri_herrera@nxos.org>  Wed, 06 Nov 2023 04:37:00 -0500
+ -- Uri Herrera <uri_herrera@nxos.org>  Wed, 06 Dec 2023 04:37:00 -0500
 
 calamares-qml-settings-nitrux (1.4.2+new-dev) nitrux; urgency=medium
 
