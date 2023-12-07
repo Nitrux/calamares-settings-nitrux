@@ -237,13 +237,13 @@ ResponsiveBase
             {
                 width: parent.width
                 title: qsTr("Additional user configuration options")
+                subtitle: qsTr("Warning: Disabling password strength validation can lead to weaker passwords, increasing the risk of security breaches. It is advised to keep this feature enabled for enhanced account security.")
 
 
                 CheckBox
                 {
                     visible: config.permitWeakPasswords
                     text: qsTr("Enable password strength validation")
-                    subtitle: qsTr("Warning: Disabling password strength validation can lead to weaker passwords, increasing the risk of security breaches. It is advised to keep this feature enabled for enhanced account security.")
                     checked: config.requireStrongPasswords
                     onCheckedChanged: config.setRequireStrongPasswords(checked)
                 }
