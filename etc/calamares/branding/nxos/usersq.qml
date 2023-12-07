@@ -50,7 +50,8 @@ ResponsiveBase
             {
                 width: parent.width
 
-                title: qsTr("What is your name?")
+                title: qsTr("What is your full name?")
+                subtitle: qsTr("The full name helps identify the actual user of the account. The full name might be used to personalize the user experience, like displaying the full name on the login screen or in system settings.")
 
                 TextField
                 {
@@ -74,8 +75,8 @@ ResponsiveBase
             {
                 width: parent.width
 
-                title:  qsTr("What username do you want to use to log in?")
-                subtitle: qsTr("If more than one person will use this computer, you can create multiple accounts after installation.")
+                title:  qsTr("Choose a username for your account")
+                subtitle: qsTr("The username is a unique identifier for each user on the system. It distinguishes one user account from another, ensuring that each user's settings, files, and permissions are kept separate.")
 
                 TextField
                 {

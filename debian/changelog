@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (1.4.6+new-dev) nitrux; urgency=medium
+
+  * Update messages in users QML module.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Wed, 06 Dec 2023 18:54:00 -0500
+
 calamares-qml-settings-nitrux (1.4.5+new-dev) nitrux; urgency=medium
 
   * Show checkbox to enable or disable password quality check in the GUI.
