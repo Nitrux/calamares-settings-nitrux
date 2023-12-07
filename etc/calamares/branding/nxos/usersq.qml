@@ -58,7 +58,7 @@ ResponsiveBase
                     id: _userNameField
                     width: parent.width
                     enabled: config.isEditable("fullName")
-                    placeholderText: qsTr("Your Full Name")
+                    placeholderText: qsTr("Enter your full name")
                     text: config.fullName
                     onTextChanged: config.setFullName(text)
                     background: Rectangle
@@ -83,7 +83,7 @@ ResponsiveBase
                     id: _userLoginField
                     enabled: config.isEditable("loginName")
                     width: parent.width
-                    placeholderText: qsTr("Login Name")
+                    placeholderText: qsTr("Enter your username")
                     text: config.loginName
                     onTextChanged: config.setLoginName(text)
 
@@ -109,7 +109,7 @@ ResponsiveBase
                 {
                     id: _hostName
                     width: parent.width
-                    placeholderText: qsTr("Computer Name")
+                    placeholderText: qsTr("Enter your computer name")
                     text: config.hostName
                     onTextChanged: config.setHostName(text)
                     background: Rectangle
