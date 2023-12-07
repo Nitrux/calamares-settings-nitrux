@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (1.4.7+new-dev) nitrux; urgency=medium
+
+  * Specify value for GRUB_RECORDFAIL_TIMEOUT.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Wed, 06 Dec 2023 22:05:00 -0500
+
 calamares-qml-settings-nitrux (1.4.6+new-dev) nitrux; urgency=medium
 
   * Update messages in users QML module.
