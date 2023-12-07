@@ -133,7 +133,7 @@ ResponsiveBase
                 {
                     id: _passwordField
                     width: parent.width
-                    placeholderText: qsTr("Password")
+                    placeholderText: qsTr("Enter password for user account")
                     text: config.userPassword
 
                     echoMode: TextInput.Password
@@ -155,7 +155,7 @@ ResponsiveBase
                 {
                     id: _verificationPasswordField
                     width: parent.width
-                    placeholderText: qsTr("Repeat Password")
+                    placeholderText: qsTr("Enter password for user account")
                     text: config.userPasswordSecondary
                     onTextChanged: config.setUserPasswordSecondary(text)
 
