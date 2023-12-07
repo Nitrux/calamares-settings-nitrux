@@ -125,7 +125,7 @@ ResponsiveBase
             {
                 width: parent.width
 
-                title: qsTr("Choose a password to keep your account safe")
+                title: qsTr("Choose a password for your account")
                 subtitle: qsTr("Enter the same password twice. Users must use a password over eight characters long, including uppercase, lowercase, numbers, and symbols, with sufficient randomness, and users should change the password every 90 days.")
 
                 TextField
