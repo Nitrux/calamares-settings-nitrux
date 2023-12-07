@@ -1,3 +1,11 @@
+calamares-qml-settings-nitrux (1.4.5+new-dev) nitrux; urgency=medium
+
+  * Show checkbox to enable or disable password quality check in the GUI.
+  * Set reuse user password for root to false.
+  * Add warning message about disabling password quality check.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Wed, 06 Dec 2023 18:33:00 -0500
+
 calamares-qml-settings-nitrux (1.4.4+new-dev) nitrux; urgency=medium
 
   * Update password requirements to try to follow the suggestions from https://pages.nist.gov/800-63-3/sp800-63b.html in usersq.conf.

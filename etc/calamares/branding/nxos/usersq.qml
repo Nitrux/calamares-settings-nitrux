@@ -74,7 +74,7 @@ ResponsiveBase
             {
                 width: parent.width
 
-                title:  qsTr("What name do you want to use to log in?")
+                title:  qsTr("What username do you want to use to log in?")
                 subtitle: qsTr("If more than one person will use this computer, you can create multiple accounts after installation.")
 
                 TextField
@@ -125,8 +125,8 @@ ResponsiveBase
             {
                 width: parent.width
 
-                title: qsTr("Choose a password to keep your account safe.")
-                subtitle: qsTr("Enter the same password twice, so that it can be checked for typing errors. A good password will contain a mixture of letters, numbers and punctuation, should be at least eight characters long, and should be changed at regular intervals.")
+                title: qsTr("Choose a password to keep your account safe")
+                subtitle: qsTr("Enter the same password twice. Users must use a password over eight characters long, including uppercase, lowercase, numbers, and symbols, with sufficient randomness, and users should change the password every 90 days.")
 
                 TextField
                 {
@@ -187,13 +187,14 @@ ResponsiveBase
                 width: parent.width
                 visible: !config.reuseUserPasswordForRoot
 
-                title: qsTr("Choose a root password to keep your account safe.")
+                title: qsTr("Choose a password for the root account")
+                subtitle: qsTr("Enter the same password twice. Users must use a password over eight characters long, including uppercase, lowercase, numbers, and symbols, with sufficient randomness, and users should change the password every 90 days.")
 
                 TextField
                 {
                     id: _rootPasswordField
                     width: parent.width
-                    placeholderText: qsTr("Root Password")
+                    placeholderText: qsTr("Enter password for root")
                     echoMode: TextInput.Password
                     passwordMaskDelay: 300
                     inputMethodHints: Qt.ImhNoAutoUppercase
@@ -214,7 +215,7 @@ ResponsiveBase
                 {
                     id: _verificationRootPasswordField
                     width: parent.width
-                    placeholderText: qsTr("Repeat Root Password")
+                    placeholderText: qsTr("Repeat password for root")
                     echoMode: TextInput.Password
                     passwordMaskDelay: 300
                     inputMethodHints: Qt.ImhNoAutoUppercase
@@ -235,13 +236,14 @@ ResponsiveBase
             ItemSection
             {
                 width: parent.width
-                title: qsTr("More options.")
+                title: qsTr("Additional user configuration options")
 
 
                 CheckBox
                 {
                     visible: config.permitWeakPasswords
-                    text: qsTr("Validate passwords quality")
+                    text: qsTr("Enable password strength validation")
+                    subtitle: qsTr("Warning: Disabling password strength validation can lead to weaker passwords, increasing the risk of security breaches. It is advised to keep this feature enabled for enhanced account security.")
                     checked: config.requireStrongPasswords
                     onCheckedChanged: config.setRequireStrongPasswords(checked)
                 }
@@ -250,7 +252,7 @@ ResponsiveBase
 
                 CheckBox
                 {
-                    text: qsTr("Log in automatically without asking for the password")
+                    text: qsTr("Enable automatic login")
                     checked: config.doAutoLogin
                     onCheckedChanged: config.setAutoLogin(checked)
                 }
