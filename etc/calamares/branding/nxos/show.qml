@@ -91,7 +91,7 @@ Presentation
             Label {
                 Layout.fillWidth: true
 
-                text: qsTr("Introducing NX Desktop.")
+                text: qsTr("Introducing NX Desktop")
                 font.pixelSize: 22
                 font.bold: true
                 color: "white"
@@ -140,7 +140,7 @@ Presentation
             Label {
                 Layout.fillWidth: true
 
-                text: qsTr("A free and modular front-end framework.")
+                text: qsTr("A free and modular front-end framework")
                 font.pixelSize: 22
                 font.bold: true
                 color: "white"
@@ -187,7 +187,7 @@ Presentation
             Label {
                 Layout.fillWidth: true
 
-                text: qsTr("Immutability enhances the integrity of our operating system.")
+                text: qsTr("Immutability enhances the integrity of our operating system")
                 font.pixelSize: 22
                 font.bold: true
                 color: "white"
@@ -228,7 +228,7 @@ Presentation
             Label {
                 Layout.fillWidth: true
 
-                text: qsTr("Everything you need to get started.")
+                text: qsTr("Everything you need to get started")
                 font.pixelSize: 22
                 font.bold: true
                 color: "white"
@@ -285,7 +285,7 @@ Presentation
             Label {
                 Layout.fillWidth: true
 
-                text: qsTr("Explore a universe of apps in Nitrux with AppImage.")
+                text: qsTr("Explore a universe of apps in Nitrux with AppImage")
                 font.pixelSize: 22
                 font.bold: true
                 color: "white"
@@ -331,7 +331,7 @@ Presentation
             Label {
                 Layout.fillWidth: true
 
-                text: qsTr("Use every package manager anywhere at the same time.")
+                text: qsTr("Use every package manager anywhere at the same time")
                 font.pixelSize: 22
                 font.bold: true
                 color: "white"
@@ -374,7 +374,7 @@ Presentation
             Label {
                 Layout.fillWidth: true
 
-                text: qsTr("Run Android apps natively.")
+                text: qsTr("Run Android apps natively")
                 font.pixelSize: 22
                 font.bold: true
                 color: "white"
@@ -418,7 +418,7 @@ Presentation
             Label {
                 Layout.fillWidth: true
 
-                text: qsTr("Securing your desktop and workstation.")
+                text: qsTr("Securing your desktop and workstation")
                 font.pixelSize: 22
                 font.bold: true
                 color: "white"
@@ -467,7 +467,7 @@ Presentation
             Label {
                 Layout.fillWidth: true
 
-                text: qsTr("Automate version and backup sync of your files.")
+                text: qsTr("Automate version and backup sync of your files")
                 font.pixelSize: 22
                 font.bold: true
                 color: "white"
@@ -516,7 +516,7 @@ Presentation
             Label {
                 Layout.fillWidth: true
 
-                text: qsTr("Multilingual support out of the box.")
+                text: qsTr("Multilingual support out of the box")
                 font.pixelSize: 22
                 font.bold: true
                 color: "white"
@@ -564,7 +564,7 @@ Presentation
             Label {
                 Layout.fillWidth: true
 
-                text: qsTr("Next-generation audio management with PipeWire.")
+                text: qsTr("Next-generation audio management with PipeWire")
                 font.pixelSize: 22
                 font.bold: true
                 color: "white"
@@ -606,7 +606,7 @@ Presentation
             Label {
                 Layout.fillWidth: true
 
-                text: qsTr("Next-generation display server with Wayland.")
+                text: qsTr("Next-generation display server with Wayland")
                 font.pixelSize: 22
                 font.bold: true
                 color: "white"
