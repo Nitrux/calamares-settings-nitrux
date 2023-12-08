@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (1.4.9+new-dev) nitrux; urgency=medium
+
+  * Improve slideshow text spacing.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Fir, 08 Dec 2023 04:03:00 -0500
+
 calamares-qml-settings-nitrux (1.4.8+new-dev) nitrux; urgency=medium
 
   * Update branding.
