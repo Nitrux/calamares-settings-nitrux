@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (1.5.1+new-dev) nitrux; urgency=medium
+
+  * Restore
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Mon, 11 Dec 2023 19:22:00 -0500
+
 calamares-qml-settings-nitrux (1.5.0+new-dev) nitrux; urgency=medium
 
   * Improve slideshow titles.
