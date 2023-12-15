@@ -38,8 +38,8 @@ Page
                 height: parent.height
                 width: parent.width
 
-                sourceSize.height: 600
-                sourceSize.width: 800
+                sourceSize.height: 2160
+                sourceSize.width: 3780
 
                 fillMode: Image.PreserveAspectCrop
                 antialiasing: false

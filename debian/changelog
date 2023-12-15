@@ -1,6 +1,12 @@
+calamares-qml-settings-nitrux (1.5.2+new-dev) nitrux; urgency=medium
+
+  * Add new background.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Fri, 12 Dec 2023 12:52:00 -0500
+
 calamares-qml-settings-nitrux (1.5.1+new-dev) nitrux; urgency=medium
 
-  * Restore
+  * Restore mount module configuration.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Mon, 11 Dec 2023 19:22:00 -0500
 
