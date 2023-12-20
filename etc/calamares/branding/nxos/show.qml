@@ -112,8 +112,6 @@ Presentation
                 font.pixelSize: 12
                 color: "white"
                 text: qsTr("We extend Plasma to allow the user to glance over system operations with easy-to-understand status displayed on the screen. NX Desktop is our set of applied customizations to the Plasma 5 Desktop. It includes new plasmoids (or Plasma widgets) and a new LnF (also known as a “look and feel”) package that includes the following items, KStyle, KWin decorations, wallpapers, Plasma themes, Konsole theme and profile, Aurorae themes, SDDM themes, cursors, and color schemes.\n\n"
-                           +"Renewed System Tray\n"
-                           + " • The System Tray replaces the traditional Plasma version.\n\n"
                            +"Quick access to networks\n"
                            + " • Easily access and edit your network preferences\n\n"
                            +"Easy multimedia controls\n"

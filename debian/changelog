@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (1.5.3+new-dev) nitrux; urgency=medium
+
+  * Remove line from slideshow.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Tue, 19 Dec 2023 18:50:00 -0500
+
 calamares-qml-settings-nitrux (1.5.2+new-dev) nitrux; urgency=medium
 
   * Add new background.
