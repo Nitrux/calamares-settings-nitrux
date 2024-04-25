@@ -1,5 +1,11 @@
 calamares-qml-settings-nitrux (1.5.7+new-dev) nitrux; urgency=medium
 
+  * Update branding.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Thu, 24 Apr 2024 03:06:00 -0500
+
+calamares-qml-settings-nitrux (1.5.7+new-dev) nitrux; urgency=medium
+
   * Add parameter to GRUB configuration to enable full contrl of AMD graphics cards using AMDGPU.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Thu, 18 Apr 2024 00:13:00 -0500
