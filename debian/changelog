@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (1.5.9+new-dev) nitrux; urgency=medium
+
+  * Add kernel parameter to avoid USB auto-suspend.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Thu, 02 May 2024 14:46:00 -0500
+
 calamares-qml-settings-nitrux (1.5.8+new-dev) nitrux; urgency=medium
 
   * Update branding.
