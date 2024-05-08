@@ -1,5 +1,5 @@
 [Desktop Entry]
-Categories=Settings
+Categories=Qt;System;
 Comment[en_US]=Install Nitrux OS in this computer.
 Comment=Install Nitrux OS in this computer.
 Exec=start-calamares
