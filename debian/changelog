@@ -1,5 +1,11 @@
 calamares-qml-settings-nitrux (1.6.0+new-dev) nitrux; urgency=medium
 
+  * Remove kernel parameter to avoid USB auto-suspend.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Fri, 17 May 2024 14:11:00 -0500
+
+calamares-qml-settings-nitrux (1.6.0+new-dev) nitrux; urgency=medium
+
   * Change category in desktop launcher.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Wed, 08 May 2024 02:42:00 -0500
