@@ -1,4 +1,4 @@
-calamares-qml-settings-nitrux (1.6.0+new-dev) nitrux; urgency=medium
+calamares-qml-settings-nitrux (1.6.1+new-dev) nitrux; urgency=medium
 
   * Add kernel parameter to enable shuffling of pages in the memory allocator.
 
