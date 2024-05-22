@@ -1,5 +1,11 @@
 calamares-qml-settings-nitrux (1.6.0+new-dev) nitrux; urgency=medium
 
+  * Add kernel parameter to enable shuffling of pages in the memory allocator.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Wed, 22 May 2024 00:30:00 -0500
+
+calamares-qml-settings-nitrux (1.6.0+new-dev) nitrux; urgency=medium
+
   * Remove kernel parameter to avoid USB auto-suspend.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Fri, 17 May 2024 14:11:00 -0500
