@@ -1,3 +1,13 @@
+calamares-qml-settings-nitrux (1.6.2+new-dev) nitrux; urgency=medium
+
+  * Add kernel parameter to Fill freed pages and heap objects with zeroes.
+  * Add kernel parameter to Disable the merging of slabs of similar sizes.
+  * Add kernel parameter to enable Redzoning which adds extra areas around slabs that detect when a slab is overwritten past its real size, which can help detect overflows.
+  * Add kernel parameter to Disable Virtual syscalls.
+  * Add kernel parameter to Randomize kernel stack offset on syscall entry.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Thu, 23 May 2024 04:17:00 -0500
+
 calamares-qml-settings-nitrux (1.6.1+new-dev) nitrux; urgency=medium
 
   * Add kernel parameter to enable shuffling of pages in the memory allocator.
