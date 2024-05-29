@@ -1,6 +1,12 @@
+calamares-qml-settings-nitrux (1.6.4+new-dev) nitrux; urgency=medium
+
+  * Use zstd and zsmalloc for zswap.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Tue, 28 May 2024 19:15:00 -0500
+
 calamares-qml-settings-nitrux (1.6.3+new-dev) nitrux; urgency=medium
 
-  * Add kernel parameter to disable usb auto suspend.
+  * Add kernel parameter to disable USB auto-suspend.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Mon, 27 May 2024 04:50:00 -0500
 
