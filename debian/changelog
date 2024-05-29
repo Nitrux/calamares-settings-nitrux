@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (1.6.5+new-dev) nitrux; urgency=medium
+
+  * Update branding.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Wed, 29 May 2024 04:52:00 -0500
+
 calamares-qml-settings-nitrux (1.6.4+new-dev) nitrux; urgency=medium
 
   * Use zstd and zsmalloc for zswap.
