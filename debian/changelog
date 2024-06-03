@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (1.6.6+new-dev) nitrux; urgency=medium
+
+  * Don't delete module configuration files jsut comment the content.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Mon, 03 Jun 2024 16:57:00 -0500
+
 calamares-qml-settings-nitrux (1.6.5+new-dev) nitrux; urgency=medium
 
   * Update branding.
