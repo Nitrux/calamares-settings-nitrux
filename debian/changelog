@@ -1,7 +1,7 @@
 calamares-qml-settings-nitrux (1.6.7+new-dev) nitrux; urgency=medium
 
   * Delete module configuration files just comment the content.
-  * Add text to Users module hostname field to indicate to NOT PUT SPACES IN THE HOSTNAME.
+  * Add text to Users module hostname field to indicate NOT TO PUT SPACES IN THE HOSTNAME.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Mon, 10 Jun 2024 14:27:00 -0500
 
