@@ -1,3 +1,8 @@
+calamares-qml-settings-nitrux (1.6.8+new-dev) nitrux; urgency=medium
+
+  * Set Calamares to create a default hostname.
+
+ -- Uri Herrera 
 calamares-qml-settings-nitrux (1.6.7+new-dev) nitrux; urgency=medium
 
   * Delete module configuration files just comment the content.
