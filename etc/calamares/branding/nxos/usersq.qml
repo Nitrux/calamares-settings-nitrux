@@ -103,7 +103,7 @@ ResponsiveBase
                 width: parent.width
 
                 title: qsTr("What is the name of this computer?")
-                subtitle: qsTr("This name will be used if you make the computer visible to others on a network.")
+                subtitle: qsTr("This name will be used if you make the computer visible to others on a network. Valid characters for hostnames are ASCII letters from a to z, the digits from 0 to 9, and the hyphen (-). A hostname may not start with a hyphen.")
 
                 TextField
                 {
