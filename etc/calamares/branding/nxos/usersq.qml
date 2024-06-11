@@ -19,7 +19,15 @@ ResponsiveBase
 
     title: qsTr("Users")
     subtitle: qsTr("Pick your user name and credentials to login and perform admin tasks")
-    message: config.status.message
+    message: {
+        try {
+            return config.status && config.status.message ? config.status.message : "";
+        } catch (e) {
+            console.error("Error accessing config.status.message:", e);
+            return "";
+            }
+    }
+
     icon.source: "cala-qml-user"
 
     stackView.initialItem: ScrollView
@@ -50,15 +58,15 @@ ResponsiveBase
             {
                 width: parent.width
 
-                title: qsTr("What is your full name?")
-                subtitle: qsTr("The full name helps identify the actual user of the account. The full name might be used to personalize the user experience, like displaying the full name on the login screen or in system settings.")
+                title: qsTr("What is your name?")
+                subtitle: qsTr("The name helps identify the actual user of the account. The name might be used to personalize the user experience, like displaying the name on the login screen.")
 
                 TextField
                 {
                     id: _userNameField
                     width: parent.width
                     enabled: config.isEditable("fullName")
-                    placeholderText: qsTr("Enter your full name")
+                    placeholderText: qsTr("Enter your name")
                     text: config.fullName
                     onTextChanged: config.setFullName(text)
                     background: Rectangle
@@ -102,15 +110,24 @@ ResponsiveBase
             {
                 width: parent.width
 
-                title: qsTr("What is the name of this computer?")
-                subtitle: qsTr("This name will be used if you make the computer visible to others on a network. Valid characters for hostnames are ASCII letters from a to z, the digits from 0 to 9, and the hyphen (-). A hostname may not start with a hyphen.")
+                title: qsTr("What is the hostname computer?")
+                subtitle: qsTr("The hostname will be used if you make the computer visible to others on a network. Valid characters for hostnames are ASCII letters from a to z, the digits from 0 to 9, and the hyphen (-). A hostname may not start with a hyphen.")
 
                 TextField
                 {
                     id: _hostName
                     width: parent.width
-                    placeholderText: qsTr("Enter your computer name")
-                    text: config.hostName
+                    placeholderText: qsTr("Enter your computer hostname")
+                    text: {
+                        try {
+                            return config.hostName ? config.hostName : "";
+                        } catch (e) {
+                            console.error("Error accessing config.hostName:", e);
+                            return "";
+                        }
+                    }
+                    inputMethodHints: Qt.ImhLowercaseOnly
+                    validator: RegExpValidator { regExp: /^[^\s]*$/ }
                     onTextChanged: config.setHostName(text)
                     background: Rectangle
                     {
@@ -137,7 +154,7 @@ ResponsiveBase
                     text: config.userPassword
 
                     echoMode: TextInput.Password
-                    passwordMaskDelay: 300
+                    passwordMaskDelay: 5
                     inputMethodHints: Qt.ImhNoAutoUppercase
                     onTextChanged: config.setUserPassword(text)
 
@@ -160,7 +177,7 @@ ResponsiveBase
                     onTextChanged: config.setUserPasswordSecondary(text)
 
                     echoMode: TextInput.Password
-                    passwordMaskDelay: 300
+                    passwordMaskDelay: 5
                     inputMethodHints: Qt.ImhNoAutoUppercase
 
                     background: Rectangle
@@ -183,55 +200,55 @@ ResponsiveBase
             }
 
 
-            ItemSection
-            {
-                width: parent.width
-                visible: !config.reuseUserPasswordForRoot
+            // ItemSection
+            // {
+            //     width: parent.width
+            //     visible: !config.reuseUserPasswordForRoot
 
-                title: qsTr("Choose a password for the root account")
-                subtitle: qsTr("Enter the same password twice. Users must use a password over eight characters long, including uppercase, lowercase, numbers, and symbols, with sufficient randomness, and users should change the password every 90 days.")
+            //     title: qsTr("Choose a password for the root account")
+            //     subtitle: qsTr("Enter the same password twice. Users must use a password over eight characters long, including uppercase, lowercase, numbers, and symbols, with sufficient randomness, and users should change the password every 90 days.")
 
-                TextField
-                {
-                    id: _rootPasswordField
-                    width: parent.width
-                    placeholderText: qsTr("Enter password for root")
-                    echoMode: TextInput.Password
-                    passwordMaskDelay: 300
-                    inputMethodHints: Qt.ImhNoAutoUppercase
-                    text: config.rootPassword
-                    onTextChanged: config.setRootPassword(text)
+            //     TextField
+            //     {
+            //         id: _rootPasswordField
+            //         width: parent.width
+            //         placeholderText: qsTr("Enter password for root")
+            //         echoMode: TextInput.Password
+            //         passwordMaskDelay: 300
+            //         inputMethodHints: Qt.ImhNoAutoUppercase
+            //         text: config.rootPassword
+            //         onTextChanged: config.setRootPassword(text)
 
-                    background: Rectangle
-                    {
-                        color:  Kirigami.Theme.backgroundColor
-                        radius: 5
-                        opacity: 0.5
-                        border.color: _rootPasswordField.text.length ? Kirigami.Theme.backgroundColor :  ( config.rootPasswordReady ? Kirigami.Theme.backgroundColor : Kirigami.Theme.negativeTextColor)
+            //         background: Rectangle
+            //         {
+            //             color:  Kirigami.Theme.backgroundColor
+            //             radius: 5
+            //             opacity: 0.5
+            //             border.color: _rootPasswordField.text.length ? Kirigami.Theme.backgroundColor :  ( config.rootPasswordReady ? Kirigami.Theme.backgroundColor : Kirigami.Theme.negativeTextColor)
 
-                    }
-                }
+            //         }
+            //     }
 
-                TextField
-                {
-                    id: _verificationRootPasswordField
-                    width: parent.width
-                    placeholderText: qsTr("Repeat password for root")
-                    echoMode: TextInput.Password
-                    passwordMaskDelay: 300
-                    inputMethodHints: Qt.ImhNoAutoUppercase
-                    text: config.rootPasswordSecondary
-                    onTextChanged: config.setRootPasswordSecondary(text)
+            //     TextField
+            //     {
+            //         id: _verificationRootPasswordField
+            //         width: parent.width
+            //         placeholderText: qsTr("Repeat password for root")
+            //         echoMode: TextInput.Password
+            //         passwordMaskDelay: 300
+            //         inputMethodHints: Qt.ImhNoAutoUppercase
+            //         text: config.rootPasswordSecondary
+            //         onTextChanged: config.setRootPasswordSecondary(text)
 
-                    background: Rectangle
-                    {
-                        color:  Kirigami.Theme.backgroundColor
-                        radius: 5
-                        opacity: 0.5
-                        border.color: _verificationRootPasswordField.text.length ? Kirigami.Theme.backgroundColor : ( config.rootPasswordReady ? Kirigami.Theme.backgroundColor : Kirigami.Theme.negativeTextColor)
-                    }
-                }
-            }
+            //         background: Rectangle
+            //         {
+            //             color:  Kirigami.Theme.backgroundColor
+            //             radius: 5
+            //             opacity: 0.5
+            //             border.color: _verificationRootPasswordField.text.length ? Kirigami.Theme.backgroundColor : ( config.rootPasswordReady ? Kirigami.Theme.backgroundColor : Kirigami.Theme.negativeTextColor)
+            //         }
+            //     }
+            // }
 
 
             ItemSection

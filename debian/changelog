@@ -1,8 +1,14 @@
 calamares-qml-settings-nitrux (1.6.8+new-dev) nitrux; urgency=medium
 
-  * Set Calamares to create a default hostname.
+  * Set Calamares to use a default hsotname.
+  * Remove the root password fields from the Users QML module since we don't see the root password in the first place.
+  * Fix a TypeError in usersq.
+  * Change text to clarify that the input field for the hostname IS FOR THE HOSTNAME.
+  * Make the input field for the hostname no accept spaces.
+  * Reduce the time that the characters are visible in the password field.
 
- -- Uri Herrera 
+ -- Uri Herrera <uri_herrera@nxos.org>  Mon, 10 Jun 2024 23:41:00 -0500
+
 calamares-qml-settings-nitrux (1.6.7+new-dev) nitrux; urgency=medium
 
   * Delete module configuration files just comment the content.
