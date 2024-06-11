@@ -154,7 +154,7 @@ ResponsiveBase
                     text: config.userPassword
 
                     echoMode: TextInput.Password
-                    passwordMaskDelay: 5
+                    passwordMaskDelay: 0
                     inputMethodHints: Qt.ImhNoAutoUppercase
                     onTextChanged: config.setUserPassword(text)
 
@@ -177,7 +177,7 @@ ResponsiveBase
                     onTextChanged: config.setUserPasswordSecondary(text)
 
                     echoMode: TextInput.Password
-                    passwordMaskDelay: 5
+                    passwordMaskDelay: 0
                     inputMethodHints: Qt.ImhNoAutoUppercase
 
                     background: Rectangle

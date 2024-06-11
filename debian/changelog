@@ -5,9 +5,9 @@ calamares-qml-settings-nitrux (1.6.8+new-dev) nitrux; urgency=medium
   * Fix a TypeError in usersq.
   * Change text to clarify that the input field for the hostname IS FOR THE HOSTNAME.
   * Make the input field for the hostname no accept spaces.
-  * Reduce the time that the characters are visible in the password field.
+  * Reduce the time that the characters are visible in the password field to 0.
 
- -- Uri Herrera <uri_herrera@nxos.org>  Mon, 10 Jun 2024 23:41:00 -0500
+ -- Uri Herrera <uri_herrera@nxos.org>  Mon, 10 Jun 2024 00:13:00 -0500
 
 calamares-qml-settings-nitrux (1.6.7+new-dev) nitrux; urgency=medium
 
