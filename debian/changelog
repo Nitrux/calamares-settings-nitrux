@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (1.6.9+new-dev) nitrux; urgency=medium
+
+  * Change the timeout for rdpkg to 120 seconds.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Mon, 10 Jun 2024 00:13:00 -0500
+
 calamares-qml-settings-nitrux (1.6.8+new-dev) nitrux; urgency=medium
 
   * Set Calamares to use a default hsotname.
