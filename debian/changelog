@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (1.7.0+new-dev) nitrux; urgency=medium
+
+  * Update slideshow.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Sat, 15 Jun 2024 23:11:00 -0500
+
 calamares-qml-settings-nitrux (1.6.9+new-dev) nitrux; urgency=medium
 
   * Change the timeout for rdpkg to 120 seconds.
