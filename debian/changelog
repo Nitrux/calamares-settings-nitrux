@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (1.7.1+new-dev) nitrux; urgency=medium
+
+  * Add parameters to disable watchdogs.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Sun, 16 Jun 2024 09:08:00 -0500
+
 calamares-qml-settings-nitrux (1.7.0+new-dev) nitrux; urgency=medium
 
   * Update slideshow.
