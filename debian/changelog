@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (1.7.2+new-dev) nitrux; urgency=medium
+
+  * Sort GRUB parameters.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Fri, 28 Jun 2024 16:16:00 -0500
+
 calamares-qml-settings-nitrux (1.7.1+new-dev) nitrux; urgency=medium
 
   * Add parameters to disable watchdogs.
