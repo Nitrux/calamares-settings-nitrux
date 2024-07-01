@@ -15,10 +15,10 @@ welcomeExpandingLogo:   true
 strings:
     productName:         Nitrux OS
     shortProductName:    Nitrux
-    version:             3.5.0
-    shortVersion:        3.5.0
-    versionedName:       Nitrux OS 3.5.0 build.310524.cx
-    shortVersionedName:  Nitrux 3.5.0 build.310524.cx
+    version:             3.5.1
+    shortVersion:        3.5.1
+    versionedName:       Nitrux OS 3.5.1 build.300624.nm
+    shortVersionedName:  Nitrux 3.5.1 build.300624.nm
     bootloaderEntryName: Nitrux
     productUrl:          https://nxos.org/
     supportUrl:          https://github.com/Nitrux/nitrux-bug-tracker/
