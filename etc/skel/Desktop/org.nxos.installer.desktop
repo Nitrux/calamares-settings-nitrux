@@ -2,7 +2,7 @@
 Categories=Qt;System;
 Comment[en_US]=Install Nitrux OS in this computer.
 Comment=Install Nitrux OS in this computer.
-Exec=start-calamares
+Exec=sudo -E start-calamares
 GenericName[en_US]=Installer
 GenericName=Installer
 Icon=live-installer

@@ -63,15 +63,15 @@ puts_error() {
 # -- Unmount swap before starting Calamres; otherwise, Calamares can't partition disks when running in a VM. I do not know why swap is automatically mounted *ONLY* in Live sessions in VMs.
 
 if swapon --show | grep -q '/dev/'; then
-    puts_info "Swap partition is currently mounted. Unmounting..."
-    sudo swapoff -a
-    puts_success "Swap partition has been unmounted."
+    puts_info "SWAP partition is currently mounted. Unmounting..."
+    swapoff -a
+    puts_success "SWAP partition has been unmounted."
 else
-    puts_error "Swap partition is not mounted."
+    puts_error "SWAP partition is not mounted."
 fi
 
 
 # -- Launch Calamares.
 
 puts_info "Starting Calamares..."
-sudo -E calamares -D6
+calamares -D6
