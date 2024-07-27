@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (1.7.5+new-dev) nitrux; urgency=medium
+
+  * Ensure intel pstate is enabled.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Sat, 27 Jun 2024 08:06:00 -0500
+
 calamares-qml-settings-nitrux (1.7.4+new-dev) nitrux; urgency=medium
 
   * Update branding.
