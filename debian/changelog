@@ -1,6 +1,12 @@
+calamares-qml-settings-nitrux (1.7.7+new-dev) nitrux; urgency=medium
+
+  * Update branding.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Tue, 30 Jul 2024 06:31:00 -0500
+
 calamares-qml-settings-nitrux (1.7.6+new-dev) nitrux; urgency=medium
 
-  * Remove acpi_osi parameter because when it's added by grub-mkconfig it can't space the quotes.
+  * Remove acpi_osi parameter because when it's added by grub-mkconfig it can't escape the quotes.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Mon, 29 Jul 2024 04:46:00 -0500
 
