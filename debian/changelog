@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (1.7.8+new-dev) nitrux; urgency=medium
+
+  * Change the timeout for linker to 120 seconds.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Tue, 06 Aug 2024 02:52:00 -0500
+
 calamares-qml-settings-nitrux (1.7.7+new-dev) nitrux; urgency=medium
 
   * Update branding.
