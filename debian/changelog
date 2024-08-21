@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (1.8.0+new-dev) nitrux; urgency=medium
+
+  * Don't download our install scripts but only execute them and delete them.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Wed, 21 Aug 2024 16:14:00 -0500
+
 calamares-qml-settings-nitrux (1.7.9+new-dev) nitrux; urgency=medium
 
   * Adjust the required size for the esp to match the size of the partition in devices preloaded with windows.
