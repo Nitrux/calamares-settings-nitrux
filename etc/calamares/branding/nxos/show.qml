@@ -112,15 +112,11 @@ Presentation
                 font.pixelSize: 12
                 color: "white"
                 text: qsTr("We extend Plasma to allow the user to glance over system operations with easy-to-understand status displayed on the screen. NX Desktop is our set of applied customizations to the Plasma 5 Desktop. It includes new plasmoids (or Plasma widgets) and a new LnF (also known as a “look and feel”) package that includes the following items, KStyle, KWin decorations, wallpapers, Plasma themes, Konsole theme and profile, Aurorae themes, SDDM themes, cursors, and color schemes.\n\n"
-                           +"Quick access to networks\n"
-                           + " • Easily access and edit your network preferences\n\n"
-                           +"Easy multimedia controls\n"
-                           + " • We combine Plasma’s volume and media controls for a more straightforward operation.\n\n"
                            +"Better workflow.\n"
-                           + " • If you’re a fan of tiling windows, you’ll feel right at home.\n\n"
-                           +"Easy workspace navigation\n"
+                           + " • If you’re a fan of tiling windows, you’ll feel right at home with Polonium, which provides DWM-like window tiling in KWin.\n"
                            + " • Additionally, we provide a way to run menubar commands with plasma-hud, much like the Unity 7 Heads-Up Display (HUD). A Heads-Up Display (HUD) allows you to search through an application’s tool menu.\n\n"
-                           + " • Touchégg is an app that runs in the background and transforms the gestures you make on your touchpad or touchscreen into visible actions on your desktop. For example, you can swipe up with three fingers to maximize a window or swipe left with four fingers to switch to the next desktop. Many more actions and gestures are available, and everything is easily configurable.\n\n"
+                           +"Easy workspace navigation\n"
+                           + " • Touchégg is an app that runs in the background and transforms the gestures you make on your touchpad or touchscreen into visible actions on your desktop. For example, you can swipe up with three fingers to maximize a window or swipe left with four fingers to switch to the next desktop. Many more actions and gestures are available, and everything is easily configurable.\n"
                            + " • The Overview will let you visualize all your virtual desktops and windows swiftly. You can move windows between virtual desktops and close and configure them to accommodate your workflow.")
                 wrapMode: Text.WordWrap
             }
@@ -205,11 +201,60 @@ Presentation
 
                 font.pixelSize: 12
                 color: "white"
-                text: qsTr("An immutable operating system remains unchangeable after installation, providing a degree of certainty. In the case of Nitrux OS, it maintains the immutability of the root directory, safeguarding its original content. This design choice offers notable advantages, such as:\n\n"
+                text: qsTr("An immutable operating system remains unchangeable after installation, providing a degree of certainty. In the case of Nitrux OS, it maintains the immutability of the root directory, safeguarding its original content.\n\n"
+                           + "This design choice offers notable advantages, such as:\n\n"
                            + " • Enhancing confidence in delivering new distribution versions without root conflicts.\n"
                            + " • Preventing issues arising from upgraded packages sourced outside our controlled repository.\n\n"
-                           + "This approach also strengthens security against tampering and malware and simplifies system maintenance by minimizing potential points of failure. It finds popularity in security-sensitive contexts like military and financial systems. The core benefits include shielding against update failures and user errors by rendering essential components as read-only, streamlining maintenance due to reduced vulnerabilities to mishaps, and ensuring unperturbed system integrity impervious to malware threats.\n\n"
-                           + "Overlayroot is a tool that utilizes OverlayFS, a union filesystem implementation. OverlayFS presents a unified view of two different filesystems; the presented filesystem results from overlaying one filesystem over another. OverlayFS presents the object from the upper filesystem and hides the object from the lower filesystem if a particular object exists in both the upper and lower filesystems. It merges and presents the directory’s contents on the upper and lower filesystems if the object is a directory.")
+                           + "Overlayroot is a tool that utilizes OverlayFS, a union filesystem implementation. OverlayFS presents a unified view of two different filesystems; the presented filesystem results from overlaying one filesystem over another. OverlayFS presents the object from the upper filesystem and hides the object from the lower filesystem if a particular object exists in both the upper and lower filesystems.\n\n"
+                           +"Effortless system upgrades\n"
+                           + "In today’s dynamic OS landscape, seamless updates and dependable rollbacks are more crucial than ever. The Nitrux Update Tool System streamlines distribution updates while ensuring a safety net against unexpected issues.\n\n"
+                           + "At its core, the Nitrux Update Tool System simplifies the update process:\n"
+                           + " • Confident Backups: It creates a backup of the root directory using SquashFS and the XFS partition using the XFS utilities and stores them locally.\n"
+                           + " • Swift Updates: Then, it downloads an OTA-style update file and updates the system using a custom AppImage.\n"
+                           + " • Effortless Rollbacks: Depending on the situation, the utility uses ‘rsync’ and the locally generated SquashFS file or the XFS tools when restoring a backup.")
+                wrapMode: Text.WordWrap
+            }
+        }
+    }
+
+    Slide {
+        
+        ColumnLayout {
+            anchors.leftMargin: 18
+            anchors.left: parent.left
+            anchors.right: parent.horizontalCenter
+            anchors.verticalCenter: parent.verticalCenter
+
+            Label {
+                Layout.fillWidth: true
+
+                text: qsTr("Improved performance and organized filesystem structure")
+                font.pixelSize: 22
+                font.bold: true
+                color: "white"
+            }
+
+            Rectangle {
+                height: 3
+                width: 24
+                radius: 2
+
+                color: "white"
+            }
+            
+            Text {
+                Layout.fillWidth: true
+                Layout.topMargin: 16
+
+                font.pixelSize: 12
+                color: "white"
+                text: qsTr("Nitrux focuses on optimizing performance and responsiveness by implementing advanced memory management tweaks.\n\n"
+                           + " • Reduced memory compaction overhead. Reduce CPU overhead and improve overall system responsiveness, especially in memory-intensive applications, leading to more stable performance by avoiding sudden spikes in CPU usage caused by proactive compaction.\n"
+                           + " • Improve performance in contended lock scenarios. By allowing more aggressive page locking, we improve performance in scenarios with contention for memory pages, which can occur in applications with high memory usage and multi-threaded environments.\n"
+                           + " • Enable THP (Transparent Hugepages) for all memory locations. Improve performance for applications with considerable memory usage and access patterns that benefit from larger pages.\n"
+                           + " • Disable memory page fragmentation. In workloads like gaming, this change can provide benefits such as reduced CPU overhead, improved system responsiveness, and more predictable performance.\n\n"
+                           + "Aesthetic FHS\n"
+                           + "Aesthetic FHS is a change in the structure of the root directory to make the FHS directories more human-readable and easier to understand their purpose. Aesthetic FHS is an initial implementation of a proposal for a new filesystem hierarchy standard for this distribution.")
                 wrapMode: Text.WordWrap
             }
         }
@@ -329,6 +374,49 @@ Presentation
             Label {
                 Layout.fillWidth: true
 
+                text: qsTr("Use Flatpak and install from a growing collection of apps")
+                font.pixelSize: 22
+                font.bold: true
+                color: "white"
+            }
+
+            Rectangle {
+                height: 3
+                width: 24
+                radius: 2
+
+                color: "white"
+            }
+            
+            Text {
+                Layout.fillWidth: true
+                Layout.topMargin: 16
+
+                font.pixelSize: 12
+                color: "white"
+                text: qsTr("Flatpak is a system for building, distributing, and running sandboxed desktop applications on Linux. It provides a consistent environment for apps across different distributions, allowing developers to build applications that can run on any Linux distribution without needing to account for each one’s specific quirks or dependencies.\n\n"
+                           + " • Sandboxing: Flatpak applications run in a containerized environment, isolated from the rest of the system. This improves security by limiting what the application can access, reducing the risk of a malicious or compromised app affecting the entire system.\n"
+                           + " • Cross-Distribution Compatibility: Flatpak packages include all the dependencies an application needs, meaning that a Flatpak can run on any Linux distribution that supports Flatpak without worrying about compatibility issues.\n"
+                           + " • Centralized Repositories: Applications are typically distributed via repositories (such as Flathub), where users can browse, download, and install apps. This centralization makes it easier to find and manage applications.\n"
+                           + " • Versioning and Updates: Flatpak allows multiple versions of an application to coexist on the same system. Updates can be pushed quickly, and users can roll back to previous versions if needed.\n"
+                           + " • Binary Formats: Flatpak uses a universal binary format, meaning the same Flatpak package works across different distributions, unlike traditional package managers where each distribution might have its format (e.g., DEB for Debian/Ubuntu, RPM for Fedora).\n"
+                           + " • Runtime Environments: Flatpak applications are built against a runtime, which provides a standardized set of libraries. This ensures that applications have the environment to run correctly, independent of the system’s installed libraries.")
+                wrapMode: Text.WordWrap
+            }
+        }
+    }
+
+    Slide {
+        
+        ColumnLayout {
+            anchors.leftMargin: 18
+            anchors.left: parent.left
+            anchors.right: parent.horizontalCenter
+            anchors.verticalCenter: parent.verticalCenter
+
+            Label {
+                Layout.fillWidth: true
+
                 text: qsTr("Use every package manager anywhere at the same time")
                 font.pixelSize: 22
                 font.bold: true
@@ -356,6 +444,48 @@ Presentation
                            + " • To mix and match a stable base system (e.g., Debian Stable, Ubuntu LTS, RedHat) with a bleeding-edge environment for development or gaming (e.g., Arch, OpenSUSE Tumbleweed, or Fedora with the latest Mesa.)\n"
                            + " • Leverage large, curated distro images for Docker/Podman to manage multiple environments.\n\n"
                            + "Users can use a container of any Linux distribution (Arch, Fedora, Debian, openSUSE, NixOS, Gentoo, and many more), including multiple containers simultaneously; there’s no limitation. Distrobox also allows users to export software that uses a desktop launcher to automatically integrate it into the application menu, even picking up the artwork from the host, like application themes and icons.")
+                wrapMode: Text.WordWrap
+            }
+        }
+    }
+
+    Slide {
+        
+        ColumnLayout {
+            anchors.leftMargin: 18
+            anchors.left: parent.left
+            anchors.right: parent.horizontalCenter
+            anchors.verticalCenter: parent.verticalCenter
+
+            Label {
+                Layout.fillWidth: true
+
+                text: qsTr("A decentralized cross-platform software installation system")
+                font.pixelSize: 22
+                font.bold: true
+                color: "white"
+            }
+
+            Rectangle {
+                height: 3
+                width: 24
+                radius: 2
+
+                color: "white"
+            }
+            
+            Text {
+                Layout.fillWidth: true
+                Layout.topMargin: 16
+
+                font.pixelSize: 12
+                color: "white"
+                text: qsTr("Zero Install or 0install is “a decentralized cross-distribution software installation system available under the LGPL. It allows software developers to publish programs directly from their websites while supporting features familiar from centralized distribution repositories, such as shared libraries, automatic updates, and digital signatures.”\n\n"
+                           + "Some of Zero Install features are.\n\n"
+                           + " • Run apps with a single click. Run applications without having to install them first.\n"
+                           + " • Anyone can distribute software. Create one package that works on multiple platforms.\n"
+                           + " • You control your computer. You don’t have to guess what happens during installation.\n"
+                           + " • Security is central. Installing an app doesn’t grant it administrator access.")
                 wrapMode: Text.WordWrap
             }
         }
@@ -545,6 +675,7 @@ Presentation
                            + " • French\n"
                            + " • Spanish\n"
                            + " • Portuguese\n\n"
+                           + " • ..and more\n\n"
                            + "Additionally, we include support for Mozc, a Japanese Input Method Editor (IME) designed for multi-platform such as Android OS, Apple OS X, Chromium OS, GNU/Linux, and Microsoft Windows for Japanese users.")
                 wrapMode: Text.WordWrap
             }
