@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (1.8.5+new-dev) nitrux; urgency=medium
+
+  * Add user to gamemode group.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Wed, 23 Oct 2024 18:30:00 -0500
+
 calamares-qml-settings-nitrux (1.8.4+new-dev) nitrux; urgency=medium
 
   * Add missing parameters to installation from ISO.
