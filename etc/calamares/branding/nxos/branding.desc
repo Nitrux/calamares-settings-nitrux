@@ -17,8 +17,8 @@ strings:
     shortProductName:    Nitrux
     version:             3.7.1
     shortVersion:        3.7.1
-    versionedName:       Nitrux OS 3.7.1 build.311024.xx
-    shortVersionedName:  Nitrux 3.7.1 build.311024.xx
+    versionedName:       Nitrux OS 3.7.1 build.311024.sp
+    shortVersionedName:  Nitrux 3.7.1 build.311024.sp
     bootloaderEntryName: Nitrux
     productUrl:          https://nxos.org/
     supportUrl:          https://github.com/Nitrux/nitrux-bug-tracker/
