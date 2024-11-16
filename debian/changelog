@@ -1,10 +1,9 @@
 calamares-qml-settings-nitrux (1.8.8+new-dev) nitrux; urgency=medium
 
   * Update branding.
-  * Add kernel paramaters to avoid clockdrift in some laptops.
-  * Remove module configuration from grubcfg.conf since we're adding a configuration file.
+  * Add kernel paramaters to prevent clockdrift in some laptops.
 
- -- Uri Herrera <uri_herrera@nxos.org>  Fri, 15 Nov 2024 17:19:00 -0500
+ -- Uri Herrera <uri_herrera@nxos.org>  Sat, 16 Nov 2024 14:10:00 -0500
 
 calamares-qml-settings-nitrux (1.8.7+new-dev) nitrux; urgency=medium
 
