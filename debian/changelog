@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (1.9.0+new-dev) nitrux; urgency=medium
+
+  * Update branding.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Mon, 02 Dec 2024 12:54:00 -0500
+
 calamares-qml-settings-nitrux (1.8.9+new-dev) nitrux; urgency=medium
 
   * Remove parameter not enable din kernel.
