@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (1.9.2+new-dev) nitrux; urgency=medium
+
+  * Add parameter to enable landlock.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Sat, 14 Dec 2024 13:34:00 -0500
+
 calamares-qml-settings-nitrux (1.9.1+new-dev) nitrux; urgency=medium
 
   * Add parameter to mitigate spurious wake events when suspending.
