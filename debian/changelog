@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (1.9.3+new-dev) nitrux; urgency=medium
+
+  * Add user to group video.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Sat, 14 Dec 2024 16:35:00 -0500
+
 calamares-qml-settings-nitrux (1.9.2+new-dev) nitrux; urgency=medium
 
   * Add parameter to enable landlock.
