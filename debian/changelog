@@ -1,6 +1,12 @@
+calamares-qml-settings-nitrux (1.9.7+new-dev) nitrux; urgency=medium
+
+  * Add script to sign the kernel for secure boot within the chroot.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Thu, 19 Dec 2024 02:18:00 -0500
+
 calamares-qml-settings-nitrux (1.9.6+new-dev) nitrux; urgency=medium
 
-  * Add paramaters for PTi and KFENCE.
+  * Add paramaters for PTI and KFENCE.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Thu, 19 Dec 2024 02:18:00 -0500
 
