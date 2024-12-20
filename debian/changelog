@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (1.9.9+new-dev) nitrux; urgency=medium
+
+  * Revert sb-shim instead of grub in bootloader.conf as it causes our update-grub script not to work.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Fri, 20 Dec 2024 14:28:00 -0500
+
 calamares-qml-settings-nitrux (1.9.8+new-dev) nitrux; urgency=medium
 
   * Use sb-shim instead of grub in bootloader.conf.
