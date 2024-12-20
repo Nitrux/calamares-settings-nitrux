@@ -1,4 +1,4 @@
-calamares-qml-settings-nitrux (1.9.7+new-dev) nitrux; urgency=medium
+calamares-qml-settings-nitrux (1.9.8+new-dev) nitrux; urgency=medium
 
   * Use sb-shim instead of grub in bootloader.conf.
   * Don't use external script to sign the kernel as it's already signed during ISO build process.
