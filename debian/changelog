@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (2.0.2+new-dev) nitrux; urgency=medium
+
+  * Disable kfence.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Thu, 30 Jan 2025 17:23:00 -0500
+
 calamares-qml-settings-nitrux (2.0.1+new-dev) nitrux; urgency=medium
 
   * Add parameter to convert irqs to threads.
