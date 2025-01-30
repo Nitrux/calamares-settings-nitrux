@@ -1,6 +1,12 @@
+calamares-qml-settings-nitrux (2.0.1+new-dev) nitrux; urgency=medium
+
+  * Add parameter for threadirqs.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Thu, 30 Jan 2025 17:05:00 -0500
+
 calamares-qml-settings-nitrux (2.0.0+new-dev) nitrux; urgency=medium
 
-  * Enable amd_pstate and use prefcore.
+  * Enable amd_pstate and  add parameter for amd prefcore.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Sat, 25 Jan 2025 00:12:00 -0500
 
