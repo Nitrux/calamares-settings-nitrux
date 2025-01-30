@@ -1,6 +1,7 @@
 calamares-qml-settings-nitrux (2.0.1+new-dev) nitrux; urgency=medium
 
-  * Add parameter for threadirqs.
+  * Add parameter to convert irqs to threads.
+  * Remove paramater for KFENCE.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Thu, 30 Jan 2025 17:05:00 -0500
 
