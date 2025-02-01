@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (2.0.3+new-dev) nitrux; urgency=medium
+
+  * Remove parameter to convert irqs to threads because it causes a constant stutter every couple of seconds.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Fri, 31 Jan 2025 21:13:00 -0500
+
 calamares-qml-settings-nitrux (2.0.2+new-dev) nitrux; urgency=medium
 
   * Disable kfence.
