@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (2.0.8) nitrux; urgency=medium
+
+  * Update branding.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Fri, 26 Sep 2025 14:59:00 -0500
+
 calamares-qml-settings-nitrux (2.0.7+new-dev) nitrux; urgency=medium
 
   * Update branding.
