@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (2.0.9) nitrux; urgency=medium
+
+  * Remove unnecesary script.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Sat, 27 Sep 2025 02:19:00 -0500
+
 calamares-qml-settings-nitrux (2.0.8) nitrux; urgency=medium
 
   * Update branding.
