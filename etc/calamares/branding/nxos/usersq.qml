@@ -3,7 +3,6 @@ import io.calamares.ui 1.0
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
-import Qt5Compat.GraphicalEffects
 import QtQuick.Window
 
 import "."
@@ -46,7 +45,7 @@ ResponsiveBase
             {
                 id: _formLayout
                 width: parent.width
-                spacing: 8 // Replaced Kirigami.Units
+                spacing: 8
 
                 ItemSection
                 {
@@ -62,13 +61,14 @@ ResponsiveBase
                         placeholderText: qsTr("Enter your name")
                         text: config.fullName
                         onTextChanged: config.setFullName(text)
-                        
+
                         background: Rectangle
                         {
                             color: "#231F20"
                             radius: 5
                             opacity: 0.5
-                            border.color: _userNameField.text.length ? "#231F20" : ( config.fullNameChanged ? "#231F20" : "red")
+                            border.width: 1
+                            border.color: _userNameField.activeFocus ? "#26C6DA" : (config.fullNameStatus ? "#231F20" : "red")
                         }
                     }
                 }
@@ -93,7 +93,8 @@ ResponsiveBase
                             color:  "#231F20"
                             radius: 5
                             opacity: 0.5
-                            border.color: _userLoginField.text.length ? "#231F20" : (config.loginNameStatusChanged ? "#231F20" : "red")
+                            border.width: 1
+                            border.color: _userLoginField.activeFocus ? "#26C6DA" : (config.loginNameStatus ? "#231F20" : "red")
                         }
                     }
                 }
@@ -118,15 +119,17 @@ ResponsiveBase
                             }
                         }
                         inputMethodHints: Qt.ImhLowercaseOnly
-                        validator: RegExpValidator { regExp: /^[^\s]*$/ }
+                        // *** CORRECTED VALIDATOR ***
+                        validator: RegularExpressionValidator { regularExpression: /^[^\s]*$/ }
                         onTextChanged: config.setHostName(text)
-                        
+
                         background: Rectangle
                         {
                             color:  "#231F20"
                             radius: 5
                             opacity: 0.5
-                            border.color:  _hostName.text.length ? "#231F20" :  ( config.hostNameStatusChanged ? "#231F20" : "red")
+                            border.width: 1
+                            border.color:  _hostName.activeFocus ? "#26C6DA" : ( config.hostNameStatus ? "#231F20" : "red")
                         }
                     }
                 }
@@ -144,7 +147,6 @@ ResponsiveBase
                         placeholderText: qsTr("Enter password for user account")
                         text: config.userPassword
                         echoMode: TextInput.Password
-                        passwordMaskDelay: 0
                         inputMethodHints: Qt.ImhNoAutoUppercase
                         onTextChanged: config.setUserPassword(text)
 
@@ -153,7 +155,8 @@ ResponsiveBase
                             color:  "#231F20"
                             radius: 5
                             opacity: 0.5
-                            border.color: ( config.userPasswordStatusChanged ? "#231F20" : "red")
+                            border.width: 1
+                            border.color: _passwordField.activeFocus ? "#26C6DA" : ( config.userPasswordStatus ? "#231F20" : "red")
                         }
                     }
 
@@ -161,11 +164,10 @@ ResponsiveBase
                     {
                         id: _verificationPasswordField
                         width: parent.width
-                        placeholderText: qsTr("Enter password for user account")
+                        placeholderText: qsTr("Repeat password for user account")
                         text: config.userPasswordSecondary
                         onTextChanged: config.setUserPasswordSecondary(text)
                         echoMode: TextInput.Password
-                        passwordMaskDelay: 0
                         inputMethodHints: Qt.ImhNoAutoUppercase
 
                         background: Rectangle
@@ -173,7 +175,8 @@ ResponsiveBase
                             color:  "#231F20"
                             radius: 5
                             opacity: 0.5
-                            border.color: config.userPasswordSecondaryChanged ? "#231F20" : "red"
+                            border.width: 1
+                            border.color: _verificationPasswordField.activeFocus ? "#26C6DA" : (config.userPasswordSecondaryStatus ? "#231F20" : "red")
                         }
                     }
 
