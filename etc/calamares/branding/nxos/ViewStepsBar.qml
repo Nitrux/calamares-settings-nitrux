@@ -1,64 +1,71 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
-import Qt5Compat.GraphicalEffects
-
 import io.calamares.ui 1.0
 import io.calamares.core 1.0
 
-Item
-{
+Item {
     implicitHeight: 80
 
-    RowLayout
-    {
+    RowLayout {
         anchors.fill: parent
         anchors.margins: 16
         spacing: 0
 
-        Repeater
-        {
+        Repeater {
             id: _viewManagerRepeater
             model: ViewManager
 
-            RowLayout
-            {
-                opacity: index !== _viewManagerRepeater.count - 1 ? 1 : 0
+            Item {
                 Layout.fillWidth: true
                 Layout.fillHeight: true
-                spacing: 0
 
-                Rectangle
-                {
-                    Layout.alignment: Qt.AlignCenter
-                    Layout.fillWidth: true
-                    Layout.preferredHeight: 4
-                    color: index !== 0 ? (ViewManager.currentStepIndex >= index ? "#26C6DA" : "#FFFFFF") : "transparent"
+                Rectangle {
+                    id: dot
+                    width: 22
+                    height: 22
+                    radius: width / 2
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    anchors.verticalCenter: parent.verticalCenter
+                    anchors.verticalCenterOffset: -0.5
+                    z: 2
+
+                    border.color: ViewManager.currentStepIndex >= index ? "#26C6DA" : "#FFFFFF"
+                    border.width: 4
+                    color: ViewManager.currentStepIndex >= index ? "#26C6DA" : "transparent"
                 }
 
-                ColumnLayout
-                {
-                    Layout.alignment: Qt.AlignCenter
-                    spacing: 16
+                Rectangle {
+                    width: Math.round((parent.width - dot.width) / 2)
+                    height: 4
+                    anchors.verticalCenter: dot.verticalCenter
+                    anchors.right: dot.left
+                    z: 0
 
-                    Rectangle
-                    {
-                        id: _bgCheck
-                        height: 22
-                        width: 22
-                        radius: 11
-                        border.color: ViewManager.currentStepIndex === index ? "#FFFFFF" : (ViewManager.currentStepIndex >= index ? "#26C6DA" : "#FFFFFF")
-                        border.width: 4
-                        color: ViewManager.currentStepIndex >= index ? "#26C6DA" : "transparent"
-                    }
+                    visible: index > 0
+                    color: ViewManager.currentStepIndex >= index ? "#26C6DA" : "#FFFFFF"
+                }
 
-                    Label
-                    {
-                        text: display
-                        horizontalAlignment: Qt.AlignHCenter
-                        color: "#FFFFFF"
-                        font.bold: true
-                    }
+                Rectangle {
+                    width: Math.round((parent.width - dot.width) / 2)
+                    height: 4
+                    anchors.verticalCenter: dot.verticalCenter
+                    anchors.left: dot.right
+                    z: 0
+                    
+                    visible: index < _viewManagerRepeater.count - 1
+                    color: ViewManager.currentStepIndex > index ? "#26C6DA" : "#FFFFFF"
+                }
+                
+                Label {
+                    text: display
+                    anchors.horizontalCenter: dot.horizontalCenter
+                    anchors.top: dot.bottom
+                    anchors.topMargin: 8
+                    color: "#FFFFFF"
+                    font.bold: true
+                    elide: Text.ElideRight
+                    horizontalAlignment: Text.AlignHCenter
                 }
             }
         }
