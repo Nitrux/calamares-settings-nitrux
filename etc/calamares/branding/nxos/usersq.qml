@@ -1,21 +1,16 @@
 import io.calamares.ui 1.0
 
-import QtQuick 2.10
-import QtQuick.Controls 2.10
-import QtQuick.Layouts 1.3
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
+import Qt5Compat.GraphicalEffects
+import QtQuick.Window
 
-import QtGraphicalEffects 1.0
-import QtQuick.Window 2.3
 import "."
-
-import org.kde.kirigami 2.7 as Kirigami
-
 
 ResponsiveBase
 {
     id: control
-
-    // 	nextButton.enabled:  config.isNextEnabled
 
     title: qsTr("Users")
     subtitle: qsTr("Pick your user name and credentials to login and perform admin tasks")
@@ -25,7 +20,7 @@ ResponsiveBase
         } catch (e) {
             console.error("Error accessing config.status.message:", e);
             return "";
-            }
+        }
     }
 
     icon.source: "cala-qml-user"
@@ -37,7 +32,7 @@ ResponsiveBase
         padding: 0
         background:  Rectangle
         {
-            color: Qt.lighter(control.Kirigami.Theme.backgroundColor)
+            color: Qt.lighter("#231F20", 1.1)
             radius: 5
             opacity: 0.5
         }
@@ -45,240 +40,174 @@ ResponsiveBase
         Flickable
         {
             contentHeight: _formLayout.implicitHeight
+            anchors.fill: parent
 
-            Column
-        {
-            id: _formLayout
-            width: parent.width
-            height: parent.height
-
-            spacing: Kirigami.Units.smallSpacing
-
-            ItemSection
+            ColumnLayout
             {
+                id: _formLayout
                 width: parent.width
+                spacing: 8 // Replaced Kirigami.Units
 
-                title: qsTr("What is your name?")
-                subtitle: qsTr("The name helps identify the actual user of the account. The name might be used to personalize the user experience, like displaying the name on the login screen.")
-
-                TextField
+                ItemSection
                 {
-                    id: _userNameField
                     width: parent.width
-                    enabled: config.isEditable("fullName")
-                    placeholderText: qsTr("Enter your name")
-                    text: config.fullName
-                    onTextChanged: config.setFullName(text)
-                    background: Rectangle
+                    title: qsTr("What is your name?")
+                    subtitle: qsTr("The name helps identify the actual user of the account. The name might be used to personalize the user experience, like displaying the name on the login screen.")
+
+                    TextField
                     {
-                        color: Kirigami.Theme.backgroundColor
-                        radius: 5
-                        opacity: 0.5
-                        border.color:  _userNameField.text.length ? Kirigami.Theme.backgroundColor : ( config.fullNameChanged ? Kirigami.Theme.backgroundColor : Kirigami.Theme.negativeTextColor)
-                    }
-                }
-            }
-
-            ItemSection
-            {
-                width: parent.width
-
-                title:  qsTr("Choose a username for your account")
-                subtitle: qsTr("The username is a unique identifier for each user on the system. It distinguishes one user account from another, ensuring that each user's settings, files, and permissions are kept separate.")
-
-                TextField
-                {
-                    id: _userLoginField
-                    enabled: config.isEditable("loginName")
-                    width: parent.width
-                    placeholderText: qsTr("Enter your username")
-                    text: config.loginName
-                    onTextChanged: config.setLoginName(text)
-
-                    background: Rectangle
-                    {
-                        color:  Kirigami.Theme.backgroundColor
-                        radius: 5
-                        opacity: 0.5
-                        border.color: _userLoginField.text.length ? Kirigami.Theme.backgroundColor : (config.loginNameStatusChanged ? Kirigami.Theme.backgroundColor : Kirigami.Theme.negativeTextColor)
-
-                    }
-                }
-            }
-
-            ItemSection
-            {
-                width: parent.width
-
-                title: qsTr("Choose a hostname for this computer")
-                subtitle: qsTr("The hostname will be used if you make the computer visible to others on a network. Valid characters for hostnames are ASCII letters from a to z, the digits from 0 to 9, and the hyphen (-). A hostname may not start with a hyphen.")
-
-                TextField
-                {
-                    id: _hostName
-                    width: parent.width
-                    placeholderText: qsTr("Enter your computer hostname")
-                    text: {
-                        try {
-                            return config.hostName ? config.hostName : "";
-                        } catch (e) {
-                            console.error("Error accessing config.hostName:", e);
-                            return "";
+                        id: _userNameField
+                        width: parent.width
+                        enabled: config.isEditable("fullName")
+                        placeholderText: qsTr("Enter your name")
+                        text: config.fullName
+                        onTextChanged: config.setFullName(text)
+                        
+                        background: Rectangle
+                        {
+                            color: "#231F20"
+                            radius: 5
+                            opacity: 0.5
+                            border.color: _userNameField.text.length ? "#231F20" : ( config.fullNameChanged ? "#231F20" : "red")
                         }
                     }
-                    inputMethodHints: Qt.ImhLowercaseOnly
-                    validator: RegExpValidator { regExp: /^[^\s]*$/ }
-                    onTextChanged: config.setHostName(text)
-                    background: Rectangle
-                    {
-                        color:  Kirigami.Theme.backgroundColor
-                        radius: 5
-                        opacity: 0.5
-                        border.color:  _hostName.text.length ? Kirigami.Theme.backgroundColor :  ( config.hostNameStatusChanged ? Kirigami.Theme.backgroundColor : Kirigami.Theme.negativeTextColor)
-                    }
                 }
-            }
 
-            ItemSection
-            {
-                width: parent.width
-
-                title: qsTr("Choose a password for your account")
-                subtitle: qsTr("Enter the same password twice. Users must use a password over eight characters long, including uppercase, lowercase, numbers, and symbols, with sufficient randomness, and users should change the password every 90 days.")
-
-                TextField
+                ItemSection
                 {
-                    id: _passwordField
                     width: parent.width
-                    placeholderText: qsTr("Enter password for user account")
-                    text: config.userPassword
+                    title:  qsTr("Choose a username for your account")
+                    subtitle: qsTr("The username is a unique identifier for each user on the system. It distinguishes one user account from another, ensuring that each user's settings, files, and permissions are kept separate.")
 
-                    echoMode: TextInput.Password
-                    passwordMaskDelay: 0
-                    inputMethodHints: Qt.ImhNoAutoUppercase
-                    onTextChanged: config.setUserPassword(text)
-
-                    background: Rectangle
+                    TextField
                     {
-                        color:  Kirigami.Theme.backgroundColor
-                        radius: 5
-                        opacity: 0.5
-                        border.color: ( config.userPasswordStatusChanged ? Kirigami.Theme.backgroundColor : Kirigami.Theme.negativeTextColor)
-                    }
+                        id: _userLoginField
+                        enabled: config.isEditable("loginName")
+                        width: parent.width
+                        placeholderText: qsTr("Enter your username")
+                        text: config.loginName
+                        onTextChanged: config.setLoginName(text)
 
+                        background: Rectangle
+                        {
+                            color:  "#231F20"
+                            radius: 5
+                            opacity: 0.5
+                            border.color: _userLoginField.text.length ? "#231F20" : (config.loginNameStatusChanged ? "#231F20" : "red")
+                        }
+                    }
                 }
 
-                TextField
+                ItemSection
                 {
-                    id: _verificationPasswordField
                     width: parent.width
-                    placeholderText: qsTr("Enter password for user account")
-                    text: config.userPasswordSecondary
-                    onTextChanged: config.setUserPasswordSecondary(text)
+                    title: qsTr("Choose a hostname for this computer")
+                    subtitle: qsTr("The hostname will be used if you make the computer visible to others on a network. Valid characters for hostnames are ASCII letters from a to z, the digits from 0 to 9, and the hyphen (-). A hostname may not start with a hyphen.")
 
-                    echoMode: TextInput.Password
-                    passwordMaskDelay: 0
-                    inputMethodHints: Qt.ImhNoAutoUppercase
-
-                    background: Rectangle
+                    TextField
                     {
-                        color:  Kirigami.Theme.backgroundColor
-                        radius: 5
-                        opacity: 0.5
-                        border.color: config.userPasswordSecondaryChanged ? Kirigami.Theme.backgroundColor : Kirigami.Theme.negativeTextColor
+                        id: _hostName
+                        width: parent.width
+                        placeholderText: qsTr("Enter your computer hostname")
+                        text: {
+                            try {
+                                return config.hostName ? config.hostName : "";
+                            } catch (e) {
+                                console.error("Error accessing config.hostName:", e);
+                                return "";
+                            }
+                        }
+                        inputMethodHints: Qt.ImhLowercaseOnly
+                        validator: RegExpValidator { regExp: /^[^\s]*$/ }
+                        onTextChanged: config.setHostName(text)
+                        
+                        background: Rectangle
+                        {
+                            color:  "#231F20"
+                            radius: 5
+                            opacity: 0.5
+                            border.color:  _hostName.text.length ? "#231F20" :  ( config.hostNameStatusChanged ? "#231F20" : "red")
+                        }
                     }
                 }
 
-                CheckBox
+                ItemSection
                 {
-                    visible: config.writeRootPassword
-                    text: qsTr("Reuse user password as root password")
-                    checked: config.reuseUserPasswordForRoot
-                    onCheckedChanged: config.setReuseUserPasswordForRoot(checked)
+                    width: parent.width
+                    title: qsTr("Choose a password for your account")
+                    subtitle: qsTr("Enter the same password twice. Users must use a password over eight characters long, including uppercase, lowercase, numbers, and symbols, with sufficient randomness, and users should change the password every 90 days.")
+
+                    TextField
+                    {
+                        id: _passwordField
+                        width: parent.width
+                        placeholderText: qsTr("Enter password for user account")
+                        text: config.userPassword
+                        echoMode: TextInput.Password
+                        passwordMaskDelay: 0
+                        inputMethodHints: Qt.ImhNoAutoUppercase
+                        onTextChanged: config.setUserPassword(text)
+
+                        background: Rectangle
+                        {
+                            color:  "#231F20"
+                            radius: 5
+                            opacity: 0.5
+                            border.color: ( config.userPasswordStatusChanged ? "#231F20" : "red")
+                        }
+                    }
+
+                    TextField
+                    {
+                        id: _verificationPasswordField
+                        width: parent.width
+                        placeholderText: qsTr("Enter password for user account")
+                        text: config.userPasswordSecondary
+                        onTextChanged: config.setUserPasswordSecondary(text)
+                        echoMode: TextInput.Password
+                        passwordMaskDelay: 0
+                        inputMethodHints: Qt.ImhNoAutoUppercase
+
+                        background: Rectangle
+                        {
+                            color:  "#231F20"
+                            radius: 5
+                            opacity: 0.5
+                            border.color: config.userPasswordSecondaryChanged ? "#231F20" : "red"
+                        }
+                    }
+
+                    CheckBox
+                    {
+                        visible: config.writeRootPassword
+                        text: qsTr("Reuse user password as root password")
+                        checked: config.reuseUserPasswordForRoot
+                        onCheckedChanged: config.setReuseUserPasswordForRoot(checked)
+                    }
                 }
-
-            }
-
-
-            // ItemSection
-            // {
-            //     width: parent.width
-            //     visible: !config.reuseUserPasswordForRoot
-
-            //     title: qsTr("Choose a password for the root account")
-            //     subtitle: qsTr("Enter the same password twice. Users must use a password over eight characters long, including uppercase, lowercase, numbers, and symbols, with sufficient randomness, and users should change the password every 90 days.")
-
-            //     TextField
-            //     {
-            //         id: _rootPasswordField
-            //         width: parent.width
-            //         placeholderText: qsTr("Enter password for root")
-            //         echoMode: TextInput.Password
-            //         passwordMaskDelay: 300
-            //         inputMethodHints: Qt.ImhNoAutoUppercase
-            //         text: config.rootPassword
-            //         onTextChanged: config.setRootPassword(text)
-
-            //         background: Rectangle
-            //         {
-            //             color:  Kirigami.Theme.backgroundColor
-            //             radius: 5
-            //             opacity: 0.5
-            //             border.color: _rootPasswordField.text.length ? Kirigami.Theme.backgroundColor :  ( config.rootPasswordReady ? Kirigami.Theme.backgroundColor : Kirigami.Theme.negativeTextColor)
-
-            //         }
-            //     }
-
-            //     TextField
-            //     {
-            //         id: _verificationRootPasswordField
-            //         width: parent.width
-            //         placeholderText: qsTr("Repeat password for root")
-            //         echoMode: TextInput.Password
-            //         passwordMaskDelay: 300
-            //         inputMethodHints: Qt.ImhNoAutoUppercase
-            //         text: config.rootPasswordSecondary
-            //         onTextChanged: config.setRootPasswordSecondary(text)
-
-            //         background: Rectangle
-            //         {
-            //             color:  Kirigami.Theme.backgroundColor
-            //             radius: 5
-            //             opacity: 0.5
-            //             border.color: _verificationRootPasswordField.text.length ? Kirigami.Theme.backgroundColor : ( config.rootPasswordReady ? Kirigami.Theme.backgroundColor : Kirigami.Theme.negativeTextColor)
-            //         }
-            //     }
-            // }
-
-
-            ItemSection
-            {
-                width: parent.width
-                title: qsTr("Additional user configuration options")
-                subtitle: qsTr("Warning: Disabling password strength validation can lead to weaker passwords, increasing the risk of security breaches. It is advised to keep this feature enabled for enhanced account security.")
-
-
-                CheckBox
+                
+                ItemSection
                 {
-                    visible: config.permitWeakPasswords
-                    text: qsTr("Enable password strength validation")
-                    checked: config.requireStrongPasswords
-                    onCheckedChanged: config.setRequireStrongPasswords(checked)
-                }
+                    width: parent.width
+                    title: qsTr("Additional user configuration options")
+                    subtitle: qsTr("Warning: Disabling password strength validation can lead to weaker passwords, increasing the risk of security breaches. It is advised to keep this feature enabled for enhanced account security.")
 
+                    CheckBox
+                    {
+                        visible: config.permitWeakPasswords
+                        text: qsTr("Enable password strength validation")
+                        checked: config.requireStrongPasswords
+                        onCheckedChanged: config.setRequireStrongPasswords(checked)
+                    }
 
-
-                CheckBox
-                {
-                    text: qsTr("Enable automatic login")
-                    checked: config.doAutoLogin
-                    onCheckedChanged: config.setAutoLogin(checked)
+                    CheckBox
+                    {
+                        text: qsTr("Enable automatic login")
+                        checked: config.doAutoLogin
+                        onCheckedChanged: config.setAutoLogin(checked)
+                    }
                 }
             }
-
         }
-        }
-
     }
-
 }

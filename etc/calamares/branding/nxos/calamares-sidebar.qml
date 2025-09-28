@@ -2,7 +2,7 @@ import QtQuick 2.10
 import QtQuick.Controls 2.10
 import QtQuick.Layouts 1.3
 import org.kde.kirigami 2.7 as Kirigami
-import QtGraphicalEffects 1.0
+import Qt5Compat.GraphicalEffects 1.0
 import io.calamares.ui 1.0
 import io.calamares.core 1.0
 

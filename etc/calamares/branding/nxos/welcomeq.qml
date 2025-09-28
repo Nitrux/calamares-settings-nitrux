@@ -1,11 +1,9 @@
 import io.calamares.ui 1.0
 import io.calamares.core 1.0
 
-import QtQuick 2.14
-import QtQuick.Controls 2.14
-import QtQuick.Layouts 1.3
-
-import org.kde.kirigami 2.7 as Kirigami
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
 
 import "."
 
@@ -23,8 +21,7 @@ ResponsiveBase
         id: _requirementsList
         property string title: qsTr("Welcome to ") + Branding.string(Branding.ProductName) + " " + Branding.string(Branding.Version)
         property string subtitle: config.genericWelcomeMessage
-        property string message: config.requirementsModel.satisfiedRequirements ? "All requirements have been satisfied." :  qsTr("<p>Please ensure this computer has enough storage, RAM, and a working Internet connection. %1.<br/>
-        Setup can continue, but some features might be disabled.</p>").arg(Branding.string(Branding.VersionedName))
+        property string message: config.requirementsModel.satisfiedRequirements ? qsTr("All requirements have been satisfied.") :  qsTr("<p>Please ensure this computer has enough storage, RAM, and a working Internet connection. %1.<br/>        Setup can continue, but some features might be disabled.</p>").arg(Branding.string(Branding.VersionedName))
         property string icon : Branding.imagePath(Branding.ProductWelcome)
         model: config.unsatisfiedRequirements
 
@@ -34,7 +31,8 @@ ResponsiveBase
 
             background: Rectangle
             {
-                color: model.satisfied ? Kirigami.Theme.positiveTextColor : Kirigami.Theme.negativeTextColor
+                // Replaced Kirigami.Theme with static colors
+                color: model.satisfied ? "#27ae60" : "#c0392b" // A green/red for positive/negative
                 opacity: 0.2
             }
 
@@ -51,9 +49,12 @@ ResponsiveBase
                     Layout.alignment: Qt.AlignCenter
                     implicitWidth: 48
                     implicitHeight: 48
-                    Kirigami.Icon
+
+                    // Replaced Kirigami.Icon with a standard Image.
+                    // You will need to provide these icons in your branding resources.
+                    Image
                     {
-                        source: model.satisfied ? "checkmark" : (model.mandatory ? "error" : "emblem-info")
+                        source: model.satisfied ? "qrc:/icons/checkmark.svg" : (model.mandatory ? "qrc:/icons/error.svg" : "qrc:/icons/emblem-info.svg")
                         height: 22
                         width: 22
                         anchors.centerIn: parent
@@ -64,7 +65,8 @@ ResponsiveBase
                 {
                     Layout.fillWidth: true
                     Layout.alignment: Qt.AlignCenter
-                    Layout.margins: Kirigami.Units.smallSpacing
+                    // Replaced Kirigami.Units with a static value
+                    Layout.margins: 8
                     spacing : 0
 
                     Label
@@ -81,8 +83,6 @@ ResponsiveBase
                         wrapMode: Text.Wrap
                     }
                 }
-
-
             }
         }
 
@@ -90,18 +90,26 @@ ResponsiveBase
         {
             Layout.fillWidth: true
             Layout.preferredHeight: 64
-
-            spacing: Kirigami.Units.largeSpacing* 2
+            // Replaced Kirigami.Units with a static value
+            spacing: 32
 
             Button
             {
                 Layout.fillWidth: true
-                text: "About"
+                text: qsTr("About")
                 icon.name: "documentinfo"
-                Kirigami.Theme.backgroundColor: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.4)
-                Kirigami.Theme.textColor: "#fff"
 
-                visible: Branding.string(Branding.ProductUrl).length
+                // Standard QML button styling
+                background: Rectangle { color: "#66231F20" } // Semi-transparent version of your background
+                contentItem: Text {
+                    text: parent.text
+                    color: "#FFFFFF"
+                    font: parent.font
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                }
+
+                visible: Branding.string(Branding.ProductUrl).length > 0
                 onClicked: Qt.openUrlExternally(Branding.string(Branding.ProductUrl))
             }
 
@@ -110,9 +118,18 @@ ResponsiveBase
                 Layout.fillWidth: true
                 text: qsTr("Support")
                 icon.name: "help-contents"
-                Kirigami.Theme.backgroundColor: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.4)
-                Kirigami.Theme.textColor: "#fff"
-                visible: Branding.string(Branding.SupportUrl).length
+
+                // Standard QML button styling
+                background: Rectangle { color: "#66231F20" }
+                contentItem: Text {
+                    text: parent.text
+                    color: "#FFFFFF"
+                    font: parent.font
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                }
+
+                visible: Branding.string(Branding.SupportUrl).length > 0
                 onClicked: Qt.openUrlExternally(Branding.string(Branding.SupportUrl))
             }
 
@@ -121,9 +138,18 @@ ResponsiveBase
                 Layout.fillWidth: true
                 text: qsTr("Known issues")
                 icon.name: "tools-report-bug"
-                Kirigami.Theme.backgroundColor: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.4)
-                Kirigami.Theme.textColor: "#fff"
-                visible: Branding.string(Branding.KnownIssuesUrl).length
+
+                // Standard QML button styling
+                background: Rectangle { color: "#66231F20" }
+                contentItem: Text {
+                    text: parent.text
+                    color: "#FFFFFF"
+                    font: parent.font
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                }
+
+                visible: Branding.string(Branding.KnownIssuesUrl).length > 0
                 onClicked: Qt.openUrlExternally(Branding.string(Branding.KnownIssuesUrl))
             }
 
@@ -132,9 +158,18 @@ ResponsiveBase
                 Layout.fillWidth: true
                 text: qsTr("Release notes")
                 icon.name: "document-edit"
-                Kirigami.Theme.backgroundColor: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.4)
-                Kirigami.Theme.textColor: "#fff"
-                visible: Branding.string(Branding.ReleaseNotesUrl).length
+
+                // Standard QML button styling
+                background: Rectangle { color: "#66231F20" }
+                contentItem: Text {
+                    text: parent.text
+                    color: "#FFFFFF"
+                    font: parent.font
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                }
+
+                visible: Branding.string(Branding.ReleaseNotesUrl).length > 0
                 onClicked: Qt.openUrlExternally(Branding.string(Branding.ReleaseNotesUrl))
             }
         }

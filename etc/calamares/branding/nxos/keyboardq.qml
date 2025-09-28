@@ -1,9 +1,10 @@
 import io.calamares.ui 1.0
 
-import QtQuick 2.10
-import QtQuick.Controls 2.10
-import QtQuick.Layouts 1.3
-import org.kde.kirigami 2.7 as Kirigami
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
+
+import "."
 
 ResponsiveBase
 {
@@ -21,7 +22,6 @@ ResponsiveBase
         property string icon : "cala-qml-keyboard-model"
 
         currentIndex: model.currentIndex
-
         model: config.keyboardModelsModel
 
         delegate: ListItemDelegate
@@ -56,7 +56,6 @@ ResponsiveBase
             property string icon : "cala-qml-keyboard-layout"
 
             currentIndex: model.currentIndex
-
             model: config.keyboardLayoutsModel
 
             delegate: ListItemDelegate
@@ -71,11 +70,9 @@ ResponsiveBase
                 }
             }
 
-
             TextField
             {
                 placeholderText: qsTr("Test your keyboard")
-
                 Layout.fillWidth: true
                 Layout.alignment: Qt.AlignCenter
             }
@@ -97,13 +94,11 @@ ResponsiveBase
         ListViewTemplate
         {
             id: _variantsListView
-
             property string title: qsTr("Keyboard Layout Variant")
             property string subtitle: config.prettyStatus
             property string icon : "cala-qml-keyboard-layout-variant"
             
             currentIndex: model.currentIndex
-
             model: config.keyboardVariantsModel
 
             delegate: ListItemDelegate
