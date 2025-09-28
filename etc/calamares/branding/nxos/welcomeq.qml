@@ -85,81 +85,41 @@ ResponsiveBase
         RowLayout
         {
             Layout.fillWidth: true
-            Layout.preferredHeight: 64
+            Layout.preferredHeight: 32
             spacing: 32
 
+            // Corrected "About" Button
             Button
             {
                 Layout.fillWidth: true
                 text: qsTr("About")
-                icon.name: "documentinfo"
-
-                background: Rectangle { color: "#66231F20" }
-                contentItem: Text {
-                    text: parent.text
-                    color: "#FFFFFF"
-                    font: parent.font
-                    horizontalAlignment: Text.AlignHCenter
-                    verticalAlignment: Text.AlignVCenter
-                }
-
                 visible: Branding.string(Branding.ProductUrl).length > 0
                 onClicked: Qt.openUrlExternally(Branding.string(Branding.ProductUrl))
             }
 
+            // Corrected "Support" Button
             Button
             {
                 Layout.fillWidth: true
                 text: qsTr("Support")
-                icon.name: "help-contents"
-
-                background: Rectangle { color: "#66231F20" }
-                contentItem: Text {
-                    text: parent.text
-                    color: "#FFFFFF"
-                    font: parent.font
-                    horizontalAlignment: Text.AlignHCenter
-                    verticalAlignment: Text.AlignVCenter
-                }
-
                 visible: Branding.string(Branding.SupportUrl).length > 0
                 onClicked: Qt.openUrlExternally(Branding.string(Branding.SupportUrl))
             }
 
+            // Corrected "Known issues" Button
             Button
             {
                 Layout.fillWidth: true
                 text: qsTr("Known issues")
-                icon.name: "tools-report-bug"
-
-                background: Rectangle { color: "#66231F20" }
-                contentItem: Text {
-                    text: parent.text
-                    color: "#FFFFFF"
-                    font: parent.font
-                    horizontalAlignment: Text.AlignHCenter
-                    verticalAlignment: Text.AlignVCenter
-                }
-
                 visible: Branding.string(Branding.KnownIssuesUrl).length > 0
                 onClicked: Qt.openUrlExternally(Branding.string(Branding.KnownIssuesUrl))
             }
 
+            // Corrected "Release notes" Button
             Button
             {
                 Layout.fillWidth: true
                 text: qsTr("Release notes")
-                icon.name: "document-edit"
-
-                background: Rectangle { color: "#66231F20" }
-                contentItem: Text {
-                    text: parent.text
-                    color: "#FFFFFF"
-                    font: parent.font
-                    horizontalAlignment: Text.AlignHCenter
-                    verticalAlignment: Text.AlignVCenter
-                }
-
                 visible: Branding.string(Branding.ReleaseNotesUrl).length > 0
                 onClicked: Qt.openUrlExternally(Branding.string(Branding.ReleaseNotesUrl))
             }
