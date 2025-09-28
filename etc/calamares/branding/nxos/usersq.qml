@@ -61,7 +61,7 @@ ResponsiveBase
                         placeholderText: qsTr("Enter your name")
                         text: config.fullName
                         onTextChanged: config.setFullName(text)
-
+                        
                         background: Rectangle
                         {
                             color: "#231F20"
@@ -110,26 +110,19 @@ ResponsiveBase
                         id: _hostName
                         width: parent.width
                         placeholderText: qsTr("Enter your computer hostname")
-                        text: {
-                            try {
-                                return config.hostName ? config.hostName : "";
-                            } catch (e) {
-                                console.error("Error accessing config.hostName:", e);
-                                return "";
-                            }
-                        }
+                        text: config.hostName
                         inputMethodHints: Qt.ImhLowercaseOnly
                         // *** CORRECTED VALIDATOR ***
                         validator: RegularExpressionValidator { regularExpression: /^[^\s]*$/ }
                         onTextChanged: config.setHostName(text)
-
+                        
                         background: Rectangle
                         {
                             color:  "#231F20"
                             radius: 5
                             opacity: 0.5
                             border.width: 1
-                            border.color:  _hostName.activeFocus ? "#26C6DA" : ( config.hostNameStatus ? "#231F20" : "red")
+                            border.color: _hostName.activeFocus ? "#26C6DA" : (config.hostNameStatus ? "#231F20" : "red")
                         }
                     }
                 }
@@ -156,7 +149,7 @@ ResponsiveBase
                             radius: 5
                             opacity: 0.5
                             border.width: 1
-                            border.color: _passwordField.activeFocus ? "#26C6DA" : ( config.userPasswordStatus ? "#231F20" : "red")
+                            border.color: _passwordField.activeFocus ? "#26C6DA" : (config.userPasswordStatus ? "#231F20" : "red")
                         }
                     }
 

@@ -1,3 +1,10 @@
+calamares-qml-settings-nitrux (2.1.3) nitrux; urgency=medium
+
+  * Port the rest of the modules to Qt6.
+  * Remove some QML files that I think are unused.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Sun, 28 Sep 2025 03:51:00 -0500
+
 calamares-qml-settings-nitrux (2.1.2) nitrux; urgency=medium
 
   * Fix usersq and ItemSection.
