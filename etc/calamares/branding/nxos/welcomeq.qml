@@ -94,7 +94,7 @@ ResponsiveBase
                 text: qsTr("About")
                 icon.name: "documentinfo"
 
-                background: Rectangle { color: "#66231F20" } // Semi-transparent version of your background
+                background: Rectangle { color: "#66231F20" }
                 contentItem: Text {
                     text: parent.text
                     color: "#FFFFFF"
