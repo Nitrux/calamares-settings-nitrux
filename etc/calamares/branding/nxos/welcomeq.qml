@@ -51,7 +51,7 @@ ResponsiveBase
 
                     Image
                     {
-                        source: model.satisfied ? "qrc:/icons/checkmark.svg" : (model.mandatory ? "qrc:/icons/error.svg" : "qrc:/icons/emblem-info.svg")
+                        source: "image://theme/" + (model.satisfied ? "emblem-ok" : (model.mandatory ? "dialog-error" : "dialog-information"))
                         height: 22
                         width: 22
                         anchors.centerIn: parent
