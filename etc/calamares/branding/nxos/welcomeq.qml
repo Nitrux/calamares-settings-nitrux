@@ -31,7 +31,6 @@ ResponsiveBase
 
             background: Rectangle
             {
-                // Replaced Kirigami.Theme with static colors
                 color: model.satisfied ? "#27ae60" : "#c0392b" // A green/red for positive/negative
                 opacity: 0.2
             }
@@ -50,8 +49,6 @@ ResponsiveBase
                     implicitWidth: 48
                     implicitHeight: 48
 
-                    // Replaced Kirigami.Icon with a standard Image.
-                    // You will need to provide these icons in your branding resources.
                     Image
                     {
                         source: model.satisfied ? "qrc:/icons/checkmark.svg" : (model.mandatory ? "qrc:/icons/error.svg" : "qrc:/icons/emblem-info.svg")
@@ -65,7 +62,6 @@ ResponsiveBase
                 {
                     Layout.fillWidth: true
                     Layout.alignment: Qt.AlignCenter
-                    // Replaced Kirigami.Units with a static value
                     Layout.margins: 8
                     spacing : 0
 
@@ -90,7 +86,6 @@ ResponsiveBase
         {
             Layout.fillWidth: true
             Layout.preferredHeight: 64
-            // Replaced Kirigami.Units with a static value
             spacing: 32
 
             Button
@@ -99,7 +94,6 @@ ResponsiveBase
                 text: qsTr("About")
                 icon.name: "documentinfo"
 
-                // Standard QML button styling
                 background: Rectangle { color: "#66231F20" } // Semi-transparent version of your background
                 contentItem: Text {
                     text: parent.text
@@ -119,7 +113,6 @@ ResponsiveBase
                 text: qsTr("Support")
                 icon.name: "help-contents"
 
-                // Standard QML button styling
                 background: Rectangle { color: "#66231F20" }
                 contentItem: Text {
                     text: parent.text
@@ -139,7 +132,6 @@ ResponsiveBase
                 text: qsTr("Known issues")
                 icon.name: "tools-report-bug"
 
-                // Standard QML button styling
                 background: Rectangle { color: "#66231F20" }
                 contentItem: Text {
                     text: parent.text
@@ -159,7 +151,6 @@ ResponsiveBase
                 text: qsTr("Release notes")
                 icon.name: "document-edit"
 
-                // Standard QML button styling
                 background: Rectangle { color: "#66231F20" }
                 contentItem: Text {
                     text: parent.text

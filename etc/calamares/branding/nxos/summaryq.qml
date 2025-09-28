@@ -37,7 +37,7 @@ ResponsiveBase
                 anchors.margins: 8
 
                 Image {
-                    source: "qrc:/icons/documentinfo.svg" // Provide this icon
+                    source: "qrc:/icons/documentinfo.svg"
                     Layout.preferredWidth: 32
                     Layout.preferredHeight: 32
                 }

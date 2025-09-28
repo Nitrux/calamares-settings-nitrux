@@ -16,20 +16,17 @@ ItemDelegate
 
     background: Rectangle
     {
-        // Replaced Kirigami.Theme with static colors
         color: isCurrentItem || control.hovered ? "#26C6DA" : Qt.lighter("#231F20", 1.2)
         opacity: isCurrentItem || control.hovered ? 1.0 : 0.4
     }
 
     implicitWidth: ListView.view.width
-    // Replaced Kirigami.Units with a static value
     implicitHeight: Math.max(48, _layout.implicitHeight + 32)
 
     contentItem: RowLayout
     {
         id: _layout
         anchors.fill: parent
-        // Replaced Kirigami.Units with a static value
         anchors.margins: 16
 
         Label
@@ -38,7 +35,6 @@ ItemDelegate
             Layout.fillHeight: true
             Layout.fillWidth: true
             horizontalAlignment: Qt.AlignLeft
-            // Replaced Kirigami.Theme text colors
             color: isCurrentItem ? "#FFFFFF" : "#E0E0E0"
         }
 
@@ -49,17 +45,15 @@ ItemDelegate
             Layout.fillHeight: true
             Layout.maximumWidth: parent.width * 0.4
             horizontalAlignment: Qt.AlignRight
-            // Replaced Kirigami.Theme text colors
             color: isCurrentItem ? "#FFFFFF" : "#E0E0E0"
             opacity: isCurrentItem ? 1.0 : 0.7
             font.weight: Font.Light
             wrapMode: Text.Wrap
         }
 
-        // Replaced Kirigami.Icon with a standard Image
         Image
         {
-            source: "qrc:/icons/emblem-default.svg" // Provide this icon
+            source: "qrc:/icons/emblem-default.svg"
             Layout.preferredWidth: 22
             Layout.preferredHeight: 22
             visible: isCurrentItem
