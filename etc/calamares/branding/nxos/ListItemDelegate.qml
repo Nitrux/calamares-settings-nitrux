@@ -15,11 +15,14 @@ ItemDelegate {
 
     width: ListView.view ? ListView.view.width : (parent ? parent.width : implicitWidth)
 
+    leftPadding: 12
+    rightPadding: 12
+    topPadding: 8
+    bottomPadding: 8
+
     contentItem: RowLayout {
         id: row
-        anchors.fill: parent
-        anchors.margins: 12
-        spacing: 18
+        spacing: 12
 
         ColumnLayout {
             id: textCol
@@ -46,15 +49,16 @@ ItemDelegate {
         Image {
             id: icon
             source: "image://theme/emblem-default"
-            sourceSize.width: 22
-            sourceSize.height: 22
+            width: 22
+            height: 22
             visible: isCurrentItem
-            Layout.preferredWidth: 22
-            Layout.preferredHeight: 22
+            fillMode: Image.PreserveAspectFit
+            Layout.preferredWidth: width
+            Layout.preferredHeight: height
         }
     }
 
-    implicitHeight: Math.max(48, contentItem.implicitHeight)
+    implicitHeight: Math.max(48, Math.max(icon.visible ? icon.height : 0, textCol.implicitHeight) + topPadding + bottomPadding)
 
     onClicked: if (ListView.view) ListView.view.currentIndex = index
 }
