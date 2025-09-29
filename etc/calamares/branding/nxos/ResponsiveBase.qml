@@ -1,10 +1,10 @@
-import QtQuick 2.10
-import QtQuick.Controls 2.10
-import QtQuick.Layouts 1.3
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
 
 import org.kde.kirigami 2.7 as Kirigami
 
-import QtGraphicalEffects 1.0
+import Qt5Compat.GraphicalEffects
 
 import "."
 
@@ -269,75 +269,13 @@ Page
                 }
             }
 
-            ViewStepsBar
-            {
-                Layout.fillWidth: true
-                Layout.maximumWidth: 900
-                Layout.minimumWidth: 400
-                Layout.alignment: Qt.AlignCenter
-            }
-
+        ViewStepsBar
+        {
+            Layout.fillWidth: true
+            Layout.maximumWidth: 900
+            Layout.minimumWidth: 400
+            Layout.alignment: Qt.AlignCenter
         }
 
-        //footer: Column
-        //{
-            //width: parent.width
-
-            //Item
-            //{
-                //height: 100
-                //width: parent.width
-
-                //Row
-                //{
-                    //spacing: Kirigami.Units.largeSpacing
-                    //anchors.centerIn: parent
-
-                    //Button
-                    //{
-                        ////text: ViewManager.quitLabel;
-                        //icon.name: ViewManager.quitIcon;
-
-                        //ToolTip.visible: hovered
-                        //ToolTip.timeout: 5000
-                        //ToolTip.delay: 1000
-                        //ToolTip.text: ViewManager.quitTooltip;
-
-                        //enabled: ViewManager.quitEnabled;
-                        //visible: ViewManager.quitVisible;
-                        //onClicked: { ViewManager.quit(); }
-                    //}
-
-                    //Button
-                    //{
-                        //text: ViewManager.backLabel;
-                        //icon.name: ViewManager.backIcon;
-
-                        //enabled: ViewManager.backEnabled;
-                        //visible: true;
-                        //onClicked: { ViewManager.back(); }
-
-                        //height: implicitHeight
-                        //Kirigami.Theme.backgroundColor: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.4)
-                        //Kirigami.Theme.textColor: "#fff"
-                    //}
-
-                    //Button
-                    //{
-
-                        //height: implicitHeight
-
-                        //text: ViewManager.nextLabel;
-                        //icon.name: ViewManager.nextIcon;
-
-                        ////                     enabled: ViewManager.nextEnabled;
-                        //enabled: true;
-                        //visible: true;
-                        //onClicked: { ViewManager.next(); }
-                        //Kirigami.Theme.backgroundColor: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.4)
-                        //Kirigami.Theme.textColor: "#fff"
-                    //}
-                //}
-            //}
-        //}
+    }
 }

@@ -9,9 +9,9 @@
 
 import io.calamares.ui 1.0
 
-import QtQuick 2.7
-import QtQuick.Controls 2.2
-import QtQuick.Layouts 1.3
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
 
 import org.kde.kirigami 2.7 as Kirigami
 

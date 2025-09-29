@@ -1,5 +1,6 @@
-import QtQuick 2.10
-import QtQuick.Controls 2.10
+import QtQuick
+import QtQuick.Controls
+
 import org.kde.kirigami 2.7 as Kirigami
 
 Item

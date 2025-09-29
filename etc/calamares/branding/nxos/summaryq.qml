@@ -1,11 +1,11 @@
 import io.calamares.core 1.0
 import io.calamares.ui 1.0
 
-import QtQuick 2.10
-import QtQuick.Controls 2.10
-
-import org.mauikit.controls 1.3 as Maui
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
 import org.kde.kirigami 2.7 as Kirigami
+
 import "."
 
 ResponsiveBase
@@ -17,30 +17,43 @@ ResponsiveBase
     message: qsTr("<p>Review the steps that will be taken before the system installation starts.</p>")
     icon.source: "cala-qml-summary"
 
-
-    stackView.initialItem: ListViewTemplate
+    stackView.initialItem: ListView
     {
-        currentIndex: -1
+        id: summaryListView
         model: config.summaryModel
-        delegate: Maui.ItemDelegate
+
+        delegate: ItemDelegate 
         {
-            id: _delegate
+            width: summaryListView.width
 
-            width: ListView.view.width
-            height: _template.implicitHeight + Maui.Style.space.medium
+            contentItem: RowLayout {
+                spacing: Kirigami.Units.gridUnit
 
-            Maui.ListItemTemplate
-            {
-                id: _template
-                anchors.fill: parent
-                anchors.margins: Maui.Style.space.medium
-                iconSource: "documentinfo"
-                iconSizeHint: 32
-                headerSizeHint: iconSizeHint
-                label1.text: model.title
-                label2.text: model.message
-                label2.wrapMode: Text.Wrap
-                label2.textFormat: Text.AutoText
+                Kirigami.Icon {
+                    source: "documentinfo"
+                    width: Kirigami.Units.gridUnit * 4
+                    height: width
+                    Layout.maximumWidth: width
+                }
+
+                ColumnLayout {
+                    Layout.fillWidth: true
+                    spacing: 0.5 * Kirigami.Units.gridUnit
+                    
+                    Label {
+                        text: model.title
+                        font.pointSize: Kirigami.Units.font.large
+                        Layout.fillWidth: true
+                    }
+                    
+                    Label {
+                        text: model.message
+                        wrapMode: Text.Wrap
+                        textFormat: Text.AutoText
+                        color: Kirigami.Theme.linkColor
+                        Layout.fillWidth: true
+                    }
+                }
             }
         }
     }

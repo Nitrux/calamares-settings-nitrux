@@ -1,11 +1,13 @@
 import io.calamares.ui 1.0
 
-import QtQuick 2.10
-import QtQuick.Controls 2.10
-import QtQuick.Layouts 1.3
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
+import QtQuick.Window
+import QtQml
 
-import QtGraphicalEffects 1.0
-import QtQuick.Window 2.3
+import Qt5Compat.GraphicalEffects
+
 import "."
 
 import org.kde.kirigami 2.7 as Kirigami
@@ -14,8 +16,6 @@ import org.kde.kirigami 2.7 as Kirigami
 ResponsiveBase
 {
     id: control
-
-    // 	nextButton.enabled:  config.isNextEnabled
 
     title: qsTr("Users")
     subtitle: qsTr("Pick your user name and credentials to login and perform admin tasks")
@@ -127,7 +127,7 @@ ResponsiveBase
                         }
                     }
                     inputMethodHints: Qt.ImhLowercaseOnly
-                    validator: RegExpValidator { regExp: /^[^\s]*$/ }
+                    validator: RegularExpressionValidator { regularExpression: /^[^\s]*$/ }
                     onTextChanged: config.setHostName(text)
                     background: Rectangle
                     {
@@ -199,64 +199,11 @@ ResponsiveBase
 
             }
 
-
-            // ItemSection
-            // {
-            //     width: parent.width
-            //     visible: !config.reuseUserPasswordForRoot
-
-            //     title: qsTr("Choose a password for the root account")
-            //     subtitle: qsTr("Enter the same password twice. Users must use a password over eight characters long, including uppercase, lowercase, numbers, and symbols, with sufficient randomness, and users should change the password every 90 days.")
-
-            //     TextField
-            //     {
-            //         id: _rootPasswordField
-            //         width: parent.width
-            //         placeholderText: qsTr("Enter password for root")
-            //         echoMode: TextInput.Password
-            //         passwordMaskDelay: 300
-            //         inputMethodHints: Qt.ImhNoAutoUppercase
-            //         text: config.rootPassword
-            //         onTextChanged: config.setRootPassword(text)
-
-            //         background: Rectangle
-            //         {
-            //             color:  Kirigami.Theme.backgroundColor
-            //             radius: 5
-            //             opacity: 0.5
-            //             border.color: _rootPasswordField.text.length ? Kirigami.Theme.backgroundColor :  ( config.rootPasswordReady ? Kirigami.Theme.backgroundColor : Kirigami.Theme.negativeTextColor)
-
-            //         }
-            //     }
-
-            //     TextField
-            //     {
-            //         id: _verificationRootPasswordField
-            //         width: parent.width
-            //         placeholderText: qsTr("Repeat password for root")
-            //         echoMode: TextInput.Password
-            //         passwordMaskDelay: 300
-            //         inputMethodHints: Qt.ImhNoAutoUppercase
-            //         text: config.rootPasswordSecondary
-            //         onTextChanged: config.setRootPasswordSecondary(text)
-
-            //         background: Rectangle
-            //         {
-            //             color:  Kirigami.Theme.backgroundColor
-            //             radius: 5
-            //             opacity: 0.5
-            //             border.color: _verificationRootPasswordField.text.length ? Kirigami.Theme.backgroundColor : ( config.rootPasswordReady ? Kirigami.Theme.backgroundColor : Kirigami.Theme.negativeTextColor)
-            //         }
-            //     }
-            // }
-
-
             ItemSection
             {
                 width: parent.width
                 title: qsTr("Additional user configuration options")
                 subtitle: qsTr("Warning: Disabling password strength validation can lead to weaker passwords, increasing the risk of security breaches. It is advised to keep this feature enabled for enhanced account security.")
-
 
                 CheckBox
                 {
@@ -265,8 +212,6 @@ ResponsiveBase
                     checked: config.requireStrongPasswords
                     onCheckedChanged: config.setRequireStrongPasswords(checked)
                 }
-
-
 
                 CheckBox
                 {

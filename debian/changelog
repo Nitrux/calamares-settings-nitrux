@@ -1,3 +1,14 @@
+calamares-qml-settings-nitrux (2.1.9) nitrux; urgency=medium
+
+  * Fix regex validator.
+  * Remove MauiKit use due to a missing private component.
+  * Update imports.
+  * Update branding.
+  * Remove unused QML file in branding.
+  * Remove unused script.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Mon, 29 Sep 2025 04:59:00 -0500
+
 calamares-qml-settings-nitrux (2.0.7+new-dev) nitrux; urgency=medium
 
   * Update branding.
