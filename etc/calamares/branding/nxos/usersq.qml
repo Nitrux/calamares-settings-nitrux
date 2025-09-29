@@ -47,7 +47,7 @@ ResponsiveBase
                     enabled: config.isEditable("fullName")
                     placeholderText: qsTr("Enter your name")
                     text: config.fullName || ""
-                    onTextChanged: config.setFullName(text)
+                    onTextChanged: config.setFullName(text) 
                 }
             }
 
