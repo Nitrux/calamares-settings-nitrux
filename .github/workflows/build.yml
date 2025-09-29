@@ -3,7 +3,7 @@ name: Build and push packages to PackageCloud.
 on:
   push:
     branches:
-      - 'qml-calamares-dev'
+      - 'qml-qt5'
     paths-ignore:
       - 'README.md'
 
