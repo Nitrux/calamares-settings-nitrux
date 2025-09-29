@@ -38,7 +38,7 @@ ResponsiveBase
             onClicked:
             {
                 _regionListView.currentIndex = index
-                control.currentRegion = model.name
+                control.currentRegion = model.name.replace(/ /g, "_")
                 config.regionalZonesModel.region = control.currentRegion
                 control.stackView.push(_zonesListComponent)
             }
@@ -75,7 +75,7 @@ ResponsiveBase
                 onClicked:
                 {
                     _zonesListView.currentIndex = index
-                    control.currentZone = model.name
+                    control.currentZone = model.name.replace(/ /g, "_")
 
                     _zonesListView.listView.positionViewAtIndex(index, ListView.Center)
 
