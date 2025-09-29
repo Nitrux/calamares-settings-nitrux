@@ -1,3 +1,9 @@
+calamares-qml-settings-nitrux (2.1.6) nitrux; urgency=medium
+
+  * Fix QML.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Sun, 28 Sep 2025 22:41:00 -0500
+
 calamares-qml-settings-nitrux (2.1.5) nitrux; urgency=medium
 
   * Fix ListViewTemplate.
