@@ -197,7 +197,6 @@ Page
                     Layout.margins: 32
                     Layout.minimumWidth: 300
                     Layout.maximumWidth: 500
-                    Layout.maximumHeight:  currentItem ? currentItem.implicitHeight : 0
                     Layout.minimumHeight: 200
                     clip: true
 

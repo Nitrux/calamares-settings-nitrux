@@ -11,10 +11,10 @@ ResponsiveBase
 {
     id: control
 
-    title: stackView.currentItem.title
-    subtitle: stackView.currentItem.subtitle
-    message: stackView.currentItem.message
-    icon.source: stackView.currentItem.icon
+    title: (stackView.currentItem?.title) ?? ""
+    subtitle: (stackView.currentItem?.subtitle) ?? ""
+    message: (stackView.currentItem?.message) ?? ""
+    icon.source: (stackView.currentItem?.icon) ?? ""
 
     stackView.initialItem: ListViewTemplate
     {
@@ -36,7 +36,7 @@ ResponsiveBase
             }
 
             width: ListView.view.width
-            height: 72
+            height: 64
 
             RowLayout
             {
