@@ -20,22 +20,6 @@ Page
 
     signal goBack()
 
-    Keys.onPressed: (event) => {
-        const afi = control.activeFocusItem
-        if (afi && afi.acceptsInputMethod) {
-            event.accepted = false
-            return
-        }
-    }
-
-    Keys.onReleased: (event) => {
-        const afi = control.activeFocusItem
-        if (afi && afi.acceptsInputMethod) {
-            event.accepted = false
-            return
-        }
-    }
-
     background: Rectangle
     {
         id: _background
