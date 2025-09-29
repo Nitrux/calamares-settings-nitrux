@@ -88,7 +88,6 @@ ResponsiveBase
             Layout.preferredHeight: 32
             spacing: 32
 
-            // Corrected "About" Button
             Button
             {
                 Layout.fillWidth: true
@@ -97,7 +96,6 @@ ResponsiveBase
                 onClicked: Qt.openUrlExternally(Branding.string(Branding.ProductUrl))
             }
 
-            // Corrected "Support" Button
             Button
             {
                 Layout.fillWidth: true
@@ -106,7 +104,6 @@ ResponsiveBase
                 onClicked: Qt.openUrlExternally(Branding.string(Branding.SupportUrl))
             }
 
-            // Corrected "Known issues" Button
             Button
             {
                 Layout.fillWidth: true
@@ -115,7 +112,6 @@ ResponsiveBase
                 onClicked: Qt.openUrlExternally(Branding.string(Branding.KnownIssuesUrl))
             }
 
-            // Corrected "Release notes" Button
             Button
             {
                 Layout.fillWidth: true
