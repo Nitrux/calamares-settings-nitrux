@@ -3,7 +3,7 @@ name: Build and push packages to PackageCloud.
 on:
   push:
     branches:
-      - 'qml-qt5'
+      - 'qml-kirigami'
     paths-ignore:
       - 'README.md'
 
