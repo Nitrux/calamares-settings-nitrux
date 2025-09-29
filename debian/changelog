@@ -1,8 +1,14 @@
-calamares-qml-settings-nitrux (2.1.6) nitrux; urgency=medium
+calamares-settings-nitrux (2.1.7) nitrux; urgency=medium
+
+  * Change package name.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Sun, 28 Sep 2025 23:28:00 -0500
+
+calamares-settings-nitrux (2.1.6) nitrux; urgency=medium
 
   * Use the QWidegst UI until the QML modules are functional again.
 
- -- Uri Herrera <uri_herrera@nxos.org>  Sun, 28 Sep 2025 22:51:00 -0500
+ -- Uri Herrera <uri_herrera@nxos.org>  Sun, 28 Sep 2025 23:17:00 -0500
 
 calamares-qml-settings-nitrux (2.1.5) nitrux; urgency=medium
 

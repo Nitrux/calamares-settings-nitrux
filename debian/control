@@ -1,4 +1,4 @@
-Source: calamares-qml-settings-nitrux
+Source: calamares-settings-nitrux
 Section: kde
 Priority: optional
 Maintainer: Camilo Higuita <milo.h@aol.com>
@@ -7,7 +7,7 @@ Standards-Version: 3.9.6
 Homepage: https://nxos.org/
 Vcs-Git: https://github.com/Nitrux/calamares-settings-nitrux.git
 
-Package: calamares-qml-settings-nitrux
+Package: calamares-settings-nitrux
 Architecture: any
 Replaces: calamares-settings-nxos
 Depends: ${shlibs:Depends}, ${misc:Depends}, calamares
