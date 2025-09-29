@@ -10,6 +10,7 @@ import io.calamares.core 1.0
 Page
 {
     id: control
+    focus: false
 
     property string subtitle
     property string message
@@ -23,6 +24,8 @@ Page
     background: Rectangle
     {
         id: _background
+        z: -1
+        anchors.fill: parent
         color: "#231F20"
 
         Image
@@ -129,6 +132,7 @@ Page
                 ColumnLayout
                 {
                     id: _content
+                    z: 1
                     Layout.fillHeight: true
                     Layout.fillWidth: true
                     Layout.margins: 32

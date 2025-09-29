@@ -29,6 +29,7 @@ Frame {
             Layout.fillHeight: true
             spacing: 8
             clip: true
+            focus: false
             boundsBehavior: Flickable.StopAtBounds
             ScrollBar.vertical: ScrollBar { policy: ScrollBar.AsNeeded }
         }

@@ -39,7 +39,6 @@ ResponsiveBase
         {
             Layout.fillWidth: true
             text: qsTr("Layouts")
-            icon.name: "go-previous"
             onClicked: control.stackView.push(_keyboardLayoutsComponent)
         }
     }
@@ -72,15 +71,26 @@ ResponsiveBase
 
             TextField
             {
+                id: testField
                 placeholderText: qsTr("Test your keyboard")
                 Layout.fillWidth: true
                 Layout.alignment: Qt.AlignCenter
+                
+                focus: true 
+                
+                inputMethodHints: Qt.ImhExclusiveInput | Qt.ImhPreferNumbers
+                
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: {
+                        testField.forceActiveFocus()
+                    }
+                }
             }
 
             Button
             {
                 Layout.fillWidth: true
-                icon.name: "go-next"
                 text: qsTr("Variants")
                 onClicked: control.stackView.push(_keyboardVariantsComponent)
             }
