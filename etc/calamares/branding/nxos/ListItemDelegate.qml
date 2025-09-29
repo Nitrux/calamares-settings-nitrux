@@ -1,62 +1,64 @@
 import io.calamares.ui 1.0
-
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 
-ItemDelegate
-{
+ItemDelegate {
     id: control
 
-    property alias label1 : _label1
-    property alias label2 : _label2
+    property alias label1: _label1
+    property alias label2: _label2
 
     hoverEnabled: true
     property bool isCurrentItem: ListView.isCurrentItem
+    highlighted: isCurrentItem
 
-    background: Rectangle
-    {
-        color: isCurrentItem || control.hovered ? "#26C6DA" : Qt.lighter("#231F20", 1.2)
-        opacity: isCurrentItem || control.hovered ? 1.0 : 0.4
-    }
+    width: ListView.view ? ListView.view.width : (parent ? parent.width : implicitWidth)
 
-    implicitWidth: ListView.view.width
-    implicitHeight: Math.max(48, _layout.implicitHeight + 32)
+    leftPadding: 12
+    rightPadding: 12
+    topPadding: 8
+    bottomPadding: 8
 
-    contentItem: RowLayout
-    {
-        id: _layout
-        anchors.fill: parent
-        anchors.margins: 16
+    contentItem: RowLayout {
+        id: row
+        spacing: 12
 
-        Label
-        {
-            id: _label1
-            Layout.fillHeight: true
+        ColumnLayout {
+            id: textCol
             Layout.fillWidth: true
-            horizontalAlignment: Qt.AlignLeft
-            color: isCurrentItem ? "#FFFFFF" : "#E0E0E0"
+            spacing: 4
+
+            Label {
+                id: _label1
+                Layout.fillWidth: true
+                elide: Text.ElideRight
+                wrapMode: Text.NoWrap
+                font.weight: Font.DemiBold
+            }
+
+            Label {
+                id: _label2
+                Layout.fillWidth: true
+                opacity: isCurrentItem ? 1.0 : 0.7
+                font.weight: Font.Light
+                wrapMode: Text.Wrap
+            }
         }
 
-        Label
-        {
-            id: _label2
-            visible: text.length > 0
-            Layout.fillHeight: true
-            Layout.maximumWidth: parent.width * 0.4
-            horizontalAlignment: Qt.AlignRight
-            color: isCurrentItem ? "#FFFFFF" : "#E0E0E0"
-            opacity: isCurrentItem ? 1.0 : 0.7
-            font.weight: Font.Light
-            wrapMode: Text.Wrap
-        }
-
-        Image
-        {
-            source: "qrc:/icons/emblem-default.svg"
-            Layout.preferredWidth: 22
-            Layout.preferredHeight: 22
+        Image {
+            id: icon
+            source: "image://theme/emblem-default"
+            width: 22
+            height: 22
             visible: isCurrentItem
+            fillMode: Image.PreserveAspectFit
+            Layout.preferredWidth: width
+            Layout.preferredHeight: height
         }
     }
+
+    implicitHeight: Math.max(48, Math.max(icon.visible ? icon.height : 0, textCol.implicitHeight) + topPadding + bottomPadding)
+
+    onClicked: if (ListView.view) ListView.view.currentIndex = index
 }

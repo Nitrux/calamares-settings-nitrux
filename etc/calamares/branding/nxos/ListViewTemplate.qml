@@ -14,17 +14,23 @@ Frame {
 
     contentItem: ColumnLayout {
         id: _contentArea
+        anchors {
+            fill: parent
+            leftMargin: control.leftPadding
+            rightMargin: control.rightPadding
+            topMargin: control.topPadding
+            bottomMargin: control.bottomPadding
+        }
         spacing: 16
 
         ListView {
             id: _listView
             Layout.fillWidth: true
             Layout.fillHeight: true
-            Layout.maximumHeight: 500
             spacing: 8
             clip: true
             boundsBehavior: Flickable.StopAtBounds
-            ScrollBar.vertical: ScrollBar {}
+            ScrollBar.vertical: ScrollBar { policy: ScrollBar.AsNeeded }
         }
     }
 }

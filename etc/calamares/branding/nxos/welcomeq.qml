@@ -11,10 +11,10 @@ ResponsiveBase
 {
     id: control
 
-    title: stackView.currentItem.title
-    subtitle: stackView.currentItem.subtitle
-    message: stackView.currentItem.message
-    icon.source: stackView.currentItem.icon
+    title: (stackView.currentItem?.title) ?? ""
+    subtitle: (stackView.currentItem?.subtitle) ?? ""
+    message: (stackView.currentItem?.message) ?? ""
+    icon.source: (stackView.currentItem?.icon) ?? ""
 
     stackView.initialItem: ListViewTemplate
     {
@@ -36,7 +36,7 @@ ResponsiveBase
             }
 
             width: ListView.view.width
-            height: 72
+            height: 64
 
             RowLayout
             {
@@ -51,7 +51,7 @@ ResponsiveBase
 
                     Image
                     {
-                        source: model.satisfied ? "qrc:/icons/checkmark.svg" : (model.mandatory ? "qrc:/icons/error.svg" : "qrc:/icons/emblem-info.svg")
+                        source: "image://theme/" + (model.satisfied ? "emblem-ok" : (model.mandatory ? "dialog-error" : "dialog-information"))
                         height: 22
                         width: 22
                         anchors.centerIn: parent
@@ -85,24 +85,13 @@ ResponsiveBase
         RowLayout
         {
             Layout.fillWidth: true
-            Layout.preferredHeight: 64
+            Layout.preferredHeight: 32
             spacing: 32
 
             Button
             {
                 Layout.fillWidth: true
                 text: qsTr("About")
-                icon.name: "documentinfo"
-
-                background: Rectangle { color: "#66231F20" }
-                contentItem: Text {
-                    text: parent.text
-                    color: "#FFFFFF"
-                    font: parent.font
-                    horizontalAlignment: Text.AlignHCenter
-                    verticalAlignment: Text.AlignVCenter
-                }
-
                 visible: Branding.string(Branding.ProductUrl).length > 0
                 onClicked: Qt.openUrlExternally(Branding.string(Branding.ProductUrl))
             }
@@ -111,17 +100,6 @@ ResponsiveBase
             {
                 Layout.fillWidth: true
                 text: qsTr("Support")
-                icon.name: "help-contents"
-
-                background: Rectangle { color: "#66231F20" }
-                contentItem: Text {
-                    text: parent.text
-                    color: "#FFFFFF"
-                    font: parent.font
-                    horizontalAlignment: Text.AlignHCenter
-                    verticalAlignment: Text.AlignVCenter
-                }
-
                 visible: Branding.string(Branding.SupportUrl).length > 0
                 onClicked: Qt.openUrlExternally(Branding.string(Branding.SupportUrl))
             }
@@ -130,17 +108,6 @@ ResponsiveBase
             {
                 Layout.fillWidth: true
                 text: qsTr("Known issues")
-                icon.name: "tools-report-bug"
-
-                background: Rectangle { color: "#66231F20" }
-                contentItem: Text {
-                    text: parent.text
-                    color: "#FFFFFF"
-                    font: parent.font
-                    horizontalAlignment: Text.AlignHCenter
-                    verticalAlignment: Text.AlignVCenter
-                }
-
                 visible: Branding.string(Branding.KnownIssuesUrl).length > 0
                 onClicked: Qt.openUrlExternally(Branding.string(Branding.KnownIssuesUrl))
             }
@@ -149,17 +116,6 @@ ResponsiveBase
             {
                 Layout.fillWidth: true
                 text: qsTr("Release notes")
-                icon.name: "document-edit"
-
-                background: Rectangle { color: "#66231F20" }
-                contentItem: Text {
-                    text: parent.text
-                    color: "#FFFFFF"
-                    font: parent.font
-                    horizontalAlignment: Text.AlignHCenter
-                    verticalAlignment: Text.AlignVCenter
-                }
-
                 visible: Branding.string(Branding.ReleaseNotesUrl).length > 0
                 onClicked: Qt.openUrlExternally(Branding.string(Branding.ReleaseNotesUrl))
             }
