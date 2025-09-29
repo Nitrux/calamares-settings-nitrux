@@ -1,6 +1,7 @@
 calamares-settings-nitrux (2.1.7) nitrux; urgency=medium
 
   * Change package name.
+  * Fix packages.conf with correct package name.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Sun, 28 Sep 2025 23:28:00 -0500
 

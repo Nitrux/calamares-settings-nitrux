@@ -1,6 +1,6 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: calamares-qml-settings-nitrux
-Source: https://github.com/Nitrux/calamares-qml-settings-nitrux.git
+Upstream-Name: calamares-settings-nitrux
+Source: https://github.com/Nitrux/calamares-settings-nitrux.git
 
 Files: *
 Copyright: 2020 Camilo Higuita <milo.h@aol.com>
