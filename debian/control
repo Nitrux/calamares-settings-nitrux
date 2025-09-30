@@ -9,6 +9,6 @@ Vcs-Git: https://github.com/Nitrux/calamares-settings-nitrux.git
 
 Package: calamares-qml-settings-nitrux
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, calamares, libkirigami6, libqt6core5compat6, qml6-module-org-kde-breeze, qml6-module-org-kde-kirigami, qml6-module-qt5compat-graphicaleffects, qml6-module-qtquick-effects
+Depends: ${shlibs:Depends}, ${misc:Depends}, calamares, libqt6core5compat6, qml6-module-org-kde-breeze, qml6-module-org-kde-kirigami, qml6-module-qt5compat-graphicaleffects, qml6-module-qtquick-effects
 Description: Settings for Calamares.
  Nitrux branding package and settings for the Calamares installer.
