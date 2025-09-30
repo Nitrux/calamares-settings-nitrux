@@ -1,3 +1,11 @@
+calamares-qml5-settings-nitrux (2.0.9+new-dev) nitrux; urgency=medium
+
+  * Update branding.
+  * Remove unused files.
+  * Add dependency.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Mon, 29 Sep 2025 23:36:00 -0500
+
 calamares-qml5-settings-nitrux (2.0.8+new-dev) nitrux; urgency=medium
 
   * Update branding.
