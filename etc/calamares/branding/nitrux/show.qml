@@ -43,7 +43,7 @@ Presentation
             Label {
                 Layout.fillWidth: true
 
-                text: qsTr("Welcome to the #NXWorld")
+                text: qsTr("Disruptive By Design")
                 font.pixelSize: 22
                 font.bold: true
                 color: "white"
@@ -64,13 +64,13 @@ Presentation
                 font.pixelSize: 12
                 color: "white"
                 text: qsTr("Nitrux at a glance\n"
-                           + " • Nitrux is a Linux desktop distribution directly based on Debian. It uses the Calamares installer and includes NX Desktop on the KDE Plasma 5 desktop environment and KDE Applications.\n\n"
+                           + " • Nitrux is a Linux desktop distribution directly based on Debian. Powered by Debian, Hyprland, MauiKit, and AppBoxes.\n\n"
                            +"Focused on simplicity\n"
-                           + " • Nitrux emphasizes the use of AppImages to manage end-user software. Nitrux also does not use systemd as its init system; instead, it uses OpenRC, a simpler init and service manager.\n\n"
+                           + " • Nitrux emphasizes the use of AppBoxes to manage end-user software. Nitrux also does not use Systemd as its init system; instead, it uses OpenRC, a simpler init and service manager.\n\n"
                            +"MauiKit and Maui Apps\n"
                            + " • Nitrux includes a suite of convergent applications called Maui Apps. We use MauiKit, our free and open-source convergent, cross-platform UI framework, to create these applications.\n\n"
                            +"Updated software on every release\n"
-                           + " • Nitrux is very up-to-date, thanks to its use of the latest Debian base and the Liquorix kernel, an enthusiast Linux kernel designed for uncompromised responsiveness in interactive systems. Nitrux includes additional performance enhancements, such as allowing “inodes” to be placed at any location on the filesystem, compression using zstd with compression at level 6, and verification of compressed blocks using a checksum to avoid corruption.\n\n"
+                           + " • Nitrux is very up-to-date, thanks to its use of a recent Debian base and the Pika kernel, an enthusiast Linux kernel with patches from CachyOS. Nitrux includes additional performance enhancements, such as allowing “inodes” to be placed at any location on the filesystem, compression using zstd with compression at level 6, and verification of compressed blocks using a checksum to avoid corruption.\n\n"
                            +"High-performance desktop/workstation\n"
                            + " • Additionally, Nitrux includes enhancements such as a better garbage collector and asynchronous garbage collection, avoiding the synchronous updating access or modification times, zswap enabled by default, and also changes include the rate at which VFS caches are reclaimed, enabling asynchronous non-blocking I/O, and reducing the aggressivity when the kernel swaps out anonymous memory relative to pagecache and other caches.\n\n"
                            +"Exceptional system integrity\n"
