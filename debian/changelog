@@ -1,6 +1,12 @@
+calamares-settings-nitrux (2.2.0) nitrux; urgency=medium
+
+  * Update QWidgets settings.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Sun, 28 Sep 2025 23:32:00 -0500
+
 calamares-settings-nitrux (2.1.9) nitrux; urgency=medium
 
-  * Fix settings.conf refercing QML modules.
+  * Fix settings.conf referencing QML modules.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Sun, 28 Sep 2025 23:32:00 -0500
 

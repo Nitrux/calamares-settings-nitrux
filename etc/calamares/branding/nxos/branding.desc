@@ -1,16 +1,11 @@
 ---
-componentName:  nxos
-
-# This selects between different welcome texts. When false, uses
-# the traditional "Welcome to the %1 installer.", and when true,
-# uses "Welcome to the Calamares installer for %1." This allows
-# to distinguish this installer from other installers for the
-# same distribution.
+componentName:  nitrux
 welcomeStyleCalamares:   false
-
-# Should the welcome image (productWelcome, below) be scaled
-# up beyond its natural size?
 welcomeExpandingLogo:   true
+
+windowExpanding: normal
+windowSize: 800px,580px
+windowPlacement: center
 
 strings:
     productName:         Nitrux OS
@@ -25,6 +20,9 @@ strings:
     knownIssuesUrl:      https://nxos.org/known-issues/
     releaseNotesUrl:     https://nxos.org/notes/
 
+sidebar: widget
+navigation: widget
+
 images:
     productLogo:         "calamares_product_icon.svg"
     productIcon:         "calamares_product_logo.svg"
@@ -32,19 +30,10 @@ images:
 
 slideshow:               "show.qml"
 
-# Colors for text and background components.
-#
-#  - sidebarBackground is the background of the sidebar
-#  - sidebarText is the (foreground) text color
-#  - sidebarTextHighlight sets the background of the selected (current) step.
-#    Optional, and defaults to the application palette.
-#  - sidebarSelect is the text color of the selected step.
-#
 style:
-   sidebarBackground:    "#231F20"
+   sidebarBackground:    "#11111b"
    sidebarText:          "#FFFFFF"
    sidebarTextSelect:    "#FFFFFF"
    sidebarTextHighlight: "#26C6DA"
 
-sidebar:                 none
-windowExpanding:         fullscreen
+slideshowAPI: 2

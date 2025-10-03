@@ -1,7 +1,7 @@
 Source: calamares-settings-nitrux
 Section: kde
 Priority: optional
-Maintainer: Camilo Higuita <milo.h@aol.com>
+Maintainer: Uri Herrera <uri_herrera@nxos.org
 Build-Depends: debhelper (>=9)
 Standards-Version: 3.9.6
 Homepage: https://nxos.org/
@@ -9,7 +9,6 @@ Vcs-Git: https://github.com/Nitrux/calamares-settings-nitrux.git
 
 Package: calamares-settings-nitrux
 Architecture: any
-Replaces: calamares-settings-nxos
-Depends: ${shlibs:Depends}, ${misc:Depends}, calamares
+Depends: ${shlibs:Depends}, ${misc:Depends}, calamares, libpwquality1, dmcrypt-openrc
 Description: Settings for Calamares.
  Nitrux branding package and settings for the Calamares installer.
