@@ -1,8 +1,15 @@
+calamares-settings-nitrux (2.2.1) nitrux; urgency=medium
+
+  * Fix branding.desc.
+  * Since we believe Calamares does not support autologin for greetd hide the option.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Thu, 01 Oct 2025 19:56:00 -0500
+
 calamares-settings-nitrux (2.2.0) nitrux; urgency=medium
 
   * Update QWidgets settings.
 
- -- Uri Herrera <uri_herrera@nxos.org>  Sun, 28 Sep 2025 23:32:00 -0500
+ -- Uri Herrera <uri_herrera@nxos.org>  Sun, 01 Oct 2025 18:25:00 -0500
 
 calamares-settings-nitrux (2.1.9) nitrux; urgency=medium
 
