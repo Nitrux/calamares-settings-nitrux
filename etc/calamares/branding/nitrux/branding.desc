@@ -24,8 +24,8 @@ sidebar: widget
 navigation: widget
 
 images:
-    productLogo:         "calamares_product_icon.svg"
-    productIcon:         "calamares_product_logo.svg"
+    productLogo:         "calamares_product_logo.svg"
+    productIcon:         "calamares_product_icon.svg"
     productWelcome:      "calamares_welcome_logo.svg"
 
 slideshow:               "show.qml"
