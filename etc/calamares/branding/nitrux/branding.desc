@@ -36,4 +36,4 @@ style:
    SidebarTextCurrent:          "#FFFFFF"
    SidebarBackgroundCurrent:    "#26C6DA"
 
-slideshowAPI: 2
+slideshowAPI: 1

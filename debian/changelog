@@ -1,6 +1,12 @@
+calamares-settings-nitrux (2.2.5) nitrux; urgency=medium
+
+  * Use slideShowAPI 1 because version 2 simply doesn't work.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Wed, 08 Oct 2025 01:53:00 -0500
+
 calamares-settings-nitrux (2.2.4) nitrux; urgency=medium
 
-  * Remove calamares dependencies.
+  * Add packages for removal after installation is complete in packages module.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Tue, 07 Oct 2025 22:48:00 -0500
 
