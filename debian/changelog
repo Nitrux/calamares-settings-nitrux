@@ -1,3 +1,9 @@
+calamares-settings-nitrux (2.2.7) nitrux; urgency=medium
+
+  * Try to fix displaymanager conf file.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Wed, 08 Oct 2025 10:42:00 -0500
+
 calamares-settings-nitrux (2.2.6) nitrux; urgency=medium
 
   * Fix settings conf file.
