@@ -1,3 +1,9 @@
+calamares-settings-nitrux (2.2.6) nitrux; urgency=medium
+
+  * Fix settings conf file.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Wed, 08 Oct 2025 10:17:00 -0500
+
 calamares-settings-nitrux (2.2.5) nitrux; urgency=medium
 
   * Use slideShowAPI 1 because version 2 simply doesn't work.
