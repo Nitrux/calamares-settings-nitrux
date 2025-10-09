@@ -1,3 +1,9 @@
+calamares-settings-nitrux (2.3.0) nitrux; urgency=medium
+
+  * Add more badwords for exclusion in users.conf.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Thu, 09 Oct 2025 17:25:00 -0500
+
 calamares-settings-nitrux (2.2.9) nitrux; urgency=medium
 
   * Hide URLs in welcome module.
