@@ -64,9 +64,9 @@ Presentation
                 font.pixelSize: 12
                 color: "white"
                 text: qsTr("Nitrux at a glance\n"
-                           + " • Nitrux is a Linux desktop distribution directly based on Debian. Powered by Debian, Hyprland, MauiKit, and AppBoxes.\n\n"
+                           + " • Nitrux is a Linux desktop distribution powered by Debian, Hyprland, MauiKit, and AppBoxes.\n\n"
                            +"Focused on simplicity\n"
-                           + " • Nitrux emphasizes the use of AppBoxes to manage end-user software. Nitrux also does not use Systemd as its init system; instead, it uses OpenRC, a simpler init and service manager.\n\n"
+                           + " • Nitrux emphasizes AppBoxes to manage end-user software. Nitrux also does not use Systemd as its init system; instead, it uses OpenRC, a simpler init and service manager.\n\n"
                            +"MauiKit and Maui Apps\n"
                            + " • Nitrux includes a suite of convergent applications called Maui Apps. We use MauiKit, our free and open-source convergent, cross-platform UI framework, to create these applications.\n\n"
                            +"Updated software on every release\n"

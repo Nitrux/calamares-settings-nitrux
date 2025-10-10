@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: no
+# SPDX-License-Identifier: CC0-1.0
+#
 ---
 componentName:  nitrux
 welcomeStyleCalamares:   false
@@ -12,8 +15,8 @@ strings:
     shortProductName:    Nitrux
     version:             5.0.0
     shortVersion:        5.0.0
-    versionedName:       Nitrux OS 5.0.0 build.xxyyzz
-    shortVersionedName:  Nitrux 5.0.0 build.xxyyzz
+    versionedName:       Nitrux OS 5.0.0 build.251025
+    shortVersionedName:  Nitrux 5.0.0 build.251025
     bootloaderEntryName: Nitrux
     productUrl:          https://nxos.org/
     supportUrl:          https://github.com/Nitrux/nitrux-bug-tracker/

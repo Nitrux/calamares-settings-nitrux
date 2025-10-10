@@ -1,3 +1,9 @@
+calamares-settings-nitrux (2.3.3) nitrux; urgency=medium
+
+  * Update branding.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Fri, 10 Oct 2025 01:52:00 -0500
+
 calamares-settings-nitrux (2.3.2) nitrux; urgency=medium
 
   * Use the correct syntax for module configuration.
