@@ -9,6 +9,6 @@ Vcs-Git: https://github.com/Nitrux/calamares-settings-nitrux.git
 
 Package: calamares-settings-nitrux
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, calamares, libpwquality1, dmcrypt-openrc
+Depends: ${shlibs:Depends}, ${misc:Depends}, calamares, libpwquality1, dmcrypt-openrc, libpwquality-tools, cracklib-runtime
 Description: Settings for Calamares.
  Nitrux branding package and settings for the Calamares installer.
