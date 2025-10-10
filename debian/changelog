@@ -1,3 +1,12 @@
+calamares-settings-nitrux (2.3.2) nitrux; urgency=medium
+
+  * Use the correct syntax for module configuration.
+  * Remove unused module conf file.
+  * Use luks1 because GRUB doesn't support argon2id.
+  * Change execution order of modules.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Thu, 09 Oct 2025 23:29:00 -0500
+
 calamares-settings-nitrux (2.3.1) nitrux; urgency=medium
 
   * Add package dependency.
