@@ -1,3 +1,9 @@
+calamares-settings-nitrux (2.3.4) nitrux; urgency=medium
+
+  * Disable gpu-vendor-check service during installation.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Sat, 06 Dec 2025 08:03:00 -0500
+
 calamares-settings-nitrux (2.3.3) nitrux; urgency=medium
 
   * Update branding.
