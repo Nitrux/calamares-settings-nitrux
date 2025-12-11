@@ -1,3 +1,9 @@
+calamares-settings-nitrux (2.3.5) nitrux; urgency=medium
+
+  * Add shellprocess to generate a target accurate initramfs.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Thu, 11 Dec 2025 08:09:00 -0500
+
 calamares-settings-nitrux (2.3.4) nitrux; urgency=medium
 
   * Disable gpu-vendor-check service during installation.
