@@ -1,4 +1,4 @@
-calamares-settings-nitrux (2.3.6) nitrux; urgency=medium
+calamares-settings-nitrux (2.3.7) nitrux; urgency=medium
 
   * Update branding.
   * Fix typo in module name in bootloader.conf.
