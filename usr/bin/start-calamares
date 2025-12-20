@@ -58,7 +58,8 @@ print_message() {
 }
 
 
-# -- Unmount swap before starting Calamres; otherwise, Calamares can't partition disks when running in a VM. I do not know why swap is automatically mounted *ONLY* in Live sessions in VMs.
+# -- Unmount swap before starting Calamres; otherwise, Calamares can't partition disks when running in a VM. 
+# -- I do not know why swap is automatically mounted *ONLY* in Live sessions in VMs.
 
 if swapon --show | grep -q '/dev/'; then
     puts_info "SWAP partition is currently mounted. Unmounting..."

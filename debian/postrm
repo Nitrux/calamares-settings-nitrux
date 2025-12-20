@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 
-find /home/ -iname 'org.nxos.installer.desktop' -delete
-find /usr/share/applications/ -iname 'org.nxos.installer.desktop' -delete
+find /usr/share/applications -maxdepth 1 -type f -name 'org.nxos.installer.desktop' -delete

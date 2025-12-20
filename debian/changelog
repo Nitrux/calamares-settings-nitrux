@@ -1,5 +1,13 @@
 calamares-settings-nitrux (2.3.6) nitrux; urgency=medium
 
+  * Update branding.
+  * Fix typo in module name in bootloader.conf.
+  * Ensure only to delete the desktop launcher we're installing.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Sat, 20 Dec 2025 14:48:00 -0500
+
+calamares-settings-nitrux (2.3.6) nitrux; urgency=medium
+
   * Update start-calamares.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Sat, 20 Dec 2025 12:22:00 -0500

@@ -13,10 +13,10 @@ windowPlacement: center
 strings:
     productName:         Nitrux OS
     shortProductName:    Nitrux
-    version:             5.0.0
-    shortVersion:        5.0.0
-    versionedName:       Nitrux OS 5.0.0 build.251025
-    shortVersionedName:  Nitrux 5.0.0 build.251025
+    version:             5.1.0
+    shortVersion:        5.1.0
+    versionedName:       Nitrux OS 5.1.0 build.311225
+    shortVersionedName:  Nitrux 5.1.0 build.311225
     bootloaderEntryName: Nitrux
     productUrl:          https://nxos.org/
     supportUrl:          https://github.com/Nitrux/nitrux-bug-tracker/
