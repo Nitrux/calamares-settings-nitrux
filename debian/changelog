@@ -1,3 +1,9 @@
+calamares-settings-nitrux (2.4.1) nitrux; urgency=medium
+
+  * Remove iommu paramater.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Wed, 14 Jan 2026 18:43:00 -0500
+
 calamares-settings-nitrux (2.4.0) nitrux; urgency=medium
 
   * Add intel_iommu iommu paramaters.
