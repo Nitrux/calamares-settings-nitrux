@@ -1,3 +1,9 @@
+calamares-settings-nitrux (2.4.2) nitrux; urgency=medium
+
+  * Update greetd shellprocess config.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Fri, 30 Jan 2026 13:25:00 -0500
+
 calamares-settings-nitrux (2.4.1) nitrux; urgency=medium
 
   * Remove iommu paramater.
