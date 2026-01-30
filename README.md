@@ -1,4 +1,4 @@
-# Calamares Settings Nitrux
+# Calamares Settings for Nitrux
 
 This is the repository for the custom Calamares settings used in Nitrux.
 
