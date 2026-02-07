@@ -1,3 +1,9 @@
+calamares-settings-nitrux (2.4.3) nitrux; urgency=medium
+
+  * Use simpler version structure.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Sat, 07 Feb 2026 08:15:00 -0500
+
 calamares-settings-nitrux (2.4.2) nitrux; urgency=medium
 
   * Update greetd shellprocess config.
