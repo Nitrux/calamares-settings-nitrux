@@ -1,3 +1,9 @@
+calamares-settings-nitrux (2.4.4) nitrux; urgency=medium
+
+  * Add nvme.core parameter.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Mon, 02 Mar 2026 00:55:00 -0500
+
 calamares-settings-nitrux (2.4.3-1) nitrux; urgency=medium
 
   * Build for all architectures.
