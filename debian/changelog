@@ -1,3 +1,9 @@
+calamares-settings-nitrux (2.4.5) nitrux; urgency=medium
+
+  * Remove unnecessary parameter.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Thu, 05 Mar 2026 02:44:00 -0500
+
 calamares-settings-nitrux (2.4.4) nitrux; urgency=medium
 
   * Add nvme.core parameter.
