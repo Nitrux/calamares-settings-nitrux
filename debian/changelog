@@ -1,3 +1,9 @@
+calamares-settings-nitrux (2.4.6) nitrux; urgency=medium
+
+  * Add parameter to hide the vt cursor.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Sun, 08 Mar 2026 04:10:00 -0500
+
 calamares-settings-nitrux (2.4.5) nitrux; urgency=medium
 
   * Remove unnecessary parameter.
