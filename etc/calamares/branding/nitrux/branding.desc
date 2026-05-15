@@ -13,10 +13,10 @@ windowPlacement: center
 strings:
     productName:         Nitrux OS
     shortProductName:    Nitrux
-    version:             6.0.0
-    shortVersion:        6.0.0
-    versionedName:       Nitrux OS 6.0.0
-    shortVersionedName:  Nitrux 6.0.0
+    version:             6.1.0
+    shortVersion:        6.1.0
+    versionedName:       Nitrux OS 6.1.0
+    shortVersionedName:  Nitrux 6.1.0
     bootloaderEntryName: Nitrux
     productUrl:          https://nxos.org/
     supportUrl:          https://github.com/Nitrux/nitrux-bug-tracker/
@@ -34,7 +34,7 @@ images:
 slideshow:               "show.qml"
 
 style:
-   SidebarBackground:           "#11111b"
+   SidebarBackground:           "#1e1e2e"
    SidebarText:                 "#FFFFFF"
    SidebarTextCurrent:          "#FFFFFF"
    SidebarBackgroundCurrent:    "#26C6DA"
