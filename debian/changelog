@@ -1,8 +1,8 @@
-calamares-settings-nitrux (2.4.9) nitrux; urgency=medium
+calamares-settings-nitrux (2.5.0) nitrux; urgency=medium
 
-  * Add paramater to disable cursor in VT.
+  * Fix typo in grubcfg.conf.
 
- -- Uri Herrera <uri_herrera@nxos.org>  Tue, 19 May 2026 14:26:00 -0500
+ -- Uri Herrera <uri_herrera@nxos.org>  Tue, 19 May 2026 14:48:00 -0500
 
 calamares-settings-nitrux (2.4.8) nitrux; urgency=medium
 
