@@ -1,3 +1,9 @@
+calamares-settings-nitrux (2.5.1) nitrux; urgency=medium
+
+  * Update branding.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Mon, 22 Jun 2026 23:39:00 -0500
+
 calamares-settings-nitrux (2.5.0) nitrux; urgency=medium
 
   * Fix typo in grubcfg.conf.
