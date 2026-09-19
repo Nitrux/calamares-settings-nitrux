@@ -1,3 +1,9 @@
+calamares-settings-nitrux (2.5.2) nitrux; urgency=medium
+
+  * Route greetd autologin sessions through nwsm.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Sat, 19 Sep 2026 04:51:35 -0600
+
 calamares-settings-nitrux (2.5.1) nitrux; urgency=medium
 
   * Update branding.
