@@ -1,3 +1,11 @@
+calamares-settings-nitrux (2.5.4) nitrux; urgency=medium
+
+  * Add CPU-specific kernel selection during installation.
+  * Run kernel selection before generating the initramfs.
+  * Renumber shellprocess configurations to match their execution order.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Tue, 13 Oct 2026 20:43:00 -0600
+
 calamares-settings-nitrux (2.5.3) nitrux; urgency=medium
 
   * Use LUKS2 with Argon2id for encrypted installations.

@@ -1,0 +1,133 @@
+#!/usr/bin/env bash
+
+# SPDX-License-Identifier: BSD-3-Clause
+# Copyright 2026 <Nitrux Latinoamericana S.C. <hello@nxos.org>>
+
+# -- Exit on errors.
+
+set -euo pipefail
+
+
+# -- Variables.
+
+KERNEL_VARIANTS_DIR="/opt/nitrux/kernel-variants"
+GENERIC_META_PACKAGE="linux-nitrux-amd64"
+ZEN4_META_PACKAGE="${GENERIC_META_PACKAGE}-znver4"
+
+
+# -- Detect CPU capabilities.
+
+cpu_vendor="$(awk -F: "\$1 == \"vendor_id\" { print \$2; exit }" /proc/cpuinfo | tr -d "[:space:]")"
+cpu_flags="$(awk -F: "\$1 == \"flags\" { print \$2; exit }" /proc/cpuinfo)"
+
+
+# -- Select the kernel variant.
+
+if [ "$cpu_vendor" = "AuthenticAMD" ] && [[ " $cpu_flags " == *" avx512f "* ]]; then
+    selected_variant="znver4"
+    selected_meta_package="$ZEN4_META_PACKAGE"
+else
+    selected_variant="x86-64-v3"
+    selected_meta_package="$GENERIC_META_PACKAGE"
+fi
+
+echo "Detected CPU variant: $selected_variant"
+
+
+# -- Keep the generic kernel on CPUs that do not meet the Zen 4/Zen 5 test.
+
+if [ "$selected_variant" = "x86-64-v3" ]; then
+    rm -rf -- "$KERNEL_VARIANTS_DIR"
+    exit 0
+fi
+
+
+# -- Check for the offline kernel packages.
+
+if [ ! -d "$KERNEL_VARIANTS_DIR" ]; then
+    echo "Error: $selected_meta_package is required for this CPU, but no offline kernel packages were shipped in the ISO."
+    exit 1
+fi
+
+
+# -- Index the offline package files.
+
+declare -A package_files=()
+while IFS= read -r -d "" package_file; do
+    package_name="$(dpkg-deb -f "$package_file" Package)"
+    package_files["$package_name"]="$package_file"
+done < <(find "$KERNEL_VARIANTS_DIR" -maxdepth 1 -type f -name "*.deb" -print0)
+
+
+# -- Check for the selected meta package.
+
+if [ -z "${package_files[$selected_meta_package]+x}" ]; then
+    echo "Error: $selected_meta_package is missing from $KERNEL_VARIANTS_DIR."
+    exit 1
+fi
+
+
+# -- Resolve the selected kernel image and headers packages.
+
+meta_package_file="${package_files[$selected_meta_package]}"
+kernel_package_names=()
+kernel_package_files=()
+
+while IFS= read -r dependency; do
+    dependency="${dependency%%|*}"
+    dependency="${dependency%% (*}"
+    dependency="${dependency#"${dependency%%[![:space:]]*}"}"
+    dependency="${dependency%"${dependency##*[![:space:]]}"}"
+
+    case "$dependency" in
+        linux-image-*|linux-headers-*)
+            if [ -z "${package_files[$dependency]+x}" ]; then
+                echo "Error: $dependency, required by $selected_meta_package, is missing from $KERNEL_VARIANTS_DIR."
+                exit 1
+            fi
+            kernel_package_names+=("$dependency")
+            kernel_package_files+=("${package_files[$dependency]}")
+            ;;
+    esac
+done < <(dpkg-deb -f "$meta_package_file" Depends | tr "," "\n")
+
+
+# -- Check that the selected kernel packages were found.
+
+if [ "${#kernel_package_files[@]}" -eq 0 ]; then
+    echo "Error: no kernel image or headers package was found in $selected_meta_package."
+    exit 1
+fi
+
+
+# -- Install the selected kernel packages.
+#    Unpack the kernel packages first so the meta package can be configured with
+#    all of its dependencies present.
+
+dpkg --unpack "${kernel_package_files[@]}" "$meta_package_file"
+dpkg --configure "${kernel_package_names[@]}" "$selected_meta_package"
+
+
+# -- Remove the generic kernel packages.
+#    Keep one Nitrux kernel family in the installed system.
+
+installed_generic_packages=()
+while IFS= read -r package_name; do
+    package_status="$(dpkg-query -W -f="\${Status}" "$package_name" 2>/dev/null || true)"
+    [ "$package_status" = "install ok installed" ] || continue
+
+    case "$package_name" in
+        "$GENERIC_META_PACKAGE"|linux-image-*-nitrux|linux-headers-*-nitrux)
+            installed_generic_packages+=("$package_name")
+            ;;
+    esac
+done < <(dpkg-query -W -f="\${binary:Package}\n" 2>/dev/null || true)
+
+if [ "${#installed_generic_packages[@]}" -gt 0 ]; then
+    dpkg --purge "${installed_generic_packages[@]}"
+fi
+
+
+# -- Remove the offline package archive.
+
+rm -rf -- "$KERNEL_VARIANTS_DIR"
