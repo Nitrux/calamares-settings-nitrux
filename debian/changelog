@@ -1,3 +1,9 @@
+calamares-settings-nitrux (2.5.5) nitrux; urgency=medium
+
+  * Update branding.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Wed, 28 Oct 2026 18:15:00 -0600
+
 calamares-settings-nitrux (2.5.4) nitrux; urgency=medium
 
   * Add CPU-specific kernel selection during installation.
