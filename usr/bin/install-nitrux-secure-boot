@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+
+# SPDX-License-Identifier: BSD-3-Clause
+# Copyright 2026 <Nitrux Latinoamericana S.C. <hello@nxos.org>>
+
+set -euo pipefail
+
+if [ ! -d /sys/firmware/efi ] || [ ! -d /boot/efi ]; then
+    exit 0
+fi
+
+EFI_DIR=/boot/efi/EFI/nitrux
+mkdir -p "$EFI_DIR"
+
+copy_signed_image() {
+    local source_path="$1"
+    local target_name="$2"
+
+    if [ ! -r "$source_path" ]; then
+        echo "Error: required Secure Boot image is missing: $source_path" >&2
+        exit 1
+    fi
+
+    install -m 0644 "$source_path" "$EFI_DIR/$target_name"
+}
+
+copy_signed_image /usr/lib/shim/shimx64.efi.signed shimx64.efi
+copy_signed_image /usr/lib/shim/mmx64.efi.signed mmx64.efi
+copy_signed_image /usr/lib/shim/fbx64.efi.signed fbx64.efi
+copy_signed_image /usr/lib/grub/x86_64-efi-signed/grubx64.efi.signed grubx64.efi
+
+if [ ! -r /usr/share/grub/nitrux-secure-boot.cer ]; then
+    echo "Error: Nitrux Secure Boot certificate is missing: /usr/share/grub/nitrux-secure-boot.cer" >&2
+    exit 1
+fi
+install -m 0644 /usr/share/grub/nitrux-secure-boot.cer "$EFI_DIR/nitrux-secure-boot.cer"
+
+if [ ! -r /usr/share/nitrux/secure-boot/kernel.cer ]; then
+    echo "Error: kernel Secure Boot certificate is missing: /usr/share/nitrux/secure-boot/kernel.cer" >&2
+    exit 1
+fi
+install -m 0644 /usr/share/nitrux/secure-boot/kernel.cer "$EFI_DIR/nitrux-kernel-secure-boot.cer"

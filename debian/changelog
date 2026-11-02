@@ -1,3 +1,9 @@
+calamares-settings-nitrux (2.5.6) nitrux; urgency=medium
+
+  * Install the signed shim and separate GRUB and kernel Secure Boot certificates through Calamares.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Mon, 02 Nov 2026 11:55:00 -0600
+
 calamares-settings-nitrux (2.5.5) nitrux; urgency=medium
 
   * Update branding.
