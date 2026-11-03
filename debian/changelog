@@ -1,3 +1,9 @@
+calamares-settings-nitrux (2.5.7) nitrux; urgency=medium
+
+  * Fix CPU feature detection in the kernel selection script.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Mon, 02 Nov 2026 23:58:00 -0600
+
 calamares-settings-nitrux (2.5.6) nitrux; urgency=medium
 
   * Install the signed shim and separate GRUB and kernel Secure Boot certificates through Calamares.

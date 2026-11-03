@@ -17,8 +17,8 @@ ZEN4_META_PACKAGE="${GENERIC_META_PACKAGE}-znver4"
 
 # -- Detect CPU capabilities.
 
-cpu_vendor="$(awk -F: "\$1 == \"vendor_id\" { print \$2; exit }" /proc/cpuinfo | tr -d "[:space:]")"
-cpu_flags="$(awk -F: "\$1 == \"flags\" { print \$2; exit }" /proc/cpuinfo)"
+cpu_vendor="$(awk -F: '$1 ~ /^[[:space:]]*vendor_id[[:space:]]*$/ { print $2; exit }' /proc/cpuinfo | tr -d "[:space:]")"
+cpu_flags="$(awk -F: '$1 ~ /^[[:space:]]*flags[[:space:]]*$/ { print $2; exit }' /proc/cpuinfo)"
 
 
 # -- Select the kernel variant.
