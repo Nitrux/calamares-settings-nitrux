@@ -1,3 +1,9 @@
+calamares-settings-nitrux (2.5.10) nitrux; urgency=medium
+
+  * Register the Secure Boot shellprocess before generating the GRUB configuration.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Wed, 04 Nov 2026 08:59:00 -0600
+
 calamares-settings-nitrux (2.5.9) nitrux; urgency=medium
 
   * Replace the selected kernel variant and its provider dependencies in one APT transaction.
