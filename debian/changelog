@@ -1,3 +1,9 @@
+calamares-settings-nitrux (2.5.9) nitrux; urgency=medium
+
+  * Replace the selected kernel variant and its provider dependencies in one APT transaction.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Wed, 04 Nov 2026 08:43:00 -0600
+
 calamares-settings-nitrux (2.5.8) nitrux; urgency=medium
 
   * Purge the generic kernel packages before installing a CPU-specific kernel.

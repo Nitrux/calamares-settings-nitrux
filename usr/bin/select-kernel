@@ -100,33 +100,11 @@ if [ "${#kernel_package_files[@]}" -eq 0 ]; then
 fi
 
 
-# -- Remove the generic kernel packages.
-#    The selected variant conflicts with the generic kernel packages, so purge
-#    them before unpacking the selected packages.
+# -- Replace the installed kernel with the selected variant.
+#    Let APT resolve the conflicting packages together so dependencies provided
+#    by the new meta package remain satisfied during the replacement.
 
-installed_generic_packages=()
-while IFS= read -r package_name; do
-    package_status="$(dpkg-query -W -f="\${Status}" "$package_name" 2>/dev/null || true)"
-    [ "$package_status" = "install ok installed" ] || continue
-
-    case "$package_name" in
-        "$GENERIC_META_PACKAGE"|linux-image-*-nitrux|linux-headers-*-nitrux)
-            installed_generic_packages+=("$package_name")
-            ;;
-    esac
-done < <(dpkg-query -W -f="\${binary:Package}\n" 2>/dev/null || true)
-
-if [ "${#installed_generic_packages[@]}" -gt 0 ]; then
-    dpkg --purge "${installed_generic_packages[@]}"
-fi
-
-
-# -- Install the selected kernel packages.
-#    Unpack the kernel packages first so the meta package can be configured with
-#    all of its dependencies present.
-
-dpkg --unpack "${kernel_package_files[@]}" "$meta_package_file"
-dpkg --configure "${kernel_package_names[@]}" "$selected_meta_package"
+apt --yes --no-download install "${kernel_package_files[@]}" "$meta_package_file"
 
 
 # -- Remove the offline package archive.
