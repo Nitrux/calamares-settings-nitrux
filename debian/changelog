@@ -1,3 +1,15 @@
+calamares-settings-nitrux (2.5.12) nitrux; urgency=medium
+
+  * Install Secure Boot fallback files for UEFI systems without overwriting an existing fallback loader.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Wed, 04 Nov 2026 09:49:00 -0600
+
+calamares-settings-nitrux (2.5.11) nitrux; urgency=medium
+
+  * Match the Secure Boot helper and EFI bootloader ID directory capitalization.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Wed, 04 Nov 2026 09:33:00 -0600
+
 calamares-settings-nitrux (2.5.10) nitrux; urgency=medium
 
   * Register the Secure Boot shellprocess before generating the GRUB configuration.
