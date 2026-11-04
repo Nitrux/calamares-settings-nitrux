@@ -100,16 +100,9 @@ if [ "${#kernel_package_files[@]}" -eq 0 ]; then
 fi
 
 
-# -- Install the selected kernel packages.
-#    Unpack the kernel packages first so the meta package can be configured with
-#    all of its dependencies present.
-
-dpkg --unpack "${kernel_package_files[@]}" "$meta_package_file"
-dpkg --configure "${kernel_package_names[@]}" "$selected_meta_package"
-
-
 # -- Remove the generic kernel packages.
-#    Keep one Nitrux kernel family in the installed system.
+#    The selected variant conflicts with the generic kernel packages, so purge
+#    them before unpacking the selected packages.
 
 installed_generic_packages=()
 while IFS= read -r package_name; do
@@ -126,6 +119,14 @@ done < <(dpkg-query -W -f="\${binary:Package}\n" 2>/dev/null || true)
 if [ "${#installed_generic_packages[@]}" -gt 0 ]; then
     dpkg --purge "${installed_generic_packages[@]}"
 fi
+
+
+# -- Install the selected kernel packages.
+#    Unpack the kernel packages first so the meta package can be configured with
+#    all of its dependencies present.
+
+dpkg --unpack "${kernel_package_files[@]}" "$meta_package_file"
+dpkg --configure "${kernel_package_names[@]}" "$selected_meta_package"
 
 
 # -- Remove the offline package archive.

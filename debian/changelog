@@ -1,3 +1,9 @@
+calamares-settings-nitrux (2.5.8) nitrux; urgency=medium
+
+  * Purge the generic kernel packages before installing a CPU-specific kernel.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Tue, 03 Nov 2026 23:07:00 -0600
+
 calamares-settings-nitrux (2.5.7) nitrux; urgency=medium
 
   * Fix CPU feature detection in the kernel selection script.
