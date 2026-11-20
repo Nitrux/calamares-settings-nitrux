@@ -104,7 +104,7 @@ fi
 #    Let APT resolve the conflicting packages together so dependencies provided
 #    by the new meta package remain satisfied during the replacement.
 
-apt --yes --no-download install "${kernel_package_files[@]}" "$meta_package_file"
+apt --yes -o Dir::Etc::sourcelist=/dev/null -o Dir::Etc::sourceparts=- install "${kernel_package_files[@]}" "$meta_package_file"
 
 
 # -- Remove the offline package archive.
